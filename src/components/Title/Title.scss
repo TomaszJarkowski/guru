@@ -1,0 +1,19 @@
+@import '../../scss/Variables.scss';
+
+.title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: $fs-xxl;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: bold;
+    border: 2px solid $c-primary;
+    background-color: $c-green;
+    text-shadow: 0 2px 2px $c-dark;
+
+    @media (min-width: 600px) {
+        padding: 30px 0;
+        font-size: $fs-xxxl;
+    }
+}

@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
-function App() {
-    return (
+import { Nav } from './components/Navigation/Nav';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
+import { Page } from './Page';
+
+import './scss/Reset.scss';
+import './App.scss';
+import 'react-toastify/dist/ReactToastify.css';
+
+export const App = () => (
+    <Router>
         <div className='App'>
-            <header className='App-header'>
-                <img src={logo} className='App-logo' alt='logo' />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className='App-link'
-                    href='https://reactjs.org'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    Learn React
-                </a>
-            </header>
+            <ToastContainer limit={4} autoClose={3000} />
+            <Header />
+            <Nav />
+            <Page />
+            <Footer />
         </div>
-    );
-}
-
-export default App;
+    </Router>
+);

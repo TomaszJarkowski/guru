@@ -1,0 +1,111 @@
+@import '../../scss/Variables.scss';
+
+.is-active {
+    background: #799f0c;
+    background: linear-gradient(to right, #799f0c, #ffe000);
+    box-shadow: 0 0 5px 0 white;
+}
+
+.navigation {
+    height: 48px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    z-index: 22;
+
+    @media (min-width: 500px) {
+        height: 64px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: none;
+
+        @media (min-width: 400px) {
+            display: block;
+            width: 90px;
+        }
+
+        @media (min-width: 500px) {
+            width: 110px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        list-style: none;
+        align-items: center;
+
+        .navigation__item {
+            background: $c-primary;
+            margin: 0 $m-xs;
+            border-radius: $br-m;
+
+            @media (min-width: 600px) {
+                margin: 0 $m-sm;
+                padding: 0;
+            }
+
+            a {
+                padding: 10px;
+                border-radius: $br-m;
+
+                @media (min-width: 500px) {
+                    padding: 10px 15px;
+                    font-size: $fs-lg;
+                }
+
+                &:hover {
+                    background: $c-green;
+                }
+            }
+        }
+    }
+
+    a.basket__link {
+        width: 55px;
+        padding: 2px;
+        border: 2px $c-primary solid;
+        border-radius: $br-m;
+        margin: 0 $m-sm;
+
+        @media (min-width: 500px) {
+            width: 70px;
+            margin-right: $m-md;
+        }
+
+        &:hover {
+            background-color: $c-primary;
+        }
+    }
+
+    .link__content {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+
+        span {
+            margin-right: $m-xs;
+
+            @media (min-width: 500px) {
+                font-size: $fs-lg;
+                margin-right: $m-sm;
+            }
+        }
+
+        i {
+            @media (min-width: 500px) {
+                font-size: $fs-lg;
+            }
+        }
+
+        @media (min-width: 500px) {
+            margin-right: $m-md;
+        }
+    }
+}

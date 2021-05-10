@@ -1,0 +1,78 @@
+@import '../../../scss/Variables.scss';
+
+.product {
+    border: 3px solid $c-primary;
+    border-radius: $br-m;
+    margin: $m-sm;
+    background-color: $c-blue;
+    width: 300px;
+    position: relative;
+
+    &__img {
+        width: 100%;
+        border-radius: $br-m $br-m 0 0;
+        margin-bottom: $m-md;
+    }
+
+    &__name {
+        width: 90%;
+        font-size: $fs-xl;
+        margin-bottom: $m-md;
+        margin-left: $m-sm;
+    }
+
+    &__price {
+        font-size: $fs-lg;
+        font-weight: bold;
+        margin-bottom: $m-md;
+        margin-left: $m-sm;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__new {
+        position: absolute;
+        top: -3%;
+        right: -5%;
+        background-color: $c-red;
+        box-shadow: 0 0 2px 0 $c-red;
+        font-weight: bold;
+        width: 40px;
+        text-align: center;
+        padding: 5px;
+        border-radius: $br-l;
+    }
+
+    &__btn {
+        display: block;
+        color: $c-dark;
+        background: none;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: $br-l;
+        width: 80px;
+        padding: 6px;
+        margin: 0 $m-xs;
+        margin-bottom: $m-md;
+        font-size: $fs-sm;
+        cursor: pointer;
+
+        &:last-child {
+            color: white;
+            border: 2px solid $c-primary;
+            background-color: $c-primary;
+        }
+
+        &:active {
+            box-shadow: 0 0 7px 2px white;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

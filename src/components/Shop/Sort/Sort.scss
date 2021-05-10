@@ -1,0 +1,40 @@
+@import '../../../scss/Variables.scss';
+
+.sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    background-color: $c-secondary;
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+    }
+
+    h2 {
+        color: black;
+        font-size: $fs-lg;
+        margin: 0 $m-sm;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    button {
+        padding: 10px;
+        color: black;
+        border: 2px solid black;
+        margin: $m-xs;
+        transition: all linear 0.2s;
+        font-size: $fs-xs;
+        cursor: pointer;
+
+        @media (min-width: 850px) {
+            font-size: $fs-sm;
+        }
+
+        &:hover {
+            transform: scale((1.03));
+        }
+    }
+}

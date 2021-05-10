@@ -1,0 +1,20 @@
+@import '../../../scss/Variables.scss';
+
+.empty,
+.error {
+    background-color: white;
+    text-align: center;
+
+    h3 {
+        color: gray;
+        margin-bottom: $m-md;
+        padding: 20px;
+        font-size: $fs-xl;
+    }
+
+    img {
+        width: 80%;
+        max-width: 500px;
+        padding-bottom: 40px;
+    }
+}

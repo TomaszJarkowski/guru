@@ -1,0 +1,33 @@
+@import '../../../scss/Variables.scss';
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $c-secondary;
+
+    .pagination-item {
+        padding: 5px;
+
+        @media (min-width: 400px) {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: $br-m;
+            color: white;
+            background-color: #ffa33b;
+            cursor: pointer;
+
+            @media (min-width: 400px) {
+                font-size: $fs-lg;
+            }
+
+            &:hover {
+                background: $c-green;
+            }
+        }
+    }
+}
