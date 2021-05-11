@@ -63,7 +63,8 @@ export const fetchProducts = () => async (dispatch: Function) => {
     const url = process.env.REACT_APP_PROJECTS;
 
     dispatch(setLoadingFetch());
-    // await new Promise((r) => setTimeout(r, 2000));
+    await new Promise((r) => setTimeout(r, 2000));
+
     try {
         const res = await axios.get('http://localhost:3004/products');
         dispatch(setProducts(res.data));
