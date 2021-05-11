@@ -1,0 +1,83 @@
+@import '../../../scss/Variables.scss';
+
+.cartItem {
+    display: flex;
+    width: 95%;
+    max-width: 700px;
+    margin: $m-sm auto;
+    border: 2px solid $c-primary;
+    border-radius: $br-m;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $c-blue;
+    color: white;
+
+    .cartImg {
+        width: 80px;
+        border-radius: $br-m;
+
+        @media (min-width: 700px) {
+            width: 100px;
+        }
+    }
+
+    .cartName {
+        font-size: $fs-sm;
+        width: 20%;
+
+        @media (min-width: 700px) {
+            font-size: $fs-md;
+        }
+    }
+
+    i {
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .fa-arrow-circle-right {
+        &:active {
+            color: yellowgreen;
+        }
+    }
+
+    .fa-arrow-circle-left {
+        &:active {
+            color: $c-red;
+        }
+    }
+
+    .fa-trash-alt {
+        &:active {
+            color: $c-red;
+        }
+    }
+
+    .cartNumbers {
+        display: flex;
+        font-size: $fs-sm;
+
+        h3 {
+            margin: 0 $m-xs;
+
+            @media (min-width: 700px) {
+                margin: 0 $m-sm;
+            }
+        }
+
+        @media (min-width: 700px) {
+            font-size: $fs-md;
+        }
+    }
+
+    .cartTotal {
+        font-size: $fs-sm;
+
+        @media (min-width: 700px) {
+            font-size: $fs-md;
+        }
+    }
+}

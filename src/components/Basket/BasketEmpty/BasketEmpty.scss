@@ -1,0 +1,16 @@
+@import '../../../scss/Variables.scss';
+
+.basket__empty {
+    display: flex;
+    margin: $m-lg auto;
+    max-width: 700px;
+    justify-content: center;
+    color: black;
+    align-items: center;
+
+    h3 {
+        font-size: $fs-xl;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+}
