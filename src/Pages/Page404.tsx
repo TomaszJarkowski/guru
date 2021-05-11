@@ -1,5 +1,4 @@
 import { Container } from '../components/Container/Container';
-import { Title } from '../components/Title/Title';
 import errorIMG from '../img/404.svg';
 
 export const Page404: React.FC = () => {

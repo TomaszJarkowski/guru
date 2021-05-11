@@ -1,0 +1,111 @@
+@import './Variables.scss';
+
+.contact {
+    color: black;
+
+    .backgroungIMG {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-image: url("../img//backgroundFisherman.jpeg");
+        background-size: cover;
+    }
+
+    &__header {
+        font-size: $fs-xl;
+        font-weight: bold;
+        background-color: $c-primary;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    &__contactUs {
+        border: 2px solid black;
+        width: 40%;
+        margin: 0 auto;
+        min-width: 300px;
+        background-color: white;
+        position: relative;
+
+        .contactUs__item {
+            h3 {
+                margin: $m-sm 0;
+                padding-left: 10px;
+                font-size: $fs-lg;
+                max-width: 100%;
+                background-color: rgb(212, 212, 212);
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            p {
+                margin: $m-sm;
+                font-size: $fs-md;
+
+                i {
+                    margin-right: $m-sm;
+                }
+            }
+        }
+    }
+
+    &__oppeningHours {
+        border: 2px solid black;
+        width: 40%;
+        min-width: 300px;
+        margin: 0 auto;
+        margin-top: $m-sm;
+
+        .oppeningHours__item {
+            font-size: $fs-md;
+            background-color: rgb(212, 212, 212);
+
+            p {
+                text-align: center;
+                padding: 10px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__article {
+        background-color: white;
+        border-top: 1.5px solid black;
+        padding-bottom: 10px;
+
+        .article__title {
+            font-size: $fs-xl;
+            font-weight: bold;
+            margin-top: $m-md;
+            margin-left: $m-sm;
+        }
+
+        .article__description {
+            text-align: justify;
+            padding: 20px 10px;
+            width: 100%;
+            max-width: 800px;
+            font-size: $fs-md;
+            line-height: 22px;
+        }
+
+        .article__picture {
+            width: 100%;
+            max-width: 700px;
+
+            @media (min-width: 720px) {
+                margin-left: $m-md;
+            }
+        }
+    }
+
+    iframe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+    }
+}
