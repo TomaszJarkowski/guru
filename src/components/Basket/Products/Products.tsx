@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
+
 import { addProduct, removeProduct, trashProduct } from '../../../store/basket/basketSlice';
 import { Product } from '../../../store/basket/basketSlice';
+
 import './Products.scss';
 
 type TProducts = {

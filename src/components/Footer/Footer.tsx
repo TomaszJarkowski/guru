@@ -1,5 +1,6 @@
-import logo from '../../img/guru_logo.jpg';
 import { Container } from '../Container/Container';
+
+import logo from '../../img/guru_logo.jpg';
 
 import './Footer.scss';
 

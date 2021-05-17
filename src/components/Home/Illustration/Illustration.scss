@@ -1,0 +1,40 @@
+@import '../../../scss/Variables.scss';
+
+.illustration {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    color: $c-dark;
+    margin-top: $m-sm;
+    box-shadow: 0 0 7px 0 black;
+    padding: 15px 0;
+
+    @media (min-width: 500px) {
+        flex-direction: row;
+    }
+
+    img {
+        width: 60px;
+        padding: 10px;
+
+        @media (min-width: 500px) {
+            padding: 10px;
+        }
+
+        @media (min-width: 800px) {
+            width: 90px;
+        }
+    }
+
+    h2 {
+        letter-spacing: 0.5px;
+        font-weight: bold;
+        padding: 10px;
+
+        @media (min-width: 800px) {
+            font-size: $fs-lg;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import './Variables.scss';
+
+.home {
+    background-color: white;
+
+    .background-img {
+        background-image: url("../img/guru-fishing.jpeg");
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        h1 {
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            @media (min-width: 441px) {
+                font-size: $fs-xxl;
+            }
+
+            @media (min-width: 630px) {
+                font-size: 50px;
+            }
+        }
+
+        .description {
+            margin-top: $m-md;
+            font-size: $fs-sm;
+            max-width: 900px;
+            line-height: 23px;
+            padding: 5px;
+
+            @media (min-width: 441px) {
+                padding: 10px;
+            }
+
+            @media (min-width: 630px) {
+                font-size: $fs-lg;
+                padding: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}

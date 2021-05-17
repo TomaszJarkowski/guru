@@ -1,0 +1,41 @@
+@import '../../../scss/Variables.scss';
+
+.summary {
+    width: 100%;
+    padding: 0 5px;
+    color: black;
+
+    @media (min-width: 400px) {
+        padding: 0 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: $fs-xl;
+        text-align: center;
+        text-decoration: underline;
+        background-color: rgb(216, 216, 216);
+        padding: 5px 0;
+    }
+
+    h3 {
+        font-size: $fs-md;
+        margin: $m-sm 0;
+    }
+
+    &__basket {
+        div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px 0;
+            border: 2px solid $c-primary;
+            margin: $m-sm 0;
+
+            img {
+                width: 100px;
+                border-radius: $br-m;
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@import '../../../scss//Variables.scss';
+
+.YTChanel {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    background-color: #c4302b;
+
+    .video__header {
+        font-size: $fs-xl;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: white;
+        padding: 10px;
+        border: 2px solid $c-primary;
+        box-shadow: 0 0 20px 0 $c-primary;
+
+        @media (min-width: 550px) {
+            font-size: $fs-xxl;
+        }
+    }
+
+    .video__items {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: $m-md;
+
+        .video__item {
+            background-color: white;
+            border: black 2px solid;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin: $m-sm 0;
+
+            h1 {
+                max-width: 200px;
+                margin: $m-sm auto;
+                font-weight: bold;
+            }
+
+            img {
+                width: 250px;
+                margin-bottom: $m-sm;
+            }
+
+            button {
+                padding: 5px 0;
+                border: 2px solid #c4302b;
+                transition: 0.2s linear all;
+                background-color: white;
+
+                @media (min-width: 550px) {
+                    padding: 10px 0;
+                }
+
+                a {
+                    color: black;
+                    transition: 0.2s linear all;
+
+                    @media (min-width: 550px) {
+                        font-size: $fs-md;
+                    }
+
+                    i {
+                        margin-left: $m-sm;
+                        color: #c4302b;
+                        transition: 0.2s linear all;
+                    }
+                }
+
+                &:hover {
+                    background-color: #c4302b;
+
+                    a {
+                        color: white;
+
+                        i {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

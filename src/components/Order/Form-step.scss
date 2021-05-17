@@ -1,0 +1,100 @@
+@import '../../scss/Variables.scss';
+
+.form-step {
+    border: 2px solid black;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        padding: 7px 0;
+
+        @media (min-width: 450px) {
+            padding: 10px 0;
+        }
+
+        img {
+            width: 90px;
+
+            @media (min-width: 450px) {
+                width: 100px;
+            }
+        }
+    }
+
+    .header-form {
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: $fs-xl;
+        font-weight: bold;
+        font-style: italic;
+        background: linear-gradient(to right, #0575e6, #00f260);
+        width: 100%;
+        margin-bottom: $m-sm;
+        text-shadow: 0 0 3px black;
+        letter-spacing: 2px;
+
+        @media (min-width: 450px) {
+            font-size: 28px;
+        }
+
+        @media (min-width: 700px) {
+            font-size: 30px;
+        }
+    }
+
+    .forom__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px 0;
+
+        button {
+            margin: $m-sm;
+        }
+
+        .disabled {
+            border: 2px solid gray;
+            padding: 10px;
+            color: black;
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .active {
+            border: 2px solid yellowgreen;
+            padding: 10px;
+            color: black;
+            box-shadow: 0 0 1px 0 green;
+        }
+
+        a,
+        .back {
+            margin: 0 $m-sm;
+            border: 2px solid black;
+            padding: 10px;
+            background-color: white;
+            transition: all linear 0.2s;
+            color: black;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}

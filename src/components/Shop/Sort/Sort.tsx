@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { TProduct } from '../Product/Product';
 
 import './Sort.scss';

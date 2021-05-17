@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router';
+
 import { toast } from 'react-toastify';
+
 import { addProduct } from '../../store/basket/basketSlice';
 import {
     fetchProducts,
@@ -11,8 +13,9 @@ import {
 import { Loader } from '../Loader/Loader';
 import { Empty } from '../Shop/Empty/Empty';
 import { Error } from '../Shop/Error/Error';
-import './Content.scss';
 import { Info } from './Info/Info';
+
+import './Content.scss';
 
 export const Content: React.FC = () => {
     const params: { id: string } = useParams();

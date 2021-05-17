@@ -1,0 +1,109 @@
+@import '../../../scss/Variables.scss';
+
+.newslatter {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+
+    h2 {
+        font-size: $fs-xl;
+        padding: 10px;
+        font-weight: bold;
+        letter-spacing: 1px;
+
+        @media (min-width: 500px) {
+            font-size: $fs-xxl;
+        }
+    }
+
+    p {
+        font-size: $fs-sm;
+        padding: 10px;
+
+        @media (min-width: 500px) {
+            font-size: $fs-md;
+        }
+    }
+
+    label {
+        padding: 10px;
+        font-size: $fs-sm;
+        font-weight: bold;
+        line-height: 40px;
+
+        @media (min-width: 500px) {
+            font-size: $fs-md;
+        }
+    }
+
+    .error {
+        color: $c-red;
+        font-weight: bold;
+        font-size: $fs-sm;
+    }
+
+    input {
+        background: none;
+        border-radius: $br-m;
+        padding: 10px;
+        font-size: $fs-sm;
+        border: 2px solid $c-primary;
+    }
+
+    input:focus {
+        outline: none;
+        border: 2px solid $c-blue;
+    }
+
+    .formButton {
+        margin-left: $m-sm;
+        margin-top: $m-sm;
+        background: none;
+        text-transform: uppercase;
+        border: 2px solid $c-primary;
+        background-color: white;
+        padding: 8px;
+        font-size: $fs-sm;
+        border-radius: $br-m;
+        transition: background-color 0.2s linear;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $c-primary;
+        }
+
+        &:active {
+            box-shadow: 0 0 2px 0 black;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $c-primary;
+        }
+
+        @media (min-width: 700px) {
+            padding: 10px;
+        }
+    }
+
+    .div__results {
+        color: white;
+    }
+
+    .defeat__newslatter {
+        padding: 10px;
+        border-radius: $br-m;
+        background-color: rgb(196, 21, 21);
+    }
+
+    .success__newslatter {
+        padding: 10px;
+        border-radius: $br-m;
+        background-color: rgb(116, 180, 21);
+    }
+}

@@ -1,9 +1,9 @@
 import { useState, useEffect, SetStateAction } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Products } from './Products/Products';
 import { Pagination } from './Pagination/Pagination';
 import { Sort } from './Sort/Sort';
-import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts, selectProductsState } from '../../store/products/productsSlice';
 import { Loader } from '../Loader/Loader';
 import { StatusFetch } from '../../store/products/productsSlice';

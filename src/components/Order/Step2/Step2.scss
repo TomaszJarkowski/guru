@@ -1,0 +1,40 @@
+@import '../../../scss/Variables.scss';
+
+.form-step {
+    .delivery__item,
+    .payment__item {
+        height: 70px;
+        border-top: 1.5px solid black;
+        border-bottom: 1.5px solid black;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: $m-xs;
+
+        @media (min-width: 550px) {
+            height: 90px;
+        }
+
+        img {
+            width: 70px;
+
+            @media (min-width: 550px) {
+                width: 85px;
+            }
+        }
+
+        h4 {
+            font-weight: bold;
+
+            @media (min-width: 550px) {
+                font-size: $fs-md;
+            }
+        }
+    }
+
+    .delivery__container,
+    .payment__container {
+        width: 100%;
+    }
+}

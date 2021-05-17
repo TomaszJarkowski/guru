@@ -1,0 +1,68 @@
+@import '../../../scss/Variables.scss';
+
+.dots {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $c-dark;
+    padding: 15px;
+    text-align: center;
+
+    .dot {
+        padding: 10px 2px;
+        width: 100%;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s linear;
+        background-color: white;
+
+        @media (min-width: 450px) {
+            padding: 10px;
+        }
+
+        @media (min-width: 720px) {
+            padding: 15px 10px;
+        }
+
+        &:last-child {
+            border-right: 2px solid black;
+        }
+
+        h3 {
+            font-size: $fs-xs;
+            margin-right: $m-xs;
+
+            @media (min-width: 350px) {
+                font-size: $fs-sm;
+            }
+
+            @media (min-width: 450px) {
+                font-size: $fs-md;
+            }
+
+            @media (min-width: 720px) {
+                font-size: $fs-lg;
+            }
+        }
+
+        i {
+            font-size: $fs-xs;
+
+            @media (min-width: 350px) {
+                font-size: $fs-sm;
+            }
+
+            @media (min-width: 450px) {
+                font-size: $fs-md;
+            }
+
+            @media (min-width: 720px) {
+                font-size: $fs-lg;
+            }
+        }
+    }
+}

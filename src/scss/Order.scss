@@ -1,0 +1,16 @@
+@import './Variables.scss';
+
+.order {
+    background-color: $c-dark;
+}
+
+.order__container {
+    background-color: $c-dark;
+
+    @media (min-width: 700px) {
+        background-image: url("../img/background.jpeg");
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 30px;
+    }
+}

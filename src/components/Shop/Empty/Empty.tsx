@@ -1,6 +1,6 @@
-import imgEmpty from '../../../img/empty.svg';
-
 import './Empty.scss';
+
+import imgEmpty from '../../../img/empty.svg';
 
 export const Empty: React.FC = () => (
     <div className='empty'>

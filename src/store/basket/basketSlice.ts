@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { differenceNumbers, sumNumbers } from '../../helpers/helpers';
+
 export type Product = {
     id: number;
     name: string;
@@ -43,22 +45,20 @@ export const slice = createSlice({
                 state.basket.push(product);
             }
             state.number += 1;
-            const sum = state.cost + action.payload.price;
-            state.cost = Math.round(sum * 100) / 100;
+            state.cost = sumNumbers(state.cost, action.payload.price);
         },
         removeProduct: (state, action) => {
             const index = state.basket.findIndex((obj) => obj.id === action.payload.id);
             if (state.basket[index].quantity === 1) return;
             state.basket[index].quantity -= 1;
             state.number -= 1;
-            const difference = state.cost - action.payload.price;
-            state.cost = Math.round(difference * 100) / 100;
+            state.cost = differenceNumbers(state.cost, action.payload.price);
         },
         trashProduct: (state, action) => {
             const index = state.basket.findIndex((obj) => obj.id === action.payload.id);
             state.number -= state.basket[index].quantity;
             const multi = state.basket[index].quantity * state.basket[index].price;
-            state.cost = Math.round((state.cost - multi) * 100) / 100;
+            state.cost = differenceNumbers(state.cost, multi);
             state.basket.splice(index, 1);
         },
         clearBasket: (state) => {

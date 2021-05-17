@@ -1,6 +1,6 @@
-import imgError from '../../../img/error.svg';
-
 import '../Empty/Empty.scss';
+
+import imgError from '../../../img/error.svg';
 
 export const Error: React.FC = ({ children }) => (
     <div className='error'>

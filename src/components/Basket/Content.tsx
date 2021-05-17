@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { Products } from './Products/Products';
 import { BasketEmpty } from './BasketEmpty/BasketEmpty';
 import { clearBasket, selectBasketState } from '../../store/basket/basketSlice';
-import { useDispatch, useSelector } from 'react-redux';
+
 import './Content.scss';
 
 export const Content: React.FC = () => {

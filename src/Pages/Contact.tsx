@@ -1,7 +1,9 @@
 import { Container } from '../components/Container/Container';
 import { Title } from '../components/Title/Title';
-import teamGuru from '../img/teamGuru.jpg';
+
 import '../scss/Contact.scss';
+
+import teamGuru from '../img/teamGuru.jpg';
 
 export const Contact = () => (
     <div className='contact'>

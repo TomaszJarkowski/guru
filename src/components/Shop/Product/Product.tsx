@@ -1,7 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
-import { addProduct } from '../../../store/basket/basketSlice';
+
 import { toast } from 'react-toastify';
+
+import { addProduct } from '../../../store/basket/basketSlice';
+
 import './Product.scss';
 
 export type TProduct = {

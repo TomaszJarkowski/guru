@@ -1,13 +1,14 @@
 import { useState } from 'react';
-
 import { NavLink } from 'react-router-dom';
+
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 import { Basket } from './Basket';
-import url from '../../img/guru_logo.jpg';
+import { Container } from '../Container/Container';
 
 import './Nav.scss';
-import { Container } from '../Container/Container';
+
+import url from '../../img/guru_logo.jpg';
 
 const listOfLinks = [
     { name: 'Home', path: '/', exact: true },

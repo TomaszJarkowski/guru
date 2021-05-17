@@ -1,0 +1,89 @@
+@import '../../../scss/Variables.scss';
+
+.form-step {
+    .input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: $m-xs 0;
+
+        .correct-input {
+            font-size: $fs-sm;
+            color: rgb(141, 189, 45);
+
+            @media (min-width: 450px) {
+                font-size: $fs-md;
+            }
+        }
+
+        .wrong-input {
+            font-size: $fs-sm;
+            color: rgb(226, 71, 44);
+
+            @media (min-width: 450px) {
+                font-size: $fs-md;
+            }
+        }
+    }
+
+    label {
+        margin: $m-sm;
+        font-weight: bold;
+        font-size: 14px;
+        width: 90px;
+        margin-left: $m-sm;
+
+        @media (min-width: 450px) {
+            font-size: 18px;
+            width: 120px;
+        }
+
+        span {
+            margin-left: 3px;
+            color: red;
+        }
+    }
+
+    input {
+        height: 25px;
+        font-size: $fs-sm;
+        margin-right: $m-sm;
+        transition: all 0.3s linear;
+        box-shadow: 0 0 4px 0 black;
+        border: 2px solid transparent;
+
+        @media (min-width: 450px) {
+            height: 30px;
+            font-size: $fs-md;
+        }
+
+        @media (min-width: 550px) {
+            margin-right: $m-md;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $c-primary;
+            box-shadow: 0 0 4px 0 $c-primary;
+        }
+    }
+
+    select {
+        height: 25px;
+        font-size: $fs-sm;
+        transition: all 0.3s linear;
+        box-shadow: 0 0 4px 0 black;
+        border: 2px solid transparent;
+
+        @media (min-width: 450px) {
+            height: 30px;
+            font-size: $fs-md;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $c-primary;
+            box-shadow: 0 0 4px 0 $c-primary;
+        }
+    }
+}

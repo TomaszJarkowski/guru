@@ -1,4 +1,5 @@
 import { Product } from '../../../store/products/productsSlice';
+
 import './Info.scss';
 
 type TInfo = {

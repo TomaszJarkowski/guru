@@ -1,0 +1,79 @@
+@import '../../../scss/Variables.scss';
+
+.newProducts {
+    padding: 20px 0;
+    width: 100%;
+    color: black;
+    background-color: white;
+
+    &__title {
+        text-align: center;
+        font-size: 30px;
+        text-shadow: 0 0 1px black;
+        padding: 20px 0;
+        color: black;
+        text-decoration: underline;
+
+        span {
+            color: $c-red;
+            text-shadow: none;
+        }
+    }
+
+    &__product {
+        margin: $m-md;
+        padding: 10px 0;
+        position: relative;
+        background-color: white;
+        border: 2px solid black;
+
+        .name {
+            margin: $m-sm;
+            font-weight: bold;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        img {
+            margin: $m-sm 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button {
+            background-color: white;
+            padding: 10px 20px;
+            border: 2px solid black;
+            cursor: pointer;
+            display: block;
+            margin: $m-sm auto;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+
+    &__flag {
+        background-color: $c-red;
+        padding: 5px 10px;
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: -2%;
+        right: -2%;
+        border-radius: $br-l;
+    }
+
+    &__products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (min-width: 800px) {
+            flex-wrap: unset;
+        }
+    }
+}
