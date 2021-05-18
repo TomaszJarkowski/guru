@@ -3,12 +3,6 @@ import axios from 'axios';
 
 import { StatusFetch } from '../products/productsSlice';
 
-declare const process: {
-    env: {
-        REACT_APP_PROJECTS: string;
-    };
-};
-
 type img = {
     src: string;
 };
@@ -60,13 +54,13 @@ export const selectArticlesState = (state: any): articlesState => state.articles
 export default slice.reducer;
 
 export const fetchArticles = () => async (dispatch: Function) => {
-    const url = process.env.REACT_APP_PROJECTS;
+    const url = `${process.env.REACT_APP_API}/articles`;
 
     dispatch(setLoadingFetch());
     await new Promise((r) => setTimeout(r, 2000));
 
     try {
-        const res = await axios.get('http://localhost:3004/articles');
+        const res = await axios.get(url);
         dispatch(setArticles(res.data));
     } catch (err) {
         dispatch(setErrorFetch(err.message));

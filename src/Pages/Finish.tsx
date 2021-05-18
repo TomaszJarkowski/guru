@@ -1,4 +1,4 @@
-import { Container } from '../components/Container/Container';
+import { Container } from '../components/UI/Container/Container';
 
 import finishIMG from '../img/finish.svg';
 

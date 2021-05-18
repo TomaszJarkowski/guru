@@ -5,7 +5,7 @@ import axios from 'axios';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import { Loader } from '../../Loader/Loader';
+import { Loader } from '../../UI/Loader/Loader';
 
 import './Newslatter.scss';
 
@@ -43,9 +43,10 @@ export const Newslatter = () => {
     const onSubmit = async (data: TData) => {
         setIsLoading(true);
         setFirstTime(false);
+        const url = `${process.env.REACT_APP_API}/newslatter`
 
         try {
-            await axios.post('http://localhost:3004/newslatter', data);
+            await axios.post(url, data);
             setCorrectEmail(true);
             reset();
         } catch (e) {

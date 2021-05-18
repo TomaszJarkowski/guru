@@ -1,6 +1,6 @@
 import { Content } from '../components/Basket/Content';
-import { Container } from '../components/Container/Container';
-import { Title } from '../components/Title/Title';
+import { Container } from '../components/UI/Container/Container';
+import { Title } from '../components/UI/Title/Title';
 
 export const Basket: React.FC = () => (
     <Container>

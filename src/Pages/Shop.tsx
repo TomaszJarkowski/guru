@@ -1,6 +1,6 @@
-import { Container } from '../components/Container/Container';
+import { Container } from '../components/UI/Container/Container';
 import { Content } from '../components/Shop/Content';
-import { Title } from '../components/Title/Title';
+import { Title } from '../components/UI/Title/Title';
 
 export const Shop = () => (
     <div className='shop'>

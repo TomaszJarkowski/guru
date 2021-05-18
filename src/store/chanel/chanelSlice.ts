@@ -5,7 +5,7 @@ import { StatusFetch } from '../products/productsSlice';
 
 declare const process: {
     env: {
-        REACT_APP_PROJECTS: string;
+        REACT_APP_YT: string;
     };
 };
 
@@ -62,14 +62,13 @@ export const selectChanelState = (state: any): ChanelState => state.chanel;
 export default slice.reducer;
 
 export const fetchFilms = () => async (dispatch: Function) => {
-    const url = process.env.REACT_APP_PROJECTS;
+    const url = process.env.REACT_APP_YT;
 
     dispatch(setLoadingFetch());
     await new Promise((r) => setTimeout(r, 2000));
-    const URL =
-        'https://www.googleapis.com/youtube/v3/search?key=AIzaSyB_YCvOT3hkl5pwoQF8Gpd8_OSkIiYwZSg&channelId=UCJQn_8gbzx8m0Dh094YWi9Q&part=snippet,id&order=date&maxResults=4';
+
     try {
-        const res = await axios.get(URL);
+        const res = await axios.get(url);
         dispatch(setFilms(res.data.items));
     } catch (err) {
         dispatch(setErrorFetch(err.message));

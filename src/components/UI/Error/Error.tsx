@@ -1,4 +1,4 @@
-import '../Empty/Empty.scss';
+import '../../UI/Empty/Empty.scss';
 
 import imgError from '../../../img/error.svg';
 

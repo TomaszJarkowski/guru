@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { selectChanelState, TFilm, fetchFilms } from '../../../store/chanel/chanelSlice';
 import { StatusFetch } from '../../../store/products/productsSlice';
-import { Loader } from '../../Loader/Loader';
-import { Error } from '../../Shop/Error/Error';
+import { Loader } from '../../UI/Loader/Loader';
+import { Error } from '../../UI/Error/Error';
 
 import './YouTubeChanel.scss';
 

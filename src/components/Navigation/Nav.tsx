@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 import { Basket } from './Basket';
-import { Container } from '../Container/Container';
+import { Container } from '../UI/Container/Container';
 
 import './Nav.scss';
 

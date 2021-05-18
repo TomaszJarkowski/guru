@@ -1,12 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-declare const process: {
-    env: {
-        REACT_APP_PROJECTS: string;
-    };
-};
-
 export enum StatusFetch {
     LOADING = 'LOADING',
     SUCCESS = 'SUCCESS',
@@ -60,12 +54,12 @@ export const selectProductsState = (state: any): ProductsState => state.products
 export default slice.reducer;
 
 export const fetchProducts = () => async (dispatch: Function) => {
-    const url = process.env.REACT_APP_PROJECTS;
+    const url = `${process.env.REACT_APP_API}/products`;
 
     dispatch(setLoadingFetch());
 
     try {
-        const res = await axios.get('http://localhost:3004/products');
+        const res = await axios.get(url);
         dispatch(setProducts(res.data));
     } catch (err) {
         dispatch(setErrorFetch(err.message));

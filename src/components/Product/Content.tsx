@@ -10,9 +10,9 @@ import {
     selectProductsState,
     StatusFetch
 } from '../../store/products/productsSlice';
-import { Loader } from '../Loader/Loader';
-import { Empty } from '../Shop/Empty/Empty';
-import { Error } from '../Shop/Error/Error';
+import { Loader } from '../UI/Loader/Loader';
+import { Empty } from '../UI/Empty/Empty';
+import { Error } from '../UI/Error/Error';
 import { Info } from './Info/Info';
 
 import './Content.scss';
@@ -62,7 +62,7 @@ export const Content: React.FC = () => {
                             />
                         </div>
                     ) : (
-                        <Empty />
+                        <Empty>The product with this ID does not exist</Empty>
                     )}
                 </>
             )}

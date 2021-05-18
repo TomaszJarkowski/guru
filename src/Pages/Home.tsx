@@ -2,7 +2,7 @@ import { Carusela } from '../components/Home/Carusela/Carusela';
 import { Newslatter } from '../components/Home/Newslatter/Newslatter';
 import { YouTubeChanel } from '../components/Home/YT/YouTubeChanel';
 import { Articles } from '../components/Home/Articles/Articles';
-import { Container } from '../components/Container/Container';
+import { Container } from '../components/UI/Container/Container';
 import { OurTeam } from '../components/Home/OurTeam/OurTeam';
 import { Illustration } from '../components/Home/Illustration/Illustration';
 import { LatestProduct } from '../components/Home/LatestProduct/LatestProduct';

@@ -5,11 +5,11 @@ import { Products } from './Products/Products';
 import { Pagination } from './Pagination/Pagination';
 import { Sort } from './Sort/Sort';
 import { fetchProducts, selectProductsState } from '../../store/products/productsSlice';
-import { Loader } from '../Loader/Loader';
+import { Loader } from '../UI/Loader/Loader';
 import { StatusFetch } from '../../store/products/productsSlice';
 import { TProduct } from './Product/Product';
-import { Error } from './Error/Error';
-import { Empty } from './Empty/Empty';
+import { Error } from '../UI/Error/Error';
+import { Empty } from '../UI/Empty/Empty';
 
 export const Content = () => {
     const dispatch = useDispatch();
@@ -65,7 +65,7 @@ export const Content = () => {
                             />
                         </>
                     ) : (
-                        <Empty />
+                        <Empty>The product list is empty!</Empty>
                     )}
                 </>
             )}

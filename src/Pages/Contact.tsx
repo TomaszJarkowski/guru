@@ -1,5 +1,5 @@
-import { Container } from '../components/Container/Container';
-import { Title } from '../components/Title/Title';
+import { Container } from '../components/UI/Container/Container';
+import { Title } from '../components/UI/Title/Title';
 
 import '../scss/Contact.scss';
 

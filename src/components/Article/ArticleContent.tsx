@@ -4,9 +4,9 @@ import { useParams } from 'react-router';
 
 import { fetchArticles, selectArticlesState } from '../../store/articles/articlesSlice';
 import { StatusFetch } from '../../store/products/productsSlice';
-import { Loader } from '../Loader/Loader';
-import { Empty } from '../Shop/Empty/Empty';
-import { Error } from '../Shop/Error/Error';
+import { Loader } from '../UI/Loader/Loader';
+import { Empty } from '../UI/Empty/Empty';
+import { Error } from '../UI/Error/Error';
 
 import './ArticleContent.scss';
 
@@ -116,7 +116,7 @@ export const ArticleContent: React.FC = () => {
                             </p>
                         </div>
                     ) : (
-                        <Empty />
+                        <Empty>The article with this ID does not exist</Empty>
                     )}
                 </>
             )}

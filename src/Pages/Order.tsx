@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Prompt } from 'react-router-dom';
 
-import { Container } from '../components/Container/Container';
+import { Container } from '../components/UI/Container/Container';
 import { Step1 } from '../components/Order/Step1/Step1';
 import { Step2 } from '../components/Order/Step2/Step2';
 import { Step3 } from '../components/Order/Step3/Step3';

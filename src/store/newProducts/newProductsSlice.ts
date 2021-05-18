@@ -3,12 +3,6 @@ import axios from 'axios';
 
 import { Product, StatusFetch } from '../products/productsSlice';
 
-declare const process: {
-    env: {
-        REACT_APP_PROJECTS: string;
-    };
-};
-
 type NewProductsState = {
     newProducts: Product[];
     errorMessage: string;
@@ -48,12 +42,12 @@ export const selectNewProductsState = (state: any): NewProductsState => state.ne
 export default slice.reducer;
 
 export const fetchNewProducts = () => async (dispatch: Function) => {
-    const url = process.env.REACT_APP_PROJECTS;
+    const url = `${process.env.REACT_APP_API}/new-products`;
 
     dispatch(setLoadingFetch());
 
     try {
-        const res = await axios.get('http://localhost:3004/new-products');
+        const res = await axios.get(url);
         dispatch(setNewProducts(res.data));
     } catch (err) {
         dispatch(setErrorFetch(err.message));
