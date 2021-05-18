@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ErrorOption, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import ReactTooltip from 'react-tooltip';
 
 import { firstStep, selectOrderState } from '../../../store/order/orderSlice';
 
@@ -91,6 +92,7 @@ export const Step1: React.FC = () => {
 
     return (
         <form className='form-step' onSubmit={handleSubmit(onSubmit)}>
+            <ReactTooltip effect='solid' place='right' type='dark' />
             <div className='logo'>
                 <img src={guruLogo} alt='logo' />
             </div>
@@ -99,21 +101,39 @@ export const Step1: React.FC = () => {
                 <label htmlFor='firstName'>
                     First Name<span>*</span>
                 </label>
-                <input {...register('firstName')} type='text' name='firstName' id='firstName' />
+                <input
+                    {...register('firstName')}
+                    type='text'
+                    name='firstName'
+                    id='firstName'
+                    data-tip='Min width: 3'
+                />
                 {!errors.firstName ? <CorrectInput /> : <WrongInput />}
             </div>
             <div className='input lastName'>
                 <label htmlFor='lastName'>
                     Last Name<span>*</span>
                 </label>
-                <input {...register('lastName')} type='text' name='lastName' id='lastName' />
+                <input
+                    {...register('lastName')}
+                    type='text'
+                    name='lastName'
+                    id='lastName'
+                    data-tip='Min width: 3'
+                />
                 {!errors.lastName ? <CorrectInput /> : <WrongInput />}
             </div>
             <div className='input email'>
                 <label htmlFor='email'>
                     Email<span>*</span>
                 </label>
-                <input {...register('email')} type='email' name='email' id='email' />
+                <input
+                    {...register('email')}
+                    type='email'
+                    name='email'
+                    id='email'
+                    data-tip='Must be email'
+                />
                 {!errors.email ? <CorrectInput /> : <WrongInput />}
             </div>
             <div className='input phone'>
@@ -127,6 +147,7 @@ export const Step1: React.FC = () => {
                     id='phone'
                     placeholder='123455678'
                     pattern='[0-9]{9}'
+                    data-tip='Lenght: 9'
                 />
                 {!errors.phone ? <CorrectInput /> : <WrongInput />}
             </div>
@@ -134,14 +155,26 @@ export const Step1: React.FC = () => {
                 <label htmlFor='city'>
                     City<span>*</span>
                 </label>
-                <input {...register('city')} type='text' name='city' id='city' />
+                <input
+                    {...register('city')}
+                    type='text'
+                    name='city'
+                    id='city'
+                    data-tip='Min width: 3'
+                />
                 {!errors.city ? <CorrectInput /> : <WrongInput />}
             </div>
             <div className='input address'>
                 <label htmlFor='address'>
                     Address<span>*</span>
                 </label>
-                <input type='text' {...register('address')} name='address' id='address' />
+                <input
+                    type='text'
+                    {...register('address')}
+                    name='address'
+                    id='address'
+                    data-tip='Min width: 3'
+                />
                 {!errors.address ? <CorrectInput /> : <WrongInput />}
             </div>
             <div className='input postalCode'>
@@ -155,6 +188,7 @@ export const Step1: React.FC = () => {
                     id='postalCode'
                     placeholder='12-345'
                     pattern='[0-9]{2}-[0-9]{3}'
+                    data-tip='Min width: 1'
                 />
                 {!errors.postalCode ? <CorrectInput /> : <WrongInput />}
             </div>
