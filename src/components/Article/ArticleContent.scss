@@ -1,0 +1,39 @@
+@import '../../scss/Variables.scss';
+
+.ArticleContent {
+    background-color: white;
+    color: black;
+
+    .single-article {
+        padding: 20px;
+
+        @media (min-width: 600px) {
+            padding: 20px 40px;
+        }
+
+        h2 {
+            font-size: 30px;
+            text-shadow: 0 0 2px $c-primary;
+            border-left: 4px solid $c-primary;
+            padding-left: 10px;
+
+            @media (min-width: 450px) {
+                font-size: $fs-xxl;
+            }
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: $br-l;
+            margin: $m-md 0;
+        }
+
+        p {
+            border-top: 4px solid $c-primary;
+            padding-top: 10px;
+            text-align: justify;
+            line-height: 22px;
+        }
+    }
+}

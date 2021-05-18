@@ -54,7 +54,7 @@ export const Articles = () => {
                                     <h2>{article.title}</h2>
                                     <img src={article.imgs[0].src} alt='' />
                                     <Description description={article.description} />
-                                    <Link to={`/articles/${article.id}`}>
+                                    <Link to={`/article/${article.id}`}>
                                         <button className='btn'>Read more</button>
                                     </Link>
                                 </div>
