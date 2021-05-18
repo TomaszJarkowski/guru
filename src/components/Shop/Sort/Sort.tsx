@@ -1,4 +1,11 @@
 import { useState } from 'react';
+import {
+    sortByPriceHighToLow,
+    sortByPriceLowToHigh,
+    sortByStatus,
+    sortByNameAToZ,
+    sortByNameZToA
+} from '../../../helpers/helpers';
 
 import { TProduct } from '../Product/Product';
 
@@ -35,15 +42,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 }
                 onClick={() => {
                     setActiveSort(6);
-                    setSortedProducts(
-                        [...products].sort(function (a, b) {
-                            let fa = a.status;
-                            if (fa === 'new') {
-                                return -1;
-                            }
-                            return 0;
-                        })
-                    );
+                    setSortedProducts(sortByStatus(products));
                 }}>
                 News
             </button>
@@ -55,13 +54,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 }
                 onClick={() => {
                     setActiveSort(2);
-                    setSortedProducts(
-                        [...products]
-                            .sort(function (a, b) {
-                                return a.price - b.price;
-                            })
-                            .reverse()
-                    );
+                    setSortedProducts(sortByPriceHighToLow(products));
                 }}>
                 Price high to low
             </button>
@@ -73,11 +66,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 }
                 onClick={() => {
                     setActiveSort(3);
-                    setSortedProducts(
-                        [...products].sort(function (a, b) {
-                            return a.price - b.price;
-                        })
-                    );
+                    setSortedProducts(sortByPriceLowToHigh(products));
                 }}>
                 Price low to high
             </button>
@@ -89,19 +78,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 }
                 onClick={() => {
                     setActiveSort(4);
-                    setSortedProducts(
-                        [...products].sort(function (a, b) {
-                            let fa = a.name.toLowerCase(),
-                                fb = b.name.toLowerCase();
-                            if (fa < fb) {
-                                return -1;
-                            }
-                            if (fa > fb) {
-                                return 1;
-                            }
-                            return 0;
-                        })
-                    );
+                    setSortedProducts(sortByNameAToZ(products));
                 }}>
                 Product Name - A to Z
             </button>
@@ -113,21 +90,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 }
                 onClick={() => {
                     setActiveSort(5);
-                    setSortedProducts(
-                        [...products]
-                            .sort(function (a, b) {
-                                let fa = a.name.toLowerCase(),
-                                    fb = b.name.toLowerCase();
-                                if (fa < fb) {
-                                    return -1;
-                                }
-                                if (fa > fb) {
-                                    return 1;
-                                }
-                                return 0;
-                            })
-                            .reverse()
-                    );
+                    setSortedProducts(sortByNameZToA(products));
                 }}>
                 Product Name - Z to A
             </button>
