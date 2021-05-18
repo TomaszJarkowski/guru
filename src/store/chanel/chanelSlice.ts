@@ -65,7 +65,6 @@ export const fetchFilms = () => async (dispatch: Function) => {
     const url = process.env.REACT_APP_YT;
 
     dispatch(setLoadingFetch());
-    await new Promise((r) => setTimeout(r, 2000));
 
     try {
         const res = await axios.get(url);
