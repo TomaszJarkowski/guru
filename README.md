@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# Guru
+Fishing online store. Education and portfolio project. [LINK]()
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![screen__one]('./src/img/screen1.png')
 
-## Available Scripts
+## General information :page_facing_up:
 
-In the project directory, you can run:
+The Guru online store is a website created for learning. The website was built using the MERN stack. Before starting the project, some requirements for creating this page were set, these requirements are at the bottom of the readme. You can add products to the basket, fill out the order form and place an order, you can also subscribe to our newsletter or read our articles. In the basket, we can remove products, increase and decrease their quantity, and also go to the next stage, which is "Order". The site is also connected to YouTube and the last 4 videos are displayed.
 
-### `npm start`
+![screen__two]('./src/img/screen2.png')
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started :envelope_with_arrow:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+See the program operation in the link below or download the project, download it to your computer. Then follow the instructions. (Instead of downloading the project, you can also use the **git clone** command)
 
-### `npm test`
+### Installing :open_file_folder:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create an "**.env**" file in the project's root directory, then copy the entire contents of the "**.env.tpl**" file and paste it into "**.env**" and replace "**URL**" with the correct paths
 
-### `npm run build`
+To initiate the project, enter in the terminal:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Build the client, enter in the terminal:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run build
+```
 
-### `npm run eject`
+To start a live server, enter in the terminal:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Core technologies :rocket:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* React.js
+* Typescript
+* Redux
+* SCSS 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Additional technologies :link:
 
-## Learn More
+* Axios
+* Yup
+* @reduxjs/toolkit
+* React-router
+* React-hook-form
+* React-tooltip
+* React-toastify
+* React Portal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Customer Requirements :bulb:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [x] Each product has its own page 
+- [x] The product may have the status "new"
+- [x] The ability to sort products
+- [x] The ability to paginate products
+- [x] Notification after adding the product to the cart
+- [x] Show the last 4 videos from YT on main page
+- [x] There are products with the status "new" on the home page
+- [x] Form for subscribing to the newsletter
+- [x] Each article has its own page
+- [x] Multi-step form
+- [x] You can go back to the last steo in the multi-step form
+- [x] After hovering over the input, a tooltip with the requirements appears in the form
+- [x] If you are placing an order and want to leave the page, a warning should appear
+- [x] After correctly placing the order, you are redirected to the finish page
+- [x] If the path is incorrect, an error page should appear
+
+## Author :poland:
+
+- **Jarkowski Tomasz** 
+
+## License :closed_book:
+
+For personal use only. Do not distribute.
