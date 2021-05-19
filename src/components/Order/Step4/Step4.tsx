@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 import { finish, reduceStep, selectOrderState } from '../../../store/order/orderSlice';
 import { clearBasket, selectBasketState } from '../../../store/basket/basketSlice';
@@ -44,6 +45,7 @@ export const Step4: React.FC = () => {
         dispatch(finish());
         dispatch(clearBasket());
         redirect();
+        toast.success('Your order has been received! 🎉');
     };
 
     return (

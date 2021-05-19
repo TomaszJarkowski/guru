@@ -67,27 +67,17 @@
     }
 
     a.basket__link {
-        width: 55px;
-        padding: 2px;
         border: 2px $c-primary solid;
         border-radius: $br-m;
         margin: 0 $m-sm;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
 
         @media (min-width: 500px) {
-            width: 70px;
             margin-right: $m-md;
         }
-
-        &:hover {
-            background-color: $c-primary;
-        }
-    }
-
-    .link__content {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        cursor: pointer;
 
         span {
             margin-right: $m-xs;
@@ -103,6 +93,16 @@
                 font-size: $fs-lg;
             }
         }
+
+        &:hover {
+            background-color: $c-primary;
+        }
+    }
+
+    .link__content {
+        display: flex;
+        align-items: center;
+        padding: 10px;
 
         @media (min-width: 500px) {
             margin-right: $m-md;

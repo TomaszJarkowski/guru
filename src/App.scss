@@ -13,7 +13,7 @@ body {
 }
 
 .errorPage {
-    background-color: rgb(255, 199, 199);
+    background-color: #fff;
     color: $c-dark;
     padding: 40px 0;
 
@@ -32,22 +32,44 @@ body {
 }
 
 .finishPage {
-    background-color: rgb(165, 212, 94);
-    padding: 40px 0;
+    background-color: rgb(255, 255, 255);
 
-    h1 {
+    &__title {
         color: white;
         font-size: $fs-xxl;
-        text-shadow: 0 0 10px $c-green;
         text-align: center;
         margin-bottom: $m-lg;
+        background: linear-gradient(to right, #0575e6, #00f260);
+        padding: 20px 0;
 
         @media (min-width: 700px) {
             font-size: $fs-xxxl;
         }
     }
 
-    img {
+    &__info {
+        color: $c-dark;
+        text-align: center;
+        font-size: $fs-lg;
+    }
+
+    &__link {
+        display: block;
+        padding: 13px;
+        max-width: 120px;
+        text-align: center;
+        margin: $m-lg auto;
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+
+    &__img {
         width: 80%;
         display: block;
         margin: 0 auto;

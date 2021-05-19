@@ -1,15 +1,22 @@
+import React from 'react';
 import { createPortal } from 'react-dom';
 import { useHistory } from 'react-router-dom';
 
 import './Modal.scss';
 
-export const Modal = ({ children }: any) => {
+type TModal = {
+    children: React.ReactNode
+}
+
+export const Modal: React.FC<TModal> = ({ children }) => {
     const history = useHistory();
 
-    const handleClose = (e: any) => {
+    const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
         history.goBack();
     };
+
+    const modal = document.querySelector('#modal');
 
     return createPortal(
         <div className='modal__wrapper' onClick={handleClose}>
@@ -20,6 +27,6 @@ export const Modal = ({ children }: any) => {
                 {children}
             </div>
         </div>,
-        document.querySelector('#modal') as any
+        modal as HTMLDivElement
     );
 };

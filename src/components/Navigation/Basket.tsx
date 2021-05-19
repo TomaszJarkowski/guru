@@ -8,10 +8,8 @@ export const Basket = () => {
 
     return (
         <NavLink activeClassName='is-active' className='basket__link' to={'/basket'}>
-            <div className='link__content'>
-                <span>{number}</span>
-                <i className='fas fa-shopping-cart'></i>
-            </div>
+            <span>{number}</span>
+            <i className='fas fa-shopping-cart'></i>
         </NavLink>
     );
 };
