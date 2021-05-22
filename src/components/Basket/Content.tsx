@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Products } from './Products/Products';
+import { BasketItems } from './BasketItems/BasketItems';
 import { BasketEmpty } from './BasketEmpty/BasketEmpty';
 import { clearBasket, selectBasketState } from '../../store/basket/basketSlice';
 
@@ -16,17 +16,17 @@ export const Content: React.FC = () => {
     };
 
     return (
-        <div className='basket'>
-            <div className='basket__info'>
+        <div className='Basket'>
+            <div className='Basket__info'>
                 <h3>Product</h3>
                 <h3>Quantity</h3>
                 <h3>Total</h3>
             </div>
-            {basket.length > 0 ? <Products basket={basket} /> : <BasketEmpty />}
-            <div className='basket__subtotal'>
+            {basket.length > 0 ? <BasketItems basket={basket} /> : <BasketEmpty />}
+            <div className='Basket__subtotal'>
                 <h3>Subtotal: ${cost}</h3>
             </div>
-            <div className='basket__buttons'>
+            <div className='Basket__buttons'>
                 {basket.length > 0 ? (
                     <>
                         <button onClick={clear}>Clear cart</button>

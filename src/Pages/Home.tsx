@@ -8,17 +8,17 @@ import { Illustration } from '../components/Home/Illustration/Illustration';
 import { LatestProduct } from '../components/Home/LatestProduct/LatestProduct';
 import { NewProducts } from '../components/Home/NewProducts/NewProducts';
 
-import '../scss/Home.scss';
+import './scss/Home.scss';
 
 export const Home = () => (
     <Container>
-        <div className='home'>
+        <div className='HomePage'>
             <Carusela />
             <Illustration />
             <Articles />
             <LatestProduct />
-            <div className='background-img'>
-                <h1>Guru Fishing Tackle</h1>
+            <div className='HomePage__about'>
+                <h2 className='title'>Guru Fishing Tackle</h2>
                 <p className='description'>
                     In 2009 saw the launch of Korda’s sister brand, Guru. A fantastic new company
                     striving to take match & coarse fishing tackle to the next level. The most

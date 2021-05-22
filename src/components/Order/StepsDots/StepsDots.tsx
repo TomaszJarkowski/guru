@@ -8,13 +8,13 @@ export const StepDots: React.FC = () => {
     const { step } = useSelector(selectOrderState);
 
     return (
-        <div className='dots'>
-            <div className='dot' style={{ backgroundColor: '#00f260' }}>
+        <div className='StepsDots'>
+            <div className='StepsDots__dot' style={{ backgroundColor: '#00f260' }}>
                 <h3>Address</h3>
                 <i className='fas fa-angle-double-right'></i>
             </div>
             <div
-                className='dot'
+                className='StepsDots__dot'
                 style={
                     step >= 2
                         ? { backgroundColor: '#00f260' }
@@ -24,7 +24,7 @@ export const StepDots: React.FC = () => {
                 <i className='fas fa-angle-double-right'></i>
             </div>
             <div
-                className='dot'
+                className='StepsDots__dot'
                 style={
                     step >= 3
                         ? { backgroundColor: '#00f260' }
@@ -34,7 +34,7 @@ export const StepDots: React.FC = () => {
                 <i className='fas fa-angle-double-right'></i>
             </div>
             <div
-                className='dot'
+                className='StepsDots__dot'
                 style={
                     step === 4
                         ? { backgroundColor: '#00f260' }

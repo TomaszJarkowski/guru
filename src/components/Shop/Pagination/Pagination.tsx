@@ -2,13 +2,13 @@ import { useState } from 'react';
 
 import './Pagination.scss';
 
-export interface PaginationProps {
+type TPagination = {
     productsPerPage: number;
     totalProducts: number;
     paginate: (pageNumber: number) => void;
 }
 
-export const Pagination: React.FC<PaginationProps> = ({
+export const Pagination: React.FC<TPagination> = ({
     productsPerPage,
     totalProducts,
     paginate
@@ -21,11 +21,12 @@ export const Pagination: React.FC<PaginationProps> = ({
     }
 
     return (
-        <ul className='pagination'>
+        <ul className='Pagination'>
             {pageNumbers.map((number) => (
-                <li key={number} className='pagination-item'>
+                <li key={number} className='Pagination__item'>
                     {number === decoration ? (
                         <button
+                            className='Pagination__btn'
                             style={{ backgroundColor: '#4f9064' }}
                             onClick={() => {
                                 paginate(number);
@@ -35,6 +36,7 @@ export const Pagination: React.FC<PaginationProps> = ({
                         </button>
                     ) : (
                         <button
+                            className='Pagination__btn'
                             onClick={() => {
                                 paginate(number);
                                 setDecoration(number);

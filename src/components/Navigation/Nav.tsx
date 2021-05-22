@@ -28,7 +28,7 @@ export const Nav: React.FC = () => {
     );
 
     const menu = listOfLinks.map((item) => (
-        <li key={item.name} className='navigation__item'>
+        <li key={item.name} className='Navigation__item'>
             <NavLink
                 activeClassName='is-active'
                 to={item.path}
@@ -40,16 +40,18 @@ export const Nav: React.FC = () => {
 
     return (
         <nav
-            className='navigation'
+            className='Navigation'
             style={
                 positionSticky
                     ? { position: 'sticky', top: 0, left: 0, right: 0 }
                     : { position: 'relative' }
             }>
             <Container>
-                <img className='navigation__logo' src={url} alt='navigation-logo' />
-                <ul className='navigation__items'>{menu}</ul>
-                <Basket />
+                <div className='Navigation__container'>
+                    <img className='Navigation__logo' src={url} alt='navigation-logo' />
+                    <ul className='Navigation__items'>{menu}</ul>
+                    <Basket />
+                </div>
             </Container>
         </nav>
     );

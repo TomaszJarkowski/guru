@@ -7,11 +7,11 @@ import './LatestProduct.scss';
 import img5 from '../../../img/new-product.jpg';
 import img14 from '../../../img/latest-product.jpg';
 
-const Product = () => {
+const NewProduct = () => {
     return (
-        <div className='news__products'>
-            <h2>Super MWG</h2>
-            <p>
+        <div className='NewProduct'>
+            <h2 className='NewProduct__title'>Super MWG</h2>
+            <p className='NewProduct__text'>
                 The MWG (Match Wide Gape) hook pattern has been a massive success since its launch,
                 and there’s now a new version joining the already extensive range of Guru hooks. The
                 Guru Super MWGs feature a PTFE coating, which gives it a duller finish, as well as
@@ -27,7 +27,7 @@ const Product = () => {
                 comes with a durable PTFE coating and this takes the hook to a whole new level of
                 sharpness and strength.
             </p>
-            <img src={img14} alt='new product' />
+            <img className='NewProduct__img' src={img14} alt='new product' />
         </div>
     );
 };
@@ -35,10 +35,10 @@ const Product = () => {
 export const LatestProduct = () => {
     return (
         <>
-            <div className='last-products'>
-                <div className='last-products__item'>
-                    <h2>Latest Products</h2>
-                    <p>
+            <div className='LastProducts'>
+                <div className='LastProducts__item'>
+                    <h2 className='LastProducts__title'>Latest Products</h2>
+                    <p className='LastProducts__description'>
                         Our busy team of designers, engineers and consultants are constantly working
                         on exciting new products. Our main objective is to produce items that are
                         practical, well-engineered, affordable and most importantly, tackle that
@@ -47,15 +47,15 @@ export const LatestProduct = () => {
                         developments.
                     </p>
                     <NavLink to='/home/new-products'>
-                        <button>New Products</button>
+                        <button className='LastProducts__btn'>New Products</button>
                     </NavLink>
                 </div>
-                <img src={img5} alt='our new product' />
+                <img src={img5} className='LastProducts__img' alt='our new product' />
             </div>
             <Switch>
                 <Route path='/home/new-products'>
                     <Modal>
-                        <Product />
+                        <NewProduct />
                     </Modal>
                 </Route>
             </Switch>

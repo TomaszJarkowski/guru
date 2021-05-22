@@ -15,7 +15,7 @@ export type TProduct = {
     pathIMG: string;
 };
 
-export interface ProductProps {
+type ProductProps = {
     product: TProduct;
 }
 
@@ -33,16 +33,16 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
     };
 
     return (
-        <div key={product.id} className='product'>
-            {product.status === 'new' && <div className='product__new'>new</div>}
-            <img className='product__img' src={product.pathIMG} alt='product' />
-            <h3 className='product__name'>{product.name}</h3>
-            <h3 className='product__price'>Price: {product.price} $</h3>
-            <div className='product__buttons'>
-                <button className='product__btn' onClick={redirectToProduct}>
+        <div key={product.id} className='Product'>
+            {product.status === 'new' && <div className='Product__new'>new</div>}
+            <img className='Product__img' src={product.pathIMG} alt='product' />
+            <h3 className='Product__name'>{product.name}</h3>
+            <h3 className='Product__price'>Price: {product.price} $</h3>
+            <div className='Product__buttons'>
+                <button className='Product__btn' onClick={redirectToProduct}>
                     <i className='fas fa-info'></i>
                 </button>
-                <button className='product__btn' onClick={addProductToBasket}>
+                <button className='Product__btn' onClick={addProductToBasket}>
                     <i className='fas fa-cart-plus'></i>
                 </button>
             </div>

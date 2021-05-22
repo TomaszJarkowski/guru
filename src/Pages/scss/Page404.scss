@@ -1,0 +1,20 @@
+@import '../../scss/Variables.scss';
+
+.ErrorPage {
+    background-color: #fff;
+    color: $c-dark;
+    padding: 40px 0;
+
+    &__title {
+        font-size: $fs-xl;
+        text-align: center;
+        margin-bottom: $m-lg;
+    }
+
+    &__img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+}

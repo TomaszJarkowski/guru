@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { secondStep, reduceStep, selectOrderState } from '../../../store/order/orderSlice';
+import { HeaderStep } from '../HeaderStep/HeaderStep';
 
 import './Step2.scss';
 
@@ -9,7 +10,6 @@ import imgDPD from '../../../img/dpd.png';
 import imgUPS from '../../../img/ups.png';
 import imgINPOST from '../../../img/inpost.png';
 import imgDHL from '../../../img/dhl.png';
-import guruLogo from '../../../img/guru_logo.jpg';
 
 const method = [
     {
@@ -62,11 +62,8 @@ export const Step2: React.FC = () => {
     };
 
     return (
-        <form className='form-step'>
-            <div className='logo'>
-                <img src={guruLogo} alt='logo' />
-            </div>
-            <h2 className='header-form'>CHOOSE THE DELIVERY METHOD</h2>
+        <form className='Step'>
+            <HeaderStep>CHOOSE THE DELIVERY METHOD</HeaderStep>
             <div className='delivery__container'>
                 {method.map((el) => (
                     <div
@@ -87,7 +84,7 @@ export const Step2: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <div className='forom__buttons'>
+            <div className='Step__buttons'>
                 <button onClick={back} className='back'>
                     Back
                 </button>

@@ -11,41 +11,41 @@ import img13 from '../../../img/adamRooney.jpg';
 
 export const OurTeam = () => (
     <>
-        <div className='angler__container'>
-            <h1>TEAM</h1>
-            <div className='anglers'>
-                <div className='angler'>
+        <div className='Anglers'>
+            <h1 className='Anglers__title'>TEAM</h1>
+            <div className='Anglers__items'>
+                <div className='Anglers__item'>
                     <img src={img10} alt='angler from team Steve Ringer' />
                     <h2>Steve Ringer</h2>
                 </div>
-                <div className='angler'>
+                <div className='Anglers__item'>
                     <img src={img11} alt='angler from team Matt Godfrey' />
                     <h2>Matt Godfrey</h2>
                 </div>
             </div>
             <NavLink to='/home/team'>
-                <button>Meet our team </button>
+                <button className='Anglers__btn'>Meet our team </button>
             </NavLink>
         </div>
         <Switch>
             <Route path='/home/team'>
                 <Modal>
-                    <div className='ourTeam'>
-                        <div className='outTeam__item'>
-                            <img src={img10} alt='Steve Ringer' />
-                            <h2>Steve Ringer</h2>
+                    <div className='OurTeam'>
+                        <div className='OurTeam__item'>
+                            <img className='OurTeam__img' src={img10} alt='Steve Ringer' />
+                            <h2 className='OurTeam__title'>Steve Ringer</h2>
                         </div>
-                        <div className='outTeam__item'>
-                            <img src={img11} alt='Matt Godfrey' />
-                            <h2>Matt Godfrey</h2>
+                        <div className='OurTeam__item'>
+                            <img className='OurTeam__img' src={img11} alt='Matt Godfrey' />
+                            <h2 className='OurTeam__title'>Matt Godfrey</h2>
                         </div>
-                        <div className='outTeam__item'>
-                            <img src={img12} alt='Andy Bennett' />
-                            <h2>Andy Bennett</h2>
+                        <div className='OurTeam__item'>
+                            <img className='OurTeam__img' src={img12} alt='Andy Bennett' />
+                            <h2 className='OurTeam__title'>Andy Bennett</h2>
                         </div>
-                        <div className='outTeam__item'>
-                            <img src={img13} alt='Adam Rooney' />
-                            <h2>Adam Rooney</h2>
+                        <div className='OurTeam__item'>
+                            <img className='OurTeam__img' src={img13} alt='Adam Rooney' />
+                            <h2 className='OurTeam__title'>Adam Rooney</h2>
                         </div>
                     </div>
                 </Modal>

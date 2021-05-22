@@ -9,18 +9,18 @@ type TInfo = {
 
 export const Info: React.FC<TInfo> = ({ product, addProductToBasket }) => {
     return (
-        <div className='info'>
-            <div className='stars'>
+        <div className='Info'>
+            <div className='Info__stars'>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='far fa-star'></i>
             </div>
-            <h2 className='name'>{product.name}</h2>
-            <h2 className='price'>${product.price}</h2>
-            <h3 className='specifications'>Specifications</h3>
-            <p className='text'>
+            <h2 className='Info__name'>{product.name}</h2>
+            <h2 className='Info__price'>${product.price}</h2>
+            <h3 className='Info__specifications'>Specifications</h3>
+            <p className='Info__text'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores minima qui
                 doloremque sequi ipsum libero dicta magni dolor, quo eaque hic aspernatur nulla
                 dignissimos non nostrum ullam, eveniet porro mollitia. Lorem ipsum dolor sit amet,
@@ -28,7 +28,7 @@ export const Info: React.FC<TInfo> = ({ product, addProductToBasket }) => {
                 dicta magni dolor, quo eaque hic aspernatur nulla dignissimos non nostrum ullam,
                 eveniet porro mollitia eveniet porro mollitia eveniet porro molliti eveniet.
             </p>
-            <button className='btn' onClick={addProductToBasket}>
+            <button className='Info__btn' onClick={addProductToBasket}>
                 Add to Cart
             </button>
         </div>

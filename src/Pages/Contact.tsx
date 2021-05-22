@@ -1,17 +1,17 @@
 import { Container } from '../components/UI/Container/Container';
 import { Title } from '../components/UI/Title/Title';
 
-import '../scss/Contact.scss';
+import './scss/Contact.scss';
 
 import teamGuru from '../img/teamGuru.jpg';
 
 export const Contact = () => (
-    <div className='contact'>
-        <Container>
-            <Title>Contact</Title>
+    <Container>
+        <Title>Contact</Title>
+        <div className='ContactPage'>
             <div className='backgroungIMG'>
-                <div className='contact__contactUs'>
-                    <h2 className='contact__header'>Contact Us</h2>
+                <div className='ContactPage__contactUs'>
+                    <h2 className='ContactPage__header'>Contact Us</h2>
                     <div className='contactUs__item'>
                         <h3>Product Enquiries</h3>
                         <p>
@@ -49,15 +49,15 @@ export const Contact = () => (
                         </p>
                     </div>
                 </div>
-                <div className='contact__oppeningHours'>
-                    <h2 className='contact__header'>Opening Hours</h2>
+                <div className='ContactPage__oppeningHours'>
+                    <h2 className='ContactPage__header'>Opening Hours</h2>
                     <div className='oppeningHours__item'>
                         <p>Monday-Friday: 11 am - 10 pm</p>
                         <p>Saturday-Sunday: 12 am - 10 pm</p>
                     </div>
                 </div>
             </div>
-            <div className='contact__article'>
+            <div className='ContactPage__article'>
                 <h2 className='article__title'>Team Guru - Knowledge is power</h2>
                 <p className='article__description'>
                     The most important part of what we do is making sure that the Guru products that
@@ -80,6 +80,6 @@ export const Contact = () => (
                 src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.8434493387545!2d0.4578503157723108!3d51.571103379645606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8c690a456e441%3A0x3a37f0091c46e13f!2sKorda!5e0!3m2!1spl!2spl!4v1597586439961!5m2!1spl!2spl'
                 style={{ width: '600', height: '450', border: '0' }}
                 aria-hidden='false'></iframe>
-        </Container>
-    </div>
+        </div>
+    </Container>
 );

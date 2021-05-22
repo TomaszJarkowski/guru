@@ -19,9 +19,9 @@ export const Modal: React.FC<TModal> = ({ children }) => {
     const modal = document.querySelector('#modal');
 
     return createPortal(
-        <div className='modal__wrapper' onClick={handleClose}>
-            <div className='modal__content' onClick={(e) => e.stopPropagation()}>
-                <div className='modal__closeIcon' onClick={handleClose}>
+        <div className='Modal__wrapper' onClick={handleClose}>
+            <div className='Modal__content' onClick={(e) => e.stopPropagation()}>
+                <div className='Modal__closeIcon' onClick={handleClose}>
                     X
                 </div>
                 {children}

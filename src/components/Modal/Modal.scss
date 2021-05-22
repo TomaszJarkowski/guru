@@ -1,5 +1,4 @@
-
-.modal__wrapper {
+.Modal__wrapper {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     height: 100%;
@@ -11,7 +10,7 @@
     justify-content: center;
     z-index: 100;
 
-    .modal__content {
+    .Modal__content {
         background-color: #fff;
         position: absolute;
         margin: auto;
@@ -26,7 +25,7 @@
         }
     }
 
-    .modal__closeIcon {
+    .Modal__closeIcon {
         position: absolute;
         right: 10px;
         top: 5px;

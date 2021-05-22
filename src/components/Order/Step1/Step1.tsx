@@ -8,11 +8,10 @@ import * as yup from 'yup';
 import ReactTooltip from 'react-tooltip';
 
 import { firstStep, selectOrderState } from '../../../store/order/orderSlice';
+import { HeaderStep } from '../HeaderStep/HeaderStep';
 
 import './Step1.scss';
-import '../Form-step.scss';
-
-import guruLogo from '../../../img/guru_logo.jpg';
+import '../Steps.scss';
 
 const CorrectInput = () => (
     <div className='correct-input'>
@@ -91,17 +90,15 @@ export const Step1: React.FC = () => {
     }, []);
 
     return (
-        <form className='form-step' onSubmit={handleSubmit(onSubmit)}>
+        <form className='Step' onSubmit={handleSubmit(onSubmit)}>
             <ReactTooltip effect='solid' place='right' type='dark' />
-            <div className='logo'>
-                <img src={guruLogo} alt='logo' />
-            </div>
-            <h2 className='header-form'>SHIPPING ADDRESS</h2>
-            <div className='input firstName'>
-                <label htmlFor='firstName'>
+            <HeaderStep>SHIPPING ADDRESS</HeaderStep>
+            <div className='Step__box'>
+                <label className='Step__label' htmlFor='firstName'>
                     First Name<span>*</span>
                 </label>
                 <input
+                    className='Step__input'
                     {...register('firstName')}
                     type='text'
                     name='firstName'
@@ -110,11 +107,12 @@ export const Step1: React.FC = () => {
                 />
                 {!errors.firstName ? <CorrectInput /> : <WrongInput />}
             </div>
-            <div className='input lastName'>
-                <label htmlFor='lastName'>
+            <div className='Step__box'>
+                <label className='Step__label' htmlFor='lastName'>
                     Last Name<span>*</span>
                 </label>
                 <input
+                    className='Step__input'
                     {...register('lastName')}
                     type='text'
                     name='lastName'
@@ -123,11 +121,12 @@ export const Step1: React.FC = () => {
                 />
                 {!errors.lastName ? <CorrectInput /> : <WrongInput />}
             </div>
-            <div className='input email'>
-                <label htmlFor='email'>
+            <div className='Step__box'>
+                <label className='Step__label' htmlFor='email'>
                     Email<span>*</span>
                 </label>
                 <input
+                    className='Step__input'
                     {...register('email')}
                     type='email'
                     name='email'
@@ -136,11 +135,12 @@ export const Step1: React.FC = () => {
                 />
                 {!errors.email ? <CorrectInput /> : <WrongInput />}
             </div>
-            <div className='input phone'>
-                <label htmlFor='phone'>
+            <div className='Step__box'>
+                <label className='Step__label' htmlFor='phone'>
                     Phone<span>*</span>
                 </label>
                 <input
+                    className='Step__input'
                     {...register('phone')}
                     type='tel'
                     name='phone'
@@ -151,11 +151,12 @@ export const Step1: React.FC = () => {
                 />
                 {!errors.phone ? <CorrectInput /> : <WrongInput />}
             </div>
-            <div className='input city'>
-                <label htmlFor='city'>
+            <div className='Step__box'>
+                <label className='Step__label' htmlFor='city'>
                     City<span>*</span>
                 </label>
                 <input
+                    className='Step__input'
                     {...register('city')}
                     type='text'
                     name='city'
@@ -164,11 +165,12 @@ export const Step1: React.FC = () => {
                 />
                 {!errors.city ? <CorrectInput /> : <WrongInput />}
             </div>
-            <div className='input address'>
-                <label htmlFor='address'>
+            <div className='Step__box'>
+                <label className='Step__label' htmlFor='address'>
                     Address<span>*</span>
                 </label>
                 <input
+                    className='Step__input'
                     type='text'
                     {...register('address')}
                     name='address'
@@ -177,11 +179,12 @@ export const Step1: React.FC = () => {
                 />
                 {!errors.address ? <CorrectInput /> : <WrongInput />}
             </div>
-            <div className='input postalCode'>
-                <label htmlFor='postalCode'>
+            <div className='Step__box'>
+                <label className='Step__label' htmlFor='postalCode'>
                     Postal code<span>*</span>
                 </label>
                 <input
+                    className='Step__input'
                     {...register('postalCode')}
                     type='text'
                     name='postalCode'
@@ -192,17 +195,21 @@ export const Step1: React.FC = () => {
                 />
                 {!errors.postalCode ? <CorrectInput /> : <WrongInput />}
             </div>
-            <div className='input country'>
-                <label htmlFor='country'>
+            <div className='Step__box'>
+                <label className='Step__label' htmlFor='country'>
                     Country<span>*</span>
                 </label>
-                <select {...register('country')} name='country' id='country'>
+                <select
+                    className='Step__select'
+                    {...register('country')}
+                    name='country'
+                    id='country'>
                     <option value='poland'>Poland</option>
                     <option value='usa'>USA</option>
                     <option value='uk'>UK</option>
                 </select>
             </div>
-            <div className='forom__buttons'>
+            <div className='Step__buttons'>
                 <NavLink to={'/basket'}>Back</NavLink>
                 {Object.keys(errors).length === 0 && errors.constructor === Object ? (
                     <button className='active'>Choose Shipping</button>

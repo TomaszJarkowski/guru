@@ -5,11 +5,11 @@ import logo from '../../img/guru_logo.jpg';
 import './Footer.scss';
 
 export const Footer: React.FC = () => (
-    <footer className='footer'>
+    <footer className='Footer'>
         <Container>
-            <div className='footer__content'>
-                <img className='footer__logo' src={logo} alt='guru-logo' />
-                <div className='footer__socials'>
+            <div className='Footer__content'>
+                <img className='Footer__logo' src={logo} alt='guru-logo' />
+                <div className='Footer__socials'>
                     <a
                         href='https://www.facebook.com/Tackle.Guru'
                         target='_blank'
@@ -35,7 +35,7 @@ export const Footer: React.FC = () => (
                         <i className='fab fa-google'></i>
                     </a>
                 </div>
-                <div className='footer__info'>
+                <div className='Footer__info'>
                     <address className='info__contact info-item'>
                         <h3>Contact:</h3>
                         <div className='contact__item'>
@@ -66,13 +66,13 @@ export const Footer: React.FC = () => (
                     </div>
                 </div>
                 <a
-                    className='footer__map'
+                    className='Footer__map'
                     href='https://www.google.pl/maps/place/Korda/@51.5711034,0.4578503,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8c690a456e441:0x3a37f0091c46e13f!8m2!3d51.5711034!4d0.460039'
                     target='_blank'
                     rel='noopener noreferrer'>
                     <i className='fas fa-map-marker-alt link'></i>Map
                 </a>
-                <p className='footer__author'>Coded by Jarkowski Tomasz</p>
+                <p className='Footer__author'>Coded by Jarkowski Tomasz</p>
             </div>
         </Container>
     </footer>

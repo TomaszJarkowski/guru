@@ -1,6 +1,6 @@
 @import '../../../scss/Variables.scss';
 
-.newslatter {
+.Newslatter {
     background-color: white;
     color: black;
     display: flex;
@@ -10,7 +10,7 @@
     text-align: center;
     padding: 30px;
 
-    h2 {
+    &__title {
         font-size: $fs-xl;
         padding: 10px;
         font-weight: bold;
@@ -21,7 +21,7 @@
         }
     }
 
-    p {
+    &__text {
         font-size: $fs-sm;
         padding: 10px;
 
@@ -30,7 +30,7 @@
         }
     }
 
-    label {
+    &__label {
         padding: 10px;
         font-size: $fs-sm;
         font-weight: bold;
@@ -41,13 +41,14 @@
         }
     }
 
-    .error {
+    &__error {
+        margin-top: $m-xs;
         color: $c-red;
         font-weight: bold;
         font-size: $fs-sm;
     }
 
-    input {
+    &__input {
         background: none;
         border-radius: $br-m;
         padding: 10px;
@@ -55,12 +56,12 @@
         border: 2px solid $c-primary;
     }
 
-    input:focus {
+    &__input:focus {
         outline: none;
         border: 2px solid $c-blue;
     }
 
-    .formButton {
+    &__btn {
         margin-left: $m-sm;
         margin-top: $m-sm;
         background: none;
@@ -91,8 +92,9 @@
         }
     }
 
-    .div__results {
+    &__results {
         color: white;
+        margin-top: $m-sm;
     }
 
     .defeat__newslatter {

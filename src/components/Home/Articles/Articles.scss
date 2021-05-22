@@ -1,6 +1,6 @@
 @import '../../../scss/Variables.scss';
 
-.articles {
+.Articles {
     color: $c-dark;
     margin-top: $m-md;
     background-color: $c-green;
@@ -23,11 +23,11 @@
         background-color: $c-blue;
         color: white;
 
-        img {
+        .img {
             width: 250px;
         }
 
-        h2 {
+        .title {
             font-size: $fs-lg;
             padding: 8px 0;
             font-weight: bold;
@@ -63,7 +63,7 @@
         }
     }
 
-    .btn__allArticles {
+    &__btn {
         display: flex;
         justify-content: center;
         align-items: center;

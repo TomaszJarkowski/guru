@@ -11,18 +11,19 @@ import { TProduct } from '../Product/Product';
 
 import './Sort.scss';
 
-export interface SortProps {
+type TSort = {
     products: TProduct[];
     setSortedProducts: React.Dispatch<React.SetStateAction<TProduct[]>>;
-}
+};
 
-export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
+export const Sort: React.FC<TSort> = ({ products, setSortedProducts }) => {
     const [activeSort, setActiveSort] = useState(1);
 
     return (
-        <div className='sort'>
-            <h2>SORT</h2>
+        <div className='Sort'>
+            <h2 className='Sort__title'>SORT</h2>
             <button
+                className='Sort__btn'
                 style={
                     activeSort === 1
                         ? { backgroundColor: '#ffa33b' }
@@ -35,6 +36,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 Default
             </button>
             <button
+                className='Sort__btn'
                 style={
                     activeSort === 6
                         ? { backgroundColor: '#ffa33b' }
@@ -47,6 +49,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 News
             </button>
             <button
+                className='Sort__btn'
                 style={
                     activeSort === 2
                         ? { backgroundColor: '#ffa33b' }
@@ -59,6 +62,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 Price high to low
             </button>
             <button
+                className='Sort__btn'
                 style={
                     activeSort === 3
                         ? { backgroundColor: '#ffa33b' }
@@ -71,6 +75,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 Price low to high
             </button>
             <button
+                className='Sort__btn'
                 style={
                     activeSort === 4
                         ? { backgroundColor: '#ffa33b' }
@@ -83,6 +88,7 @@ export const Sort: React.FC<SortProps> = ({ products, setSortedProducts }) => {
                 Product Name - A to Z
             </button>
             <button
+                className='Sort__btn'
                 style={
                     activeSort === 5
                         ? { backgroundColor: '#ffa33b' }

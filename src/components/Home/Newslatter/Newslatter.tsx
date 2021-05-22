@@ -27,7 +27,7 @@ type TData = {
 
 export const Newslatter = () => {
     const [correctEmail, setCorrectEmail] = useState(false);
-    const [errorEmail, setErrorEmail] = useState('Aleksandra');
+    const [errorEmail, setErrorEmail] = useState('');
     const [firstTime, setFirstTime] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -43,7 +43,7 @@ export const Newslatter = () => {
     const onSubmit = async (data: TData) => {
         setIsLoading(true);
         setFirstTime(false);
-        const url = `${process.env.REACT_APP_API}/newslatter`
+        const url = `${process.env.REACT_APP_API}/newslatter`;
 
         try {
             await axios.post(url, data);
@@ -61,22 +61,30 @@ export const Newslatter = () => {
     };
 
     return (
-        <div className='newslatter'>
-            <h2>Newsletter</h2>
-            <p>
+        <div className='Newslatter'>
+            <h2 className='Newslatter__title'>Newsletter</h2>
+            <p className='Newslatter__text'>
                 Sign up to our newsletter to keep up to date with our latest news and product
                 releases.
             </p>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label htmlFor='email'>Email:</label>
-                <input {...register('email')} type='text' id='emial' name='email' />
-                <input type='submit' className='formButton' value='Subscribe' />
+                <label className='Newslatter__label' htmlFor='email'>
+                    Email:
+                </label>
+                <input
+                    {...register('email')}
+                    className='Newslatter__input'
+                    type='text'
+                    id='emial'
+                    name='email'
+                />
+                <input type='submit' className='Newslatter__btn' value='Subscribe' />
             </form>
-            <p className='error'>{errors.email?.message}</p>
+            <p className='Newslatter__error'>{errors.email?.message}</p>
             {isLoading ? (
                 <Loader />
             ) : (
-                <div className='div__results'>
+                <div className='Newslatter__results'>
                     {!firstTime ? (
                         correctEmail ? (
                             <Success />

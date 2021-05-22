@@ -4,12 +4,11 @@ import { toast } from 'react-toastify';
 
 import { finish, reduceStep, selectOrderState } from '../../../store/order/orderSlice';
 import { clearBasket, selectBasketState } from '../../../store/basket/basketSlice';
+import { HeaderStep } from '../HeaderStep/HeaderStep';
 import { sumNumbers } from '../../../helpers/helpers';
 
 import '../Step2/Step2.scss';
 import './Step4.scss';
-
-import guruLogo from '../../../img/guru_logo.jpg';
 
 export const Step4: React.FC = () => {
     const dispatch = useDispatch();
@@ -49,13 +48,10 @@ export const Step4: React.FC = () => {
     };
 
     return (
-        <form className='form-step'>
-            <div className='logo'>
-                <img src={guruLogo} alt='logo' />
-            </div>
-            <h2 className='header-form'>Finish</h2>
-            <div className='summary'>
-                <div className='summary__basket'>
+        <form className='Step'>
+            <HeaderStep>FINISH</HeaderStep>
+            <div className='Summary'>
+                <div className='Summary__basket'>
                     <h2>Products</h2>
                     {basket.map((product) => (
                         <div key={product.id}>
@@ -65,7 +61,7 @@ export const Step4: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <div className='summary__user'>
+                <div className='Summary__user'>
                     <h2>Address</h2>
                     <h3>First name: {firstName}</h3>
                     <h3>Last name: {lastName}</h3>
@@ -76,18 +72,18 @@ export const Step4: React.FC = () => {
                     <h3>City: {city}</h3>
                     <h3>Address: {address}</h3>
                 </div>
-                <div className='summary__delivery'>
+                <div className='Summary__delivery'>
                     <h2>Delivery</h2>
                     <h3>Delivery method: {deliveryMethod}</h3>
                     <h3>Delivery cost: ${deliveryCost}</h3>
                     <h3>Payment method: {paymentMethod}</h3>
                 </div>
-                <div className='summary__total'>
+                <div className='Summary__total'>
                     <h2>Total cost</h2>
                     <h3>${sumNumbers(cost, deliveryCost as number)}</h3>
                 </div>
             </div>
-            <div className='forom__buttons'>
+            <div className='Step__buttons'>
                 <button onClick={back} className='back'>
                     Back
                 </button>

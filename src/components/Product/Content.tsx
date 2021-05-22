@@ -50,9 +50,9 @@ export const Content: React.FC = () => {
             ) : (
                 <>
                     {products[index] ? (
-                        <div className='single-product'>
+                        <div className='SingleProduct'>
                             <img
-                                className='single-product__img'
+                                className='SingleProduct__img'
                                 src={products[index].pathIMG}
                                 alt='prodcuct img'
                             />

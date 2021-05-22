@@ -1,6 +1,6 @@
 @import '../../../scss/Variables.scss';
 
-.sort {
+.Sort {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
         flex-direction: row;
     }
 
-    h2 {
+    &__title {
         color: black;
         font-size: $fs-lg;
         margin: 0 $m-sm;
@@ -20,7 +20,7 @@
         font-weight: 600;
     }
 
-    button {
+    &__btn {
         padding: 10px;
         color: black;
         border: 2px solid black;

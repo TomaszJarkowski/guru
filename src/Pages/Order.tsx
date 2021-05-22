@@ -9,7 +9,7 @@ import { Step4 } from '../components/Order/Step4/Step4';
 import { StepDots } from '../components/Order/StepsDots/StepsDots';
 import { selectOrderState } from '../store/order/orderSlice';
 
-import '../scss/Order.scss';
+import './scss/Order.scss';
 
 export const Order: React.FC = () => {
     const { step, finish } = useSelector(selectOrderState);
@@ -33,11 +33,9 @@ export const Order: React.FC = () => {
 
     return (
         <Container>
-            <div className='order'>
-                <div className='order__container container'>
-                    <StepDots />
-                    <FormContent />
-                </div>
+            <div className='Order'>
+                <StepDots />
+                <FormContent />
             </div>
             <Prompt when={!finish} message='Are you sure you want to leave this page?' />
         </Container>

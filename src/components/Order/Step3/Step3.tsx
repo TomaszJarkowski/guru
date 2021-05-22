@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { reduceStep, selectOrderState, thirdStep } from '../../../store/order/orderSlice';
+import { HeaderStep } from '../HeaderStep/HeaderStep';
 
 import imgBLIK from '../../../img/blik.png';
-import guruLogo from '../../../img/guru_logo.jpg';
 import imgMBANK from '../../../img/mbank.png';
 import imgCREDITBANK from '../../../img/credit-bank.png';
 import imgCASHONDELIVERY from '../../../img/cashOnDelivery.jpg';
@@ -52,11 +52,8 @@ export const Step3: React.FC = () => {
     };
 
     return (
-        <form className='form-step'>
-            <div className='logo'>
-                <img src={guruLogo} alt='logo' />
-            </div>
-            <h2 className='header-form'>METHOD OF PAYMENT</h2>
+        <form className='Step'>
+            <HeaderStep>METHOD OF PAYMENT</HeaderStep>
             <div className='payment__container'>
                 {methodsPayment.map((el) => (
                     <div
@@ -75,7 +72,7 @@ export const Step3: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <div className='forom__buttons'>
+            <div className='Step__buttons'>
                 <button onClick={back} className='back'>
                     Back
                 </button>
@@ -86,7 +83,7 @@ export const Step3: React.FC = () => {
                         e.preventDefault();
                         onSubmit();
                     }}>
-                    Choose Payment
+                    Summary
                 </button>
             </div>
         </form>

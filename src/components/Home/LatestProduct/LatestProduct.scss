@@ -1,6 +1,6 @@
 @import '../../../scss/Variables.scss';
 
-.last-products {
+.LastProducts {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -13,7 +13,7 @@
         margin-top: $m-lg;
     }
 
-    h2 {
+    &__title {
         font-size: $fs-xl;
         font-weight: bold;
         margin-left: $m-sm;
@@ -23,7 +23,7 @@
         }
     }
 
-    p {
+    &__description {
         padding: 10px;
         max-width: 500px;
         text-align: justify;
@@ -39,7 +39,7 @@
         }
     }
 
-    button {
+    &__btn {
         margin-left: $m-sm;
         background: none;
         text-transform: uppercase;
@@ -68,18 +68,18 @@
         }
     }
 
-    img {
+    &__img {
         width: 90%;
         max-width: 500px;
     }
 }
 
-.news__products {
+.NewProduct {
     color: black;
     border-radius: $br-m;
     background-color: $c-primary;
 
-    h2 {
+    &__title {
         padding: 10px;
         color: white;
         letter-spacing: 2px;
@@ -95,7 +95,7 @@
         }
     }
 
-    p {
+    &__text {
         padding: 5px 10px;
         margin-bottom: $m-sm;
         font-size: $fs-xs;
@@ -111,7 +111,7 @@
         }
     }
 
-    img {
+    &__img {
         width: 150px;
         padding-bottom: 10px;
 

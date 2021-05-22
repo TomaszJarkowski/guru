@@ -1,6 +1,6 @@
 @import '../../../scss/Variables.scss';
 
-.angler__container {
+.Anglers {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,7 @@
     background-image: linear-gradient(to right, #ae454f, #8d3a5b, #65345c, #3e2e51, #1e253c);
     position: relative;
 
-    h1 {
+    &__title {
         position: absolute;
         top: 35%;
         left: 0;
@@ -29,7 +29,7 @@
         }
     }
 
-    .anglers {
+    &__items {
         width: 100%;
         display: flex;
         align-items: center;
@@ -40,19 +40,19 @@
         @media (min-width: 580px) {
             flex-direction: row;
         }
+    }
 
-        .angler {
-            margin-bottom: $m-md;
-            border: 2px solid $c-primary;
-            padding: 10px;
-            border-radius: $br-m;
-            background-color: $c-blue;
-            transition: transform 0.2s linear;
-            color: white;
+    &__item {
+        margin-bottom: $m-md;
+        border: 2px solid $c-primary;
+        padding: 10px;
+        border-radius: $br-m;
+        background-color: $c-blue;
+        transition: transform 0.2s linear;
+        color: white;
 
-            @media (min-width: 580px) {
-                margin: 0 $m-sm;
-            }
+        @media (min-width: 580px) {
+            margin: 0 $m-sm;
         }
 
         h2 {
@@ -65,7 +65,7 @@
         }
     }
 
-    button {
+    &__btn {
         background: none;
         margin-top: $m-sm;
         border: 2px solid $c-primary;
@@ -95,7 +95,7 @@
     }
 }
 
-.ourTeam {
+.OurTeam {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,27 +104,27 @@
     border-radius: $br-m;
     background-color: $c-blue;
 
-    .outTeam__item {
+    &__item {
+        margin: $m-sm;
+    }
+
+    &__title {
+        font-size: $fs-sm;
+        letter-spacing: 1px;
+        font-weight: bold;
         margin: $m-sm;
 
-        h2 {
-            font-size: $fs-sm;
-            letter-spacing: 1px;
-            font-weight: bold;
-            margin: $m-sm;
-
-            @media (min-width: 650px) {
-                font-size: $fs-lg;
-            }
+        @media (min-width: 650px) {
+            font-size: $fs-lg;
         }
+    }
 
-        img {
-            width: 150px;
-            border-radius: $br-m;
+    &__img {
+        width: 150px;
+        border-radius: $br-m;
 
-            @media (min-width: 650px) {
-                width: 250px;
-            }
+        @media (min-width: 650px) {
+            width: 250px;
         }
     }
 }

@@ -1,12 +1,12 @@
-@import './Variables.scss';
+@import '../../scss/Variables.scss';
 
-.contact {
+.ContactPage {
     color: black;
 
     .backgroungIMG {
         padding-top: 20px;
         padding-bottom: 20px;
-        background-image: url("../img//backgroundFisherman.jpeg");
+        background-image: url("../../img/backgroundFisherman.jpeg");
         background-size: cover;
     }
 

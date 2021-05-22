@@ -4,14 +4,14 @@
     background-color: white;
     color: black;
 
-    .single-article {
+    .article {
         padding: 20px;
 
         @media (min-width: 600px) {
             padding: 20px 40px;
         }
 
-        h2 {
+        &__title {
             font-size: 30px;
             text-shadow: 0 0 2px $c-primary;
             border-left: 4px solid $c-primary;
@@ -22,14 +22,14 @@
             }
         }
 
-        img {
+        &__img {
             width: 100%;
             max-width: 500px;
             border-radius: $br-l;
             margin: $m-md 0;
         }
 
-        p {
+        &__description {
             border-top: 4px solid $c-primary;
             padding-top: 10px;
             text-align: justify;

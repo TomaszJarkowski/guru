@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
-.form-step {
-    .input {
+.Step {
+    &__box {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,7 +26,7 @@
         }
     }
 
-    label {
+    &__label {
         margin: $m-sm;
         font-weight: bold;
         font-size: 14px;
@@ -44,7 +44,7 @@
         }
     }
 
-    input {
+    &__input {
         height: 25px;
         font-size: $fs-sm;
         margin-right: $m-sm;
@@ -68,7 +68,7 @@
         }
     }
 
-    select {
+    &__select {
         height: 25px;
         font-size: $fs-sm;
         transition: all 0.3s linear;

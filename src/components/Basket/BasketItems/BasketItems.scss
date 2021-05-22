@@ -1,6 +1,6 @@
 @import '../../../scss/Variables.scss';
 
-.cartItem {
+.BasketItem {
     display: flex;
     width: 95%;
     max-width: 700px;
@@ -12,7 +12,7 @@
     background-color: $c-blue;
     color: white;
 
-    .cartImg {
+    &__img {
         width: 80px;
         border-radius: $br-m;
 
@@ -21,7 +21,7 @@
         }
     }
 
-    .cartName {
+    &__name {
         font-size: $fs-sm;
         width: 20%;
 
@@ -44,19 +44,14 @@
         }
     }
 
-    .fa-arrow-circle-left {
-        &:active {
-            color: $c-red;
-        }
-    }
-
+    .fa-arrow-circle-left,
     .fa-trash-alt {
         &:active {
             color: $c-red;
         }
     }
 
-    .cartNumbers {
+    &__numbers {
         display: flex;
         font-size: $fs-sm;
 
@@ -73,7 +68,7 @@
         }
     }
 
-    .cartTotal {
+    &__total {
         font-size: $fs-sm;
 
         @media (min-width: 700px) {

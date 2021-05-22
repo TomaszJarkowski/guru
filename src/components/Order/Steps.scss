@@ -1,6 +1,6 @@
 @import '../../scss/Variables.scss';
 
-.form-step {
+.Step {
     border: 2px solid black;
     max-width: 700px;
     margin: 0 auto;
@@ -11,50 +11,7 @@
     background-color: white;
     color: black;
 
-    .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        width: 100%;
-        padding: 7px 0;
-
-        @media (min-width: 450px) {
-            padding: 10px 0;
-        }
-
-        img {
-            width: 90px;
-
-            @media (min-width: 450px) {
-                width: 100px;
-            }
-        }
-    }
-
-    .header-form {
-        color: white;
-        text-align: center;
-        padding: 20px 0;
-        font-size: $fs-xl;
-        font-weight: bold;
-        font-style: italic;
-        background: linear-gradient(to right, #0575e6, #00f260);
-        width: 100%;
-        margin-bottom: $m-sm;
-        text-shadow: 0 0 3px black;
-        letter-spacing: 2px;
-
-        @media (min-width: 450px) {
-            font-size: 28px;
-        }
-
-        @media (min-width: 700px) {
-            font-size: 30px;
-        }
-    }
-
-    .forom__buttons {
+    &__buttons {
         width: 100%;
         display: flex;
         justify-content: space-between;

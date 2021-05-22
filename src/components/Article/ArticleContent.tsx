@@ -36,14 +36,14 @@ export const ArticleContent: React.FC = () => {
             ) : (
                 <>
                     {articles[index] ? (
-                        <div className='single-article'>
-                            <h2>{articles[index].title}</h2>
+                        <div className='article'>
+                            <h2 className='article__title'>{articles[index].title}</h2>
                             <img
-                                className='single-article__img'
+                                className='article__img'
                                 src={articles[index].imgs[0].src}
                                 alt='article img'
                             />
-                            <p>
+                            <p className='article__description'>
                                 When asked to think of fishing in Scotland, one would be forgiven
                                 for automatically picturing scenes of tree-lined rivers with figures
                                 dressed in Tweed, beautifully and artistically casting a fly line

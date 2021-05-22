@@ -1,6 +1,6 @@
 @import '../../../scss/Variables.scss';
 
-.illustration {
+.Illustration {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -15,7 +15,7 @@
         flex-direction: row;
     }
 
-    img {
+    &__img {
         width: 60px;
         padding: 10px;
 
@@ -28,7 +28,7 @@
         }
     }
 
-    h2 {
+    &__title {
         letter-spacing: 0.5px;
         font-weight: bold;
         padding: 10px;

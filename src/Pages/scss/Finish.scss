@@ -1,37 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,900&display=swap');
-@import './scss/Variables.scss';
+@import '../../scss/Variables.scss';
 
-body {
-    color: white;
-    font-family: 'Lato', sans-serif;
-    background-color: $c-dark;
-}
-
-.loader {
-    padding: 50px 0;
-    background-color: white;
-}
-
-.errorPage {
-    background-color: #fff;
-    color: $c-dark;
-    padding: 40px 0;
-
-    h1 {
-        font-size: $fs-xl;
-        text-align: center;
-        margin-bottom: $m-lg;
-    }
-
-    img {
-        width: 80%;
-        display: block;
-        margin: 0 auto;
-        max-width: 600px;
-    }
-}
-
-.finishPage {
+.FinishPage {
     background-color: rgb(255, 255, 255);
 
     &__title {
@@ -75,14 +44,4 @@ body {
         margin: 0 auto;
         max-width: 600px;
     }
-}
-
-a {
-    display: block;
-    color: white;
-    text-decoration: none;
-}
-
-a:link {
-    outline: none;
 }

@@ -7,7 +7,6 @@ import { Footer } from './components/Footer/Footer';
 import { Page } from './Page';
 
 import './scss/Reset.scss';
-import './App.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const App = () => (

@@ -1,43 +1,43 @@
 @import '../../../scss/Variables.scss';
 
-.info {
+.Info {
     padding: 20px;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
 
-    .stars {
+    &__stars {
         display: flex;
         color: $c-green;
         margin-bottom: $m-sm;
     }
 
-    .name {
+    &__name {
         font-size: 28px;
         letter-spacing: 1px;
         text-decoration: underline;
     }
 
-    .price {
+    &__price {
         font-size: 28px;
         margin: $m-md 0;
         color: $c-green;
     }
 
-    .specifications {
+    &__specifications {
         font-size: 18px;
         font-weight: bold;
         margin-bottom: $m-sm;
         color: $c-dark;
     }
 
-    .text {
+    &__text {
         text-align: justify;
         margin-bottom: $m-md;
         line-height: 20px;
     }
 
-    .btn {
+    &__btn {
         border: none;
         color: white;
         font-weight: bold;

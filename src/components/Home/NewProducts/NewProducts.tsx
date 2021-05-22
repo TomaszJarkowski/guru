@@ -32,21 +32,21 @@ export const NewProducts: React.FC = () => {
     }
 
     return (
-        <div className='newProducts'>
-            <h2 className='newProducts__title'>
+        <div className='NewProducts'>
+            <h2 className='NewProducts__title'>
                 New products<span>*</span>
             </h2>
             <>
                 {newProductsFetch !== StatusFetch.SUCCESS ? (
                     <Loader />
                 ) : (
-                    <div className='newProducts__products'>
+                    <div className='NewProducts__products'>
                         {newProducts.map((el: Product) => (
-                            <div className='newProducts__product' key={el.name}>
+                            <div className='NewProducts__product' key={el.name}>
                                 <p className='name'>{el.name}</p>
                                 <img src={el.pathIMG} alt='new products' />
                                 <button onClick={() => redirectToProduct(el.id)}>DETAILS</button>
-                                <div className='newProducts__flag'>new</div>
+                                <div className='NewProducts__flag'>new</div>
                             </div>
                         ))}
                     </div>

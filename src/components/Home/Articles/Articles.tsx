@@ -42,17 +42,17 @@ export const Articles = () => {
     }
 
     return (
-        <div className='articles'>
+        <div className='Articles'>
             <>
                 {articlesFetch !== StatusFetch.SUCCESS ? (
                     <Loader />
                 ) : (
-                    <div className='articles__list'>
+                    <div className='Articles__list'>
                         {articles
                             .map((article: TArticle) => (
-                                <div className='articles__item' key={article.id}>
-                                    <h2>{article.title}</h2>
-                                    <img src={article.imgs[0].src} alt='' />
+                                <div className='Articles__item' key={article.id}>
+                                    <h2 className='title'>{article.title}</h2>
+                                    <img className='img' src={article.imgs[0].src} alt='img' />
                                     <Description description={article.description} />
                                     <Link to={`/article/${article.id}`}>
                                         <button className='btn'>Read more</button>
@@ -63,7 +63,7 @@ export const Articles = () => {
                     </div>
                 )}
             </>
-            <div className='btn__allArticles'>
+            <div className='Articles__btn'>
                 <button onClick={handleClick}>
                     <i
                         className='fas fa-arrow-alt-circle-up'

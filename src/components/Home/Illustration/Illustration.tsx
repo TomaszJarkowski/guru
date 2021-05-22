@@ -5,25 +5,23 @@ import img2 from '../../../img/clock.png';
 import img3 from '../../../img/free-shipping.png';
 import img4 from '../../../img/lock.png';
 
-export const Illustration = () => {
-    return (
-        <div className='illustration'>
-            <div className='illustration__item'>
-                <img src={img1} alt='30 days money back' />
-                <h2>30 days money back</h2>
-            </div>
-            <div className='illustration__item'>
-                <img src={img2} alt='Fast shipping' />
-                <h2>Fast shipping</h2>
-            </div>
-            <div className='illustration__item'>
-                <img src={img3} alt='Free delivery' />
-                <h2>Free delivery</h2>
-            </div>
-            <div className='illustration__item'>
-                <img src={img4} alt='Safe shopping' />
-                <h2>Safe shopping</h2>
-            </div>
+export const Illustration = () => (
+    <div className='Illustration'>
+        <div className='illustration__item'>
+            <img className='Illustration__img' src={img1} alt='30 days money back' />
+            <h2 className='Illustration__title'>30 days money back</h2>
         </div>
-    );
-};
+        <div className='illustration__item'>
+            <img className='Illustration__img' src={img2} alt='Fast shipping' />
+            <h2 className='Illustration__title'>Fast shipping</h2>
+        </div>
+        <div className='illustration__item'>
+            <img className='Illustration__img' src={img3} alt='Free delivery' />
+            <h2 className='Illustration__title'>Free delivery</h2>
+        </div>
+        <div className='illustration__item'>
+            <img className='Illustration__img' src={img4} alt='Safe shopping' />
+            <h2 className='Illustration__title'>Safe shopping</h2>
+        </div>
+    </div>
+);

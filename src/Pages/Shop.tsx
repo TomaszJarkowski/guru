@@ -3,10 +3,8 @@ import { Content } from '../components/Shop/Content';
 import { Title } from '../components/UI/Title/Title';
 
 export const Shop = () => (
-    <div className='shop'>
-        <Container>
-            <Title>Shop</Title>
-            <Content />
-        </Container>
-    </div>
+    <Container>
+        <Title>Shop</Title>
+        <Content />
+    </Container>
 );

@@ -70,6 +70,9 @@ npm start
 - [x] If you are placing an order and want to leave the page, a warning should appear
 - [x] After correctly placing the order, you are redirected to the finish page
 - [x] If the path is incorrect, an error page should appear
+- [x] Sticky menu
+- [ ] Admin panel
+- [ ] PWA
 
 ## Author :poland:
 
