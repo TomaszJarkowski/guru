@@ -1,0 +1,8 @@
+@import '../../../scss/Variables.scss';
+
+.ActiveButton {
+    border: 2px solid yellowgreen;
+    padding: 10px;
+    color: black;
+    box-shadow: 0 0 1px 0 green;
+}

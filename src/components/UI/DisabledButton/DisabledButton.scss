@@ -1,0 +1,12 @@
+@import '../../../scss/Variables.scss';
+
+.DisabledButton {
+    color: gray;
+    border: 2px solid gray;
+    cursor: default;
+    padding: 10px;
+
+    &:focus {
+        outline: none;
+    }
+}

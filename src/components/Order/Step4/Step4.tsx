@@ -4,6 +4,8 @@ import { toast } from 'react-toastify';
 
 import { finish, reduceStep, selectOrderState } from '../../../store/order/orderSlice';
 import { clearBasket, selectBasketState } from '../../../store/basket/basketSlice';
+import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
+import { ActiveButton } from '../../UI/ActiveButton/ActiveButton';
 import { HeaderStep } from '../HeaderStep/HeaderStep';
 import { sumNumbers } from '../../../helpers/helpers';
 
@@ -84,18 +86,14 @@ export const Step4: React.FC = () => {
                 </div>
             </div>
             <div className='Step__buttons'>
-                <button onClick={back} className='back'>
-                    Back
-                </button>
-                <button
-                    type='submit'
-                    className='active'
-                    onClick={(e) => {
+                <DefaultButton onClick={back}>Back</DefaultButton>
+                <ActiveButton
+                    onClick={(e:any) => {
                         e.preventDefault();
                         handleSubmit();
                     }}>
                     Order
-                </button>
+                </ActiveButton>
             </div>
         </form>
     );

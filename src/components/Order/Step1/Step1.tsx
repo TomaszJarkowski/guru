@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { ErrorOption, useForm } from 'react-hook-form';
@@ -9,6 +9,9 @@ import ReactTooltip from 'react-tooltip';
 
 import { firstStep, selectOrderState } from '../../../store/order/orderSlice';
 import { HeaderStep } from '../HeaderStep/HeaderStep';
+import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
+import { DisabledButton } from '../../UI/DisabledButton/DisabledButton';
+import { ActiveButton } from '../../UI/ActiveButton/ActiveButton';
 
 import './Step1.scss';
 import '../Steps.scss';
@@ -49,6 +52,7 @@ type TData = {
 
 export const Step1: React.FC = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const { firstName, lastName, email, phone, postalCode, city, country, address } = useSelector(
         selectOrderState
     );
@@ -75,6 +79,10 @@ export const Step1: React.FC = () => {
 
     const onSubmit = async (data: TData) => {
         dispatch(firstStep(data));
+    };
+
+    const redirect = () => {
+        history.push('/basket');
     };
 
     useEffect(() => {
@@ -210,11 +218,11 @@ export const Step1: React.FC = () => {
                 </select>
             </div>
             <div className='Step__buttons'>
-                <NavLink to={'/basket'}>Back</NavLink>
+                <DefaultButton onClick={redirect}>Back</DefaultButton>
                 {Object.keys(errors).length === 0 && errors.constructor === Object ? (
-                    <button className='active'>Choose Shipping</button>
+                    <ActiveButton>Choose Shipping</ActiveButton>
                 ) : (
-                    <button className='disabled'>Choose Shipping</button>
+                    <DisabledButton>Choose Shipping</DisabledButton>
                 )}
             </div>
         </form>

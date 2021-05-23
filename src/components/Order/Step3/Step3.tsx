@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { reduceStep, selectOrderState, thirdStep } from '../../../store/order/orderSlice';
+import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
 import { HeaderStep } from '../HeaderStep/HeaderStep';
+import { ActiveButton } from '../../UI/ActiveButton/ActiveButton';
 
 import imgBLIK from '../../../img/blik.png';
 import imgMBANK from '../../../img/mbank.png';
@@ -73,18 +75,14 @@ export const Step3: React.FC = () => {
                 ))}
             </div>
             <div className='Step__buttons'>
-                <button onClick={back} className='back'>
-                    Back
-                </button>
-                <button
-                    type='submit'
-                    className='active'
-                    onClick={(e) => {
+                <DefaultButton onClick={back}>Back</DefaultButton>
+                <ActiveButton
+                    onClick={(e:any) => {
                         e.preventDefault();
                         onSubmit();
                     }}>
                     Summary
-                </button>
+                </ActiveButton>
             </div>
         </form>
     );

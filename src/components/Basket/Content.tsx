@@ -1,19 +1,26 @@
-import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { BasketItems } from './BasketItems/BasketItems';
 import { BasketEmpty } from './BasketEmpty/BasketEmpty';
 import { clearBasket, selectBasketState } from '../../store/basket/basketSlice';
+import { DefaultButton } from '../UI/DefaultButton/DefaultButton';
+import { DisabledButton } from '../UI/DisabledButton/DisabledButton';
 
 import './Content.scss';
 
 export const Content: React.FC = () => {
     const { basket, cost } = useSelector(selectBasketState);
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const clear = () => {
         dispatch(clearBasket());
     };
+
+    const redirect = () => {
+        history.push('/order');
+    }
 
     return (
         <div className='Basket'>
@@ -29,13 +36,13 @@ export const Content: React.FC = () => {
             <div className='Basket__buttons'>
                 {basket.length > 0 ? (
                     <>
-                        <button onClick={clear}>Clear cart</button>
-                        <NavLink to={'/order'}>Check out</NavLink>
+                        <DefaultButton onClick={clear}>Clear cart</DefaultButton>
+                        <DefaultButton onClick={redirect}>Check out</DefaultButton>
                     </>
                 ) : (
                     <>
-                        <button className='disabled__button'>Clear cart</button>
-                        <button className='disabled__button'>Check out</button>
+                        <DisabledButton>Clear cart</DisabledButton>
+                        <DisabledButton>Check out</DisabledButton>
                     </>
                 )}
             </div>

@@ -11,37 +11,6 @@
         max-width: 700px;
         margin: 0 auto;
         padding: 20px 0;
-
-        a,
-        button {
-            margin: 0 $m-sm;
-            border: 2px solid black;
-            padding: 10px;
-            background-color: white;
-            transition: all linear 0.2s;
-            cursor: pointer;
-            color: black;
-
-            &:hover {
-                background-color: black;
-                color: white;
-            }
-        }
-
-        .disabled__button {
-            color: gray;
-            border: 2px solid gray;
-            cursor: default;
-
-            &:hover {
-                background-color: white;
-                color: gray;
-            }
-
-            &:focus {
-                outline: none;
-            }
-        }
     }
 
     &__info {

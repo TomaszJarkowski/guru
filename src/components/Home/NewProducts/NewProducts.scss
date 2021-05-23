@@ -41,17 +41,7 @@
         }
 
         button {
-            background-color: white;
-            padding: 10px 20px;
-            border: 2px solid black;
-            cursor: pointer;
-            display: block;
             margin: $m-sm auto;
-
-            &:hover {
-                background-color: black;
-                color: white;
-            }
         }
     }
 

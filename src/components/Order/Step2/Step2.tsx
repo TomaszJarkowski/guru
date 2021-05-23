@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { secondStep, reduceStep, selectOrderState } from '../../../store/order/orderSlice';
+import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
+import { ActiveButton } from '../../UI/ActiveButton/ActiveButton';
 import { HeaderStep } from '../HeaderStep/HeaderStep';
 
 import './Step2.scss';
@@ -85,18 +87,14 @@ export const Step2: React.FC = () => {
                 ))}
             </div>
             <div className='Step__buttons'>
-                <button onClick={back} className='back'>
-                    Back
-                </button>
-                <button
-                    type='submit'
-                    className='active'
-                    onClick={(e) => {
+                <DefaultButton onClick={back}>Back</DefaultButton>
+                <ActiveButton
+                    onClick={(e:any) => {
                         e.preventDefault();
                         onSubmit();
                     }}>
                     Choose Payment
-                </button>
+                </ActiveButton>
             </div>
         </form>
     );

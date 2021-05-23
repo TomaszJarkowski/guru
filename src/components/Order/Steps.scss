@@ -23,35 +23,5 @@
         button {
             margin: $m-sm;
         }
-
-        .disabled {
-            border: 2px solid gray;
-            padding: 10px;
-            color: black;
-            opacity: 0.5;
-            cursor: default;
-        }
-
-        .active {
-            border: 2px solid yellowgreen;
-            padding: 10px;
-            color: black;
-            box-shadow: 0 0 1px 0 green;
-        }
-
-        a,
-        .back {
-            margin: 0 $m-sm;
-            border: 2px solid black;
-            padding: 10px;
-            background-color: white;
-            transition: all linear 0.2s;
-            color: black;
-
-            &:hover {
-                background-color: black;
-                color: white;
-            }
-        }
     }
 }
