@@ -1,4 +1,5 @@
 import { Product } from '../../../store/products/productsSlice';
+import { PrimaryButton } from '../../UI/PrimaryButton/PrimaryButton';
 
 import './Info.scss';
 
@@ -28,9 +29,7 @@ export const Info: React.FC<TInfo> = ({ product, addProductToBasket }) => {
                 dicta magni dolor, quo eaque hic aspernatur nulla dignissimos non nostrum ullam,
                 eveniet porro mollitia eveniet porro mollitia eveniet porro molliti eveniet.
             </p>
-            <button className='Info__btn' onClick={addProductToBasket}>
-                Add to Cart
-            </button>
+            <PrimaryButton onClick={addProductToBasket}>Add to Cart</PrimaryButton>
         </div>
     );
 };

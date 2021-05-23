@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
 import { Loader } from '../../UI/Loader/Loader';
+import { PrimaryButton } from '../../UI/PrimaryButton/PrimaryButton';
 
 import './Newslatter.scss';
 
@@ -78,7 +79,7 @@ export const Newslatter = () => {
                     id='emial'
                     name='email'
                 />
-                <input type='submit' className='Newslatter__btn' value='Subscribe' />
+                <PrimaryButton>SUBSCRIBE</PrimaryButton>
             </form>
             <p className='Newslatter__error'>{errors.email?.message}</p>
             {isLoading ? (

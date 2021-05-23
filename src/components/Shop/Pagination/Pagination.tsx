@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { PrimaryButton } from '../../UI/PrimaryButton/PrimaryButton';
 
 import './Pagination.scss';
 
@@ -25,24 +26,22 @@ export const Pagination: React.FC<TPagination> = ({
             {pageNumbers.map((number) => (
                 <li key={number} className='Pagination__item'>
                     {number === decoration ? (
-                        <button
-                            className='Pagination__btn'
+                        <PrimaryButton
                             style={{ backgroundColor: '#4f9064' }}
                             onClick={() => {
                                 paginate(number);
                                 setDecoration(number);
                             }}>
                             {number}
-                        </button>
+                        </PrimaryButton>
                     ) : (
-                        <button
-                            className='Pagination__btn'
+                        <PrimaryButton
                             onClick={() => {
                                 paginate(number);
                                 setDecoration(number);
                             }}>
                             {number}
-                        </button>
+                        </PrimaryButton>
                     )}
                 </li>
             ))}

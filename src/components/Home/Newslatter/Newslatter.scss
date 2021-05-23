@@ -54,42 +54,12 @@
         padding: 10px;
         font-size: $fs-sm;
         border: 2px solid $c-primary;
+        margin: 0 $m-sm $m-sm 0;
     }
 
     &__input:focus {
         outline: none;
         border: 2px solid $c-blue;
-    }
-
-    &__btn {
-        margin-left: $m-sm;
-        margin-top: $m-sm;
-        background: none;
-        text-transform: uppercase;
-        border: 2px solid $c-primary;
-        background-color: white;
-        padding: 8px;
-        font-size: $fs-sm;
-        border-radius: $br-m;
-        transition: background-color 0.2s linear;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $c-primary;
-        }
-
-        &:active {
-            box-shadow: 0 0 2px 0 black;
-        }
-
-        &:focus {
-            outline: none;
-            border: 2px solid $c-primary;
-        }
-
-        @media (min-width: 700px) {
-            padding: 10px;
-        }
     }
 
     &__results {

@@ -1,4 +1,4 @@
-import { NavLink, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import { Modal } from '../../Modal/Modal';
 import { DefaultLink } from '../../UI/DefaultLink/DefaultLink';

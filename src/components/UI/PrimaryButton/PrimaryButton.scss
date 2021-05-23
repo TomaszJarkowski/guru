@@ -1,0 +1,11 @@
+@import '../../../scss/Variables.scss';
+
+.PrimaryButton {
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: $c-primary;
+    border-radius: $br-m;
+    font-size: 14px;
+    padding: 12px 15px;
+}

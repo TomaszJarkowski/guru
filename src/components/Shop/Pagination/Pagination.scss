@@ -13,21 +13,4 @@
             padding: 10px;
         }
     }
-
-    &__btn {
-        padding: 10px 15px;
-        border: none;
-        border-radius: $br-m;
-        color: white;
-        background-color: $c-primary;
-        cursor: pointer;
-
-        @media (min-width: 400px) {
-            font-size: $fs-lg;
-        }
-
-        &:hover {
-            background: $c-green;
-        }
-    }
 }
