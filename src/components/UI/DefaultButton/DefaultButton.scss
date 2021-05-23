@@ -1,0 +1,18 @@
+@import '../../../scss/Variables.scss';
+
+.DefaultButton {
+    background-color: white;
+    padding: 10px;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    display: block;
+    margin: $m-xs;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: black !important;
+        color: white !important;
+    }
+}

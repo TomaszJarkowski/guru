@@ -36,6 +36,7 @@
         justify-content: center;
         text-align: center;
         flex-direction: column;
+        margin-bottom: $m-md;
 
         @media (min-width: 580px) {
             flex-direction: row;
@@ -62,35 +63,6 @@
 
         img {
             border-radius: $br-m;
-        }
-    }
-
-    &__btn {
-        background: none;
-        margin-top: $m-sm;
-        border: 2px solid $c-primary;
-        text-transform: uppercase;
-        padding: 8px;
-        background-color: white;
-        border-radius: $br-m;
-        font-size: $fs-xs;
-        transition: background-color 0.2s linear;
-
-        &:hover {
-            background-color: $c-primary;
-        }
-
-        &:active {
-            box-shadow: 0 0 2px 0 black;
-        }
-
-        &:focus {
-            outline: none;
-        }
-
-        @media (min-width: 700px) {
-            padding: 10px;
-            font-size: $fs-sm;
         }
     }
 }

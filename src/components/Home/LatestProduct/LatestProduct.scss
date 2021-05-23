@@ -16,7 +16,6 @@
     &__title {
         font-size: $fs-xl;
         font-weight: bold;
-        margin-left: $m-sm;
 
         @media (min-width: 800px) {
             font-size: $fs-xxl;
@@ -24,7 +23,7 @@
     }
 
     &__description {
-        padding: 10px;
+        margin: $m-sm 0;
         max-width: 500px;
         text-align: justify;
 
@@ -36,35 +35,6 @@
             font-size: $fs-lg;
             max-width: 600px;
             line-height: 24px;
-        }
-    }
-
-    &__btn {
-        margin-left: $m-sm;
-        background: none;
-        text-transform: uppercase;
-        border: 2px solid rgb(255, 163, 59);
-        background-color: white;
-        padding: 8px;
-        border-radius: $br-m;
-        transition: background-color 0.2s linear;
-        font-size: $fs-xs;
-
-        &:hover {
-            background-color: rgb(255, 163, 59);
-        }
-
-        &:active {
-            box-shadow: 0 0 2px 0 black;
-        }
-
-        &:focus {
-            outline: none;
-        }
-
-        @media (min-width: 700px) {
-            padding: 10px;
-            font-size: $fs-sm;
         }
     }
 

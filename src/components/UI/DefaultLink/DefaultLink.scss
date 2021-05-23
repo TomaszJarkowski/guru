@@ -1,0 +1,28 @@
+@import '../../../scss/Variables.scss';
+
+.DefaultLink {
+    background: none;
+    text-transform: uppercase;
+    border: 2px solid $c-primary;
+    background-color: white;
+    border-radius: $br-m;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+        background-color: $c-primary;
+    }
+
+    &:active {
+        box-shadow: 0 0 2px 0 black;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    a {
+        display: block;
+        padding: 10px;
+        color: black;
+    }
+}

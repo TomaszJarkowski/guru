@@ -19,7 +19,7 @@
         margin-bottom: $m-sm;
         border: 2px solid $c-primary;
         border-radius: $br-m;
-        height: 360px;
+        height: 380px;
         background-color: $c-blue;
         color: white;
 
@@ -38,28 +38,6 @@
             padding: 10px 20px;
             font-size: $fs-sm;
             max-width: 250px;
-        }
-
-        .btn {
-            background: none;
-            text-transform: uppercase;
-            border: 2px solid $c-primary;
-            background-color: white;
-            padding: 8px;
-            border-radius: $br-m;
-            transition: background-color 0.2s linear;
-
-            &:hover {
-                background-color: $c-primary;
-            }
-
-            &:active {
-                box-shadow: 0 0 2px 0 black;
-            }
-
-            &:focus {
-                outline: none;
-            }
         }
     }
 

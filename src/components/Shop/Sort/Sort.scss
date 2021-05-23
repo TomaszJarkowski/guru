@@ -19,22 +19,4 @@
         letter-spacing: 1px;
         font-weight: 600;
     }
-
-    &__btn {
-        padding: 10px;
-        color: black;
-        border: 2px solid black;
-        margin: $m-xs;
-        transition: all linear 0.2s;
-        font-size: $fs-xs;
-        cursor: pointer;
-
-        @media (min-width: 850px) {
-            font-size: $fs-sm;
-        }
-
-        &:hover {
-            transform: scale((1.03));
-        }
-    }
 }

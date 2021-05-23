@@ -1,6 +1,7 @@
 import { NavLink, Route, Switch } from 'react-router-dom';
 
 import { Modal } from '../../Modal/Modal';
+import { DefaultLink } from '../../UI/DefaultLink/DefaultLink';
 
 import './LatestProduct.scss';
 
@@ -46,9 +47,7 @@ export const LatestProduct = () => {
                         a year, so bookmark this page to stay in touch with all of the latest
                         developments.
                     </p>
-                    <NavLink to='/home/new-products'>
-                        <button className='LastProducts__btn'>New Products</button>
-                    </NavLink>
+                    <DefaultLink path='/home/new-products'>New Product</DefaultLink>
                 </div>
                 <img src={img5} className='LastProducts__img' alt='our new product' />
             </div>

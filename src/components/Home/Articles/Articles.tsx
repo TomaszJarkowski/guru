@@ -8,6 +8,7 @@ import {
     TArticle
 } from '../../../store/articles/articlesSlice';
 import { StatusFetch } from '../../../store/products/productsSlice';
+import { DefaultLink } from '../../UI/DefaultLink/DefaultLink';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';
 
@@ -54,9 +55,9 @@ export const Articles = () => {
                                     <h2 className='title'>{article.title}</h2>
                                     <img className='img' src={article.imgs[0].src} alt='img' />
                                     <Description description={article.description} />
-                                    <Link to={`/article/${article.id}`}>
-                                        <button className='btn'>Read more</button>
-                                    </Link>
+                                    <DefaultLink path={`/article/${article.id}`}>
+                                        Read more
+                                    </DefaultLink>
                                 </div>
                             ))
                             .slice(0, numberOfArticles)}

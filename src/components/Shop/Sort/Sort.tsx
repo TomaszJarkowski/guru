@@ -6,6 +6,7 @@ import {
     sortByNameAToZ,
     sortByNameZToA
 } from '../../../helpers/helpers';
+import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
 
 import { TProduct } from '../Product/Product';
 
@@ -19,87 +20,93 @@ type TSort = {
 export const Sort: React.FC<TSort> = ({ products, setSortedProducts }) => {
     const [activeSort, setActiveSort] = useState(1);
 
+    const defaultSort = () => {
+        setActiveSort(1);
+        setSortedProducts([...products]);
+    };
+
+    const newsSort = () => {
+        setActiveSort(6);
+        setSortedProducts(sortByStatus(products));
+    };
+
+    const highToLowSort = () => {
+        setActiveSort(2);
+        setSortedProducts(sortByPriceHighToLow(products));
+    };
+
+    const lowToHighort = () => {
+        setActiveSort(3);
+        setSortedProducts(sortByPriceLowToHigh(products));
+    };
+
+    const aToZSort = () => {
+        setActiveSort(4);
+        setSortedProducts(sortByNameAToZ(products));
+    };
+
+    const zToASort = () => {
+        setActiveSort(5);
+        setSortedProducts(sortByNameZToA(products));
+    };
+
     return (
         <div className='Sort'>
             <h2 className='Sort__title'>SORT</h2>
-            <button
-                className='Sort__btn'
+            <DefaultButton
                 style={
                     activeSort === 1
                         ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'rgb(239 239 239)' }
+                        : { backgroundColor: 'white' }
                 }
-                onClick={() => {
-                    setActiveSort(1);
-                    setSortedProducts([...products]);
-                }}>
+                onClick={defaultSort}>
                 Default
-            </button>
-            <button
-                className='Sort__btn'
+            </DefaultButton>
+            <DefaultButton
                 style={
                     activeSort === 6
                         ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'rgb(239 239 239)' }
+                        : { backgroundColor: 'white' }
                 }
-                onClick={() => {
-                    setActiveSort(6);
-                    setSortedProducts(sortByStatus(products));
-                }}>
+                onClick={newsSort}>
                 News
-            </button>
-            <button
-                className='Sort__btn'
+            </DefaultButton>
+            <DefaultButton
                 style={
                     activeSort === 2
                         ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'rgb(239 239 239)' }
+                        : { backgroundColor: 'white' }
                 }
-                onClick={() => {
-                    setActiveSort(2);
-                    setSortedProducts(sortByPriceHighToLow(products));
-                }}>
+                onClick={highToLowSort}>
                 Price high to low
-            </button>
-            <button
-                className='Sort__btn'
+            </DefaultButton>
+            <DefaultButton
                 style={
                     activeSort === 3
                         ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'rgb(239 239 239)' }
+                        : { backgroundColor: 'white' }
                 }
-                onClick={() => {
-                    setActiveSort(3);
-                    setSortedProducts(sortByPriceLowToHigh(products));
-                }}>
+                onClick={lowToHighort}>
                 Price low to high
-            </button>
-            <button
-                className='Sort__btn'
+            </DefaultButton>
+            <DefaultButton
                 style={
                     activeSort === 4
                         ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'rgb(239 239 239)' }
+                        : { backgroundColor: 'white' }
                 }
-                onClick={() => {
-                    setActiveSort(4);
-                    setSortedProducts(sortByNameAToZ(products));
-                }}>
+                onClick={aToZSort}>
                 Product Name - A to Z
-            </button>
-            <button
-                className='Sort__btn'
+            </DefaultButton>
+            <DefaultButton
                 style={
                     activeSort === 5
                         ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'rgb(239 239 239)' }
+                        : { backgroundColor: 'white' }
                 }
-                onClick={() => {
-                    setActiveSort(5);
-                    setSortedProducts(sortByNameZToA(products));
-                }}>
+                onClick={zToASort}>
                 Product Name - Z to A
-            </button>
+            </DefaultButton>
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import { NavLink, Route, Switch } from 'react-router-dom';
 
 import { Modal } from '../../Modal/Modal';
+import { DefaultLink } from '../../UI/DefaultLink/DefaultLink';
 
 import './OurTeam.scss';
 
@@ -23,9 +24,7 @@ export const OurTeam = () => (
                     <h2>Matt Godfrey</h2>
                 </div>
             </div>
-            <NavLink to='/home/team'>
-                <button className='Anglers__btn'>Meet our team </button>
-            </NavLink>
+            <DefaultLink path='/home/team'>Meet our team</DefaultLink>
         </div>
         <Switch>
             <Route path='/home/team'>
