@@ -5,10 +5,9 @@
     background-color: black;
 
     &__content {
-        display: flex;
+        @include default-flex;
+
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 
     &__logo {
@@ -21,9 +20,7 @@
     }
 
     &__socials {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include default-flex;
 
         @media (min-width: 450px) {
             margin: $m-sm;
@@ -70,9 +67,8 @@
     }
 
     &__info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include default-flex;
+
         flex-direction: column;
 
         @media (min-width: 900px) {
@@ -139,12 +135,11 @@
     }
 
     &__map {
+        @include default-flex;
+
         border: 2px solid white;
         background-color: black;
         border-radius: $br-m;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: 0.2s linear;
         font-size: $fs-md;
         padding: 10px;

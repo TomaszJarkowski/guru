@@ -1,35 +1,29 @@
 @import '../../../scss//Variables.scss';
 
 .YTChanel {
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include default-flex;
+
     flex-direction: column;
     text-align: center;
+    color: black;
     padding: 30px;
     background-color: #c4302b;
 
     .video__header {
-        font-size: $fs-xl;
-        font-weight: bold;
+        @include title;
+
         letter-spacing: 2px;
         color: white;
-        padding: 10px;
         border: 2px solid $c-primary;
         box-shadow: 0 0 20px 0 $c-primary;
-
-        @media (min-width: 550px) {
-            font-size: $fs-xxl;
-        }
     }
 
     .video__items {
-        display: flex;
-        width: 100%;
+        @include default-flex;
+
         justify-content: space-evenly;
-        align-items: center;
         flex-wrap: wrap;
+        width: 100%;
         margin-top: $m-md;
 
         .video__item {

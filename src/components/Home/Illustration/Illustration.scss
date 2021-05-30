@@ -1,9 +1,9 @@
 @import '../../../scss/Variables.scss';
 
 .Illustration {
-    display: flex;
+    @include default-flex;
+
     justify-content: space-evenly;
-    align-items: center;
     text-align: center;
     flex-wrap: wrap;
     color: $c-dark;

@@ -14,9 +14,9 @@
     }
 
     &__info {
-        display: flex;
+        @include default-flex;
+
         justify-content: flex-end;
-        align-items: center;
         border-bottom: 2px solid black;
         max-width: 700px;
         margin: 0 auto;

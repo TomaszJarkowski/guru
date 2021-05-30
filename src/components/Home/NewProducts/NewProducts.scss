@@ -7,12 +7,10 @@
     background-color: white;
 
     &__title {
+        @include title;
+
         text-align: center;
-        font-size: 30px;
-        text-shadow: 0 0 1px black;
-        padding: 20px 0;
         color: black;
-        text-decoration: underline;
 
         span {
             color: $c-red;
@@ -57,9 +55,8 @@
     }
 
     &__products {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include default-flex;
+
         flex-wrap: wrap;
 
         @media (min-width: 800px) {

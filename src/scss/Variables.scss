@@ -2,6 +2,7 @@ $c-primary: #ffa33b;
 $c-secondary: #d1cccc;
 $c-dark: #333;
 $c-green: #4f9064;
+$c-light-green: #8bea5f;
 $c-blue: #4787a9;
 $c-red: #d3373a;
 
@@ -20,3 +21,17 @@ $fs-lg: 20px;
 $fs-xl: 24px;
 $fs-xxl: 35px;
 $fs-xxxl: 45px;
+
+@mixin title {
+    font-size: $fs-xxl;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@mixin default-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

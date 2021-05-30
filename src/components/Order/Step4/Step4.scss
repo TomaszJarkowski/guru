@@ -25,9 +25,9 @@
 
     &__basket {
         div {
-            display: flex;
+            @include default-flex;
+
             justify-content: space-around;
-            align-items: center;
             padding: 5px 0;
             border: 2px solid $c-primary;
             margin: $m-sm 0;

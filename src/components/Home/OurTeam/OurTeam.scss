@@ -1,9 +1,8 @@
 @import '../../../scss/Variables.scss';
 
 .Anglers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include default-flex;
+
     flex-direction: column;
     color: black;
     padding: 30px 0;
@@ -30,12 +29,11 @@
     }
 
     &__items {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include default-flex;
+
         text-align: center;
         flex-direction: column;
+        width: 100%;
         margin-bottom: $m-md;
 
         @media (min-width: 580px) {
@@ -68,9 +66,8 @@
 }
 
 .OurTeam {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include default-flex;
+
     flex-wrap: wrap;
     border: 2px solid $c-primary;
     border-radius: $br-m;

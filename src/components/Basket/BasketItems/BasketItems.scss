@@ -1,14 +1,14 @@
 @import '../../../scss/Variables.scss';
 
 .BasketItem {
-    display: flex;
+    @include default-flex;
+
+    justify-content: space-around;
     width: 95%;
     max-width: 700px;
     margin: $m-sm auto;
     border: 2px solid $c-primary;
     border-radius: $br-m;
-    align-items: center;
-    justify-content: space-around;
     background-color: $c-blue;
     color: white;
 

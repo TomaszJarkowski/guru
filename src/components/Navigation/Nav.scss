@@ -1,9 +1,7 @@
 @import '../../scss/Variables.scss';
 
 .is-active {
-    background: #799f0c;
-    background: linear-gradient(to right, #799f0c, #ffe000);
-    box-shadow: 0 0 5px 0 white;
+    background: $c-light-green;
 }
 
 .Navigation {
@@ -67,12 +65,11 @@
     }
 
     .basket__link {
+        @include default-flex;
+
         border: 2px $c-primary solid;
         border-radius: $br-m;
         margin: 0 $m-sm;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 10px 15px;
 
         @media (min-width: 500px) {

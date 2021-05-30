@@ -1,22 +1,21 @@
 @import '../../../scss/Variables.scss';
 
 .StepsDots {
-    display: flex;
+    @include default-flex;
+
     justify-content: space-around;
-    align-items: center;
     color: $c-dark;
     padding: 15px;
     text-align: center;
 
     &__dot {
+        @include default-flex;
+
         padding: 10px 2px;
         width: 100%;
         border-top: 2px solid black;
         border-bottom: 2px solid black;
         border-left: 2px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: all 0.3s linear;
         background-color: white;
 

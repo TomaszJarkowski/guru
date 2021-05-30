@@ -10,6 +10,7 @@
     margin: $m-xs;
     font-size: 14px;
     text-transform: uppercase;
+    transition: all 0.1s linear;
 
     &:hover {
         background-color: black !important;

@@ -2,14 +2,13 @@
 
 .Step {
     &__box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include default-flex;
+
         margin: $m-xs 0;
 
         .correct-input {
             font-size: $fs-sm;
-            color: rgb(141, 189, 45);
+            color: $c-light-green;
 
             @media (min-width: 450px) {
                 font-size: $fs-md;
@@ -18,7 +17,7 @@
 
         .wrong-input {
             font-size: $fs-sm;
-            color: rgb(226, 71, 44);
+            color: $c-red;
 
             @media (min-width: 450px) {
                 font-size: $fs-md;
@@ -40,7 +39,6 @@
 
         span {
             margin-left: 3px;
-            color: red;
         }
     }
 

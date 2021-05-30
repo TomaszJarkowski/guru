@@ -1,9 +1,9 @@
 @import '../../../scss/Variables.scss';
 
 .LastProducts {
-    display: flex;
+    @include default-flex;
+
     justify-content: space-evenly;
-    align-items: center;
     flex-direction: column;
     color: black;
     padding: 20px;
@@ -14,25 +14,18 @@
     }
 
     &__title {
-        font-size: $fs-xl;
-        font-weight: bold;
+        @include title;
 
-        @media (min-width: 800px) {
-            font-size: $fs-xxl;
-        }
+        padding-left: 0;
     }
 
     &__description {
         margin: $m-sm $m-md $m-sm 0;
         max-width: 500px;
         text-align: justify;
-
-        @media (min-width: 600px) {
-            font-size: $fs-md;
-        }
+        font-size: $fs-md;
 
         @media (min-width: 800px) {
-            font-size: $fs-lg;
             max-width: 600px;
             line-height: 24px;
         }

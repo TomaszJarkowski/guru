@@ -1,9 +1,8 @@
 @import '../../../scss/Variables.scss';
 
 .Pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include default-flex;
+
     background-color: $c-secondary;
 
     &__item {

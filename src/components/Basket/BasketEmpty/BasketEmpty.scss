@@ -1,12 +1,11 @@
 @import '../../../scss/Variables.scss';
 
 .BasketEmpty {
-    display: flex;
+    @include default-flex;
+
     margin: $m-lg auto;
     max-width: 700px;
-    justify-content: center;
     color: black;
-    align-items: center;
 
     &__text {
         font-size: $fs-xl;

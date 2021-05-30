@@ -71,6 +71,7 @@ npm start
 - [x] After correctly placing the order, you are redirected to the finish page
 - [x] If the path is incorrect, an error page should appear
 - [x] Sticky menu
+- [ ] Payment
 - [ ] Admin panel
 - [ ] PWA
 

@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { toast } from 'react-toastify';
 
 import { Loader } from '../../UI/Loader/Loader';
 import { PrimaryButton } from '../../UI/PrimaryButton/PrimaryButton';
@@ -12,10 +13,6 @@ import './Newslatter.scss';
 
 const Success = () => {
     return <div className='success__newslatter'>Thank you for subscribing to our newsletter!</div>;
-};
-
-const Defeat = ({ descriptionError }: { descriptionError: string }) => {
-    return <div className='defeat__newslatter'>{descriptionError}</div>;
 };
 
 const schema = yup.object().shape({
@@ -28,7 +25,6 @@ type TData = {
 
 export const Newslatter = () => {
     const [correctEmail, setCorrectEmail] = useState(false);
-    const [errorEmail, setErrorEmail] = useState('');
     const [firstTime, setFirstTime] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -36,6 +32,7 @@ export const Newslatter = () => {
         register,
         handleSubmit,
         reset,
+        setError,
         formState: { errors }
     } = useForm({
         resolver: yupResolver(schema)
@@ -49,12 +46,19 @@ export const Newslatter = () => {
         try {
             await axios.post(url, data);
             setCorrectEmail(true);
+            toast.success('You just signed up for the newsletter 🎉');
             reset();
         } catch (e) {
             if (e.response.data.errors) {
-                setErrorEmail(e.response.data.errors);
+                setError('email', {
+                    type: 'manual',
+                    message: e.response.data.errors
+                });
             } else {
-                setErrorEmail('Failed to fetch');
+                setError('email', {
+                    type: 'manual',
+                    message: 'Failed to fetch'
+                });
             }
             setCorrectEmail(false);
         }
@@ -87,11 +91,7 @@ export const Newslatter = () => {
             ) : (
                 <div className='Newslatter__results'>
                     {!firstTime ? (
-                        correctEmail ? (
-                            <Success />
-                        ) : (
-                            <Defeat descriptionError={errorEmail} />
-                        )
+                        correctEmail && <Success />
                     ) : null}
                 </div>
             )}
