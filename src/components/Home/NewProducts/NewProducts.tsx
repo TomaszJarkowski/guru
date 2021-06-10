@@ -10,6 +10,7 @@ import { Product, StatusFetch } from '../../../store/products/productsSlice';
 import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';
+import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
 import './NewProducts.scss';
 
@@ -44,7 +45,7 @@ export const NewProducts: React.FC = () => {
                     <div className='NewProducts__products'>
                         {newProducts.map((el: Product) => (
                             <div className='NewProducts__product' key={el.name}>
-                                <p className='name'>{el.name}</p>
+                                <Subtitle classNames='name'>{el.name}</Subtitle>
                                 <img src={el.pathIMG} alt='new products' />
                                 <DefaultButton onClick={() => redirectToProduct(el.id)}>
                                     DETAILS

@@ -7,6 +7,7 @@ import { OurTeam } from '../components/Home/OurTeam/OurTeam';
 import { Illustration } from '../components/Home/Illustration/Illustration';
 import { LatestProduct } from '../components/Home/LatestProduct/LatestProduct';
 import { NewProducts } from '../components/Home/NewProducts/NewProducts';
+import { Text } from '../components/UI/Text/Text';
 
 import './scss/Home.scss';
 
@@ -19,7 +20,7 @@ export const Home = () => (
             <LatestProduct />
             <div className='HomePage__about'>
                 <h2 className='title'>Guru Fishing Tackle</h2>
-                <p className='description'>
+                <Text classNames='description'>
                     In 2009 saw the launch of Korda’s sister brand, Guru. A fantastic new company
                     striving to take match & coarse fishing tackle to the next level. The most
                     important part of what Guru do is making sure that the products that you use are
@@ -28,7 +29,7 @@ export const Home = () => (
                     of anglers. We stock a massive array of Guru products like Feeders, Hooks,
                     Tools, Leads & Lines with many more products due to be launched over the coming
                     months. At Tackleuk so we are sure that you will find what you need.
-                </p>
+                </Text>
             </div>
             <NewProducts />
             <OurTeam />

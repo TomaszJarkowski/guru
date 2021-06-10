@@ -42,10 +42,10 @@
     }
 
     &__item {
+        @include default-border;
+
         margin-bottom: $m-md;
-        border: 2px solid $c-primary;
         padding: 10px;
-        border-radius: $br-m;
         background-color: $c-blue;
         transition: transform 0.2s linear;
         color: white;
@@ -67,10 +67,9 @@
 
 .OurTeam {
     @include default-flex;
+    @include default-border;
 
     flex-wrap: wrap;
-    border: 2px solid $c-primary;
-    border-radius: $br-m;
     background-color: $c-blue;
 
     &__item {

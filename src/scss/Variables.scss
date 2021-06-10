@@ -22,11 +22,19 @@ $fs-xl: 24px;
 $fs-xxl: 35px;
 $fs-xxxl: 45px;
 
-@mixin title {
+@mixin default-title {
     font-size: $fs-xxl;
     padding: 10px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+@mixin default-glass {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 @mixin default-flex {
@@ -34,4 +42,9 @@ $fs-xxxl: 45px;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+@mixin default-border {
+    border-radius: $br-m;
+    border: 2px solid $c-primary;
 }

@@ -7,6 +7,7 @@ import { StatusFetch } from '../../store/products/productsSlice';
 import { Loader } from '../UI/Loader/Loader';
 import { Empty } from '../UI/Empty/Empty';
 import { Error } from '../UI/Error/Error';
+import { Text } from '../UI/Text/Text';
 
 import './ArticleContent.scss';
 
@@ -43,7 +44,7 @@ export const ArticleContent: React.FC = () => {
                                 src={articles[index].imgs[0].src}
                                 alt='article img'
                             />
-                            <p className='article__description'>
+                            <Text classNames='article__description'>
                                 When asked to think of fishing in Scotland, one would be forgiven
                                 for automatically picturing scenes of tree-lined rivers with figures
                                 dressed in Tweed, beautifully and artistically casting a fly line
@@ -113,7 +114,7 @@ export const ArticleContent: React.FC = () => {
                                 species such as Dace and Chub and maggot feeders in particular,
                                 although not exactly traditional, are frequently used in Scotland’s
                                 deep glacial lochs for Brown Trout and Arctic Char.
-                            </p>
+                            </Text>
                         </div>
                     ) : (
                         <Empty>The article with this ID does not exist</Empty>

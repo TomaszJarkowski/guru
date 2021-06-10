@@ -4,6 +4,7 @@ import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
 
 import { addProduct } from '../../../store/basket/basketSlice';
+import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
 import './Product.scss';
 
@@ -37,7 +38,7 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
             {product.status === 'new' && <div className='Product__new'>new</div>}
             <img className='Product__img' src={product.pathIMG} alt='product' />
             <h3 className='Product__name'>{product.name}</h3>
-            <h3 className='Product__price'>Price: {product.price} $</h3>
+            <Subtitle classNames='Product__price'>Price: {product.price} $</Subtitle>
             <div className='Product__buttons'>
                 <button className='Product__btn' onClick={redirectToProduct}>
                     <i className='fas fa-info'></i>

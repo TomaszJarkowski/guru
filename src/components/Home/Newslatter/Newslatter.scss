@@ -10,7 +10,7 @@
     padding: 30px;
 
     &__title {
-        @include title;
+        @include default-title;
     }
 
     &__text {
@@ -33,11 +33,11 @@
     }
 
     &__input {
+        @include default-border;
+
         background: none;
-        border-radius: $br-m;
         padding: 10px;
         font-size: $fs-sm;
-        border: 2px solid $c-primary;
         margin: 0 $m-sm $m-sm 0;
     }
 

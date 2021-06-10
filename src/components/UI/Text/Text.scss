@@ -1,0 +1,13 @@
+@import '../../../scss/Variables.scss';
+
+.Text {
+    font-size: $fs-md;
+    text-align: justify;
+    line-height: 26px;
+}
+
+.SmallText {
+    font-size: $fs-sm;
+    text-align: justify;
+    line-height: 22px;
+}

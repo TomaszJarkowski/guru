@@ -10,7 +10,7 @@
     background-color: #c4302b;
 
     .video__header {
-        @include title;
+        @include default-title;
 
         letter-spacing: 2px;
         color: white;
@@ -34,10 +34,8 @@
             padding: 10px;
             margin: $m-sm 0;
 
-            h1 {
-                max-width: 200px;
-                margin: $m-sm auto;
-                font-weight: bold;
+            .video__title {
+                max-width: 250px;
             }
 
             img {

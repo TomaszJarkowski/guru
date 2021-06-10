@@ -1,0 +1,13 @@
+@import '../../../scss/Variables.scss';
+
+.Subtitle {
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: $fs-md;
+    text-align: center;
+
+    @media (min-width: 800px) {
+        font-size: $fs-lg;
+    }
+}

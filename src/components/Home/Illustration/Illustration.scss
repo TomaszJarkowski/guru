@@ -27,14 +27,4 @@
             width: 90px;
         }
     }
-
-    &__title {
-        letter-spacing: 0.5px;
-        font-weight: bold;
-        padding: 10px;
-
-        @media (min-width: 800px) {
-            font-size: $fs-lg;
-        }
-    }
 }

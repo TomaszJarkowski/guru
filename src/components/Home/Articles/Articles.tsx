@@ -10,12 +10,14 @@ import { StatusFetch } from '../../../store/products/productsSlice';
 import { DefaultLink } from '../../UI/DefaultLink/DefaultLink';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';
+import { Text } from '../../UI/Text/Text';
+import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
 import './Articles.scss';
 
 const Description = ({ description }: { description: string }) => {
-    const descriptionShort = description.slice(0, 90);
-    return <p className='descriptionShort'>{descriptionShort}...</p>;
+    const descriptionShort = description.slice(0, 80);
+    return <Text classNames='descriptionShort' small={true}>{descriptionShort}...</Text>;
 };
 
 export const Articles = () => {
@@ -51,7 +53,7 @@ export const Articles = () => {
                         {articles
                             .map((article: TArticle) => (
                                 <div className='Articles__item' key={article.id}>
-                                    <h2 className='title'>{article.title}</h2>
+                                    <Subtitle classNames='title'>{article.title}</Subtitle>
                                     <img className='img' src={article.imgs[0].src} alt='img' />
                                     <Description description={article.description} />
                                     <DefaultLink path={`/article/${article.id}`}>

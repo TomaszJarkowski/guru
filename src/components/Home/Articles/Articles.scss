@@ -15,9 +15,9 @@
     }
 
     &__item {
+        @include default-border;
+
         margin-bottom: $m-sm;
-        border: 2px solid $c-primary;
-        border-radius: $br-m;
         height: 380px;
         background-color: $c-blue;
         color: white;
@@ -26,16 +26,8 @@
             width: 250px;
         }
 
-        .title {
-            font-size: $fs-lg;
-            padding: 8px 0;
-            font-weight: bold;
-        }
-
         .descriptionShort {
-            text-align: justify;
             padding: 10px 20px;
-            font-size: $fs-sm;
             max-width: 250px;
         }
     }

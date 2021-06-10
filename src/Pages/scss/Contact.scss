@@ -11,31 +11,22 @@
     }
 
     &__header {
-        font-size: $fs-xl;
-        font-weight: bold;
         background-color: $c-primary;
         color: white;
-        text-align: center;
-        padding: 10px;
     }
 
     &__contactUs {
-        border: 2px solid black;
+        @include default-glass;
+
         width: 40%;
         margin: 0 auto;
         min-width: 300px;
-        background-color: white;
         position: relative;
 
         .contactUs__item {
-            h3 {
+            .subtitle {
                 margin: $m-sm 0;
-                padding-left: 10px;
-                font-size: $fs-lg;
-                max-width: 100%;
-                background-color: rgb(212, 212, 212);
-                padding-top: 5px;
-                padding-bottom: 5px;
+                background-color: rgb(212, 212, 212);;
             }
 
             p {
@@ -50,15 +41,15 @@
     }
 
     &__oppeningHours {
-        border: 2px solid black;
         width: 40%;
         min-width: 300px;
         margin: 0 auto;
         margin-top: $m-sm;
 
         .oppeningHours__item {
+            @include default-glass;
+
             font-size: $fs-md;
-            background-color: rgb(212, 212, 212);
 
             p {
                 text-align: center;
@@ -74,18 +65,15 @@
         padding-bottom: 10px;
 
         .article__title {
-            @include title;
+            @include default-title;
 
             margin-top: 20px;
         }
 
         .article__description {
-            text-align: justify;
             padding: 20px 10px;
             width: 100%;
             max-width: 800px;
-            font-size: $fs-md;
-            line-height: 22px;
         }
 
         .article__picture {

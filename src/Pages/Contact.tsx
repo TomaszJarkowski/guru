@@ -1,9 +1,11 @@
 import { Container } from '../components/UI/Container/Container';
 import { Title } from '../components/UI/Title/Title';
+import { Text } from '../components/UI/Text/Text';
 
 import './scss/Contact.scss';
 
 import teamGuru from '../img/teamGuru.jpg';
+import { Subtitle } from '../components/UI/Subtitle/Subtitle';
 
 export const Contact = () => (
     <Container>
@@ -11,9 +13,9 @@ export const Contact = () => (
         <div className='ContactPage'>
             <div className='backgroungIMG'>
                 <div className='ContactPage__contactUs'>
-                    <h2 className='ContactPage__header'>Contact Us</h2>
+                    <Subtitle classNames='ContactPage__header'>Contact Us</Subtitle>
                     <div className='contactUs__item'>
-                        <h3>Product Enquiries</h3>
+                        <Subtitle classNames='subtitle'>Product Enquiries</Subtitle>
                         <p>
                             <i className='fas fa-envelope'></i> products@tackleguru.co.uk
                         </p>
@@ -22,7 +24,7 @@ export const Contact = () => (
                         </p>
                     </div>
                     <div className='contactUs__item'>
-                        <h3>Website Enquiries And General Marketing</h3>
+                        <Subtitle classNames='subtitle'>Website Enquiries And General Marketing</Subtitle>
                         <p>
                             <i className='fas fa-envelope'></i> info@tackleguru.co.uk
                         </p>
@@ -31,7 +33,7 @@ export const Contact = () => (
                         </p>
                     </div>
                     <div className='contactUs__item'>
-                        <h3>Sales</h3>
+                        <Subtitle classNames='subtitle'>Sales</Subtitle>
                         <p>
                             <i className='fas fa-envelope'></i> sales@tackleguru.co.uk
                         </p>
@@ -40,7 +42,7 @@ export const Contact = () => (
                         </p>
                     </div>
                     <div className='contactUs__item'>
-                        <h3>Customer Services</h3>
+                        <Subtitle classNames='subtitle'>Customer Services</Subtitle>
                         <p>
                             <i className='fas fa-envelope'></i> customerservices@tackleguru.co.uk
                         </p>
@@ -50,7 +52,7 @@ export const Contact = () => (
                     </div>
                 </div>
                 <div className='ContactPage__oppeningHours'>
-                    <h2 className='ContactPage__header'>Opening Hours</h2>
+                    <Subtitle classNames='ContactPage__header'>Opening Hours</Subtitle>
                     <div className='oppeningHours__item'>
                         <p>Monday-Friday: 11 am - 10 pm</p>
                         <p>Saturday-Sunday: 12 am - 10 pm</p>
@@ -59,7 +61,7 @@ export const Contact = () => (
             </div>
             <div className='ContactPage__article'>
                 <h2 className='article__title'>Team Guru - Knowledge is power</h2>
-                <p className='article__description'>
+                <Text classNames='article__description'>
                     The most important part of what we do is making sure that the Guru products that
                     you use are the best out there, bar none. However, we also want you to be
                     completely happy with the whole Guru aftersales experience! If you need to
@@ -72,7 +74,7 @@ export const Contact = () => (
                     want to come and meet a member of the Guru team in person then pop along and say
                     hello. We’ll be only too pleased to pass on any help and advice that you might
                     need or talk you through any of our new products.
-                </p>
+                </Text>
                 <img src={teamGuru} className='article__picture' alt='our team, team GuruTackle' />
             </div>
             <iframe

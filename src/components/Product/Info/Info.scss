@@ -25,15 +25,11 @@
     }
 
     &__specifications {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: $m-sm;
-        color: $c-dark;
+        text-align: left;
+        padding-left: 0;
     }
 
     &__text {
-        text-align: justify;
         margin-bottom: $m-md;
-        line-height: 20px;
     }
 }

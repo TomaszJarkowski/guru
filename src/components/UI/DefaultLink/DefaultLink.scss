@@ -1,11 +1,11 @@
 @import '../../../scss/Variables.scss';
 
 .DefaultLink {
+    @include default-border;
+
     background: none;
     text-transform: uppercase;
-    border: 2px solid $c-primary;
     background-color: white;
-    border-radius: $br-m;
     transition: background-color 0.2s linear;
 
     &:hover {

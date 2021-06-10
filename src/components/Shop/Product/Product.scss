@@ -1,8 +1,8 @@
 @import '../../../scss/Variables.scss';
 
 .Product {
-    border: 3px solid $c-primary;
-    border-radius: $br-m;
+    @include default-border;
+
     margin: $m-sm;
     background-color: $c-blue;
     width: 300px;
@@ -17,15 +17,12 @@
     &__name {
         width: 90%;
         font-size: $fs-xl;
-        margin-bottom: $m-md;
         margin-left: $m-sm;
     }
 
     &__price {
-        font-size: $fs-lg;
-        font-weight: bold;
-        margin-bottom: $m-md;
-        margin-left: $m-sm;
+        margin-bottom: 10px;
+        text-align: left;
     }
 
     &__buttons {

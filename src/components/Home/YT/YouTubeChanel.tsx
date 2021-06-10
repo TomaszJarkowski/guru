@@ -5,6 +5,7 @@ import { selectChanelState, TFilm, fetchFilms } from '../../../store/chanel/chan
 import { StatusFetch } from '../../../store/products/productsSlice';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';
+import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
 import './YouTubeChanel.scss';
 
@@ -31,7 +32,7 @@ export const YouTubeChanel = () => {
                 ) : (
                     films.map((film: TFilm) => (
                         <div className='video__item' key={film.id.videoId}>
-                            <h1 className='video__title'>{film.snippet.title}</h1>
+                            <Subtitle classNames='video__title'>{film.snippet.title}</Subtitle>
                             <img src={film.snippet.thumbnails.high.url} alt='yt chanel img' />
                             <button>
                                 <a

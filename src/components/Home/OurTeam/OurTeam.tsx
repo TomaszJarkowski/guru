@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import { Modal } from '../../Modal/Modal';
 import { DefaultLink } from '../../UI/DefaultLink/DefaultLink';
+import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
 import './OurTeam.scss';
 
@@ -17,11 +18,11 @@ export const OurTeam = () => (
             <div className='Anglers__items'>
                 <div className='Anglers__item'>
                     <img src={img10} alt='angler from team Steve Ringer' />
-                    <h2>Steve Ringer</h2>
+                    <Subtitle>Steve Ringer</Subtitle>
                 </div>
                 <div className='Anglers__item'>
                     <img src={img11} alt='angler from team Matt Godfrey' />
-                    <h2>Matt Godfrey</h2>
+                    <Subtitle>Matt Godfrey</Subtitle>
                 </div>
             </div>
             <DefaultLink path='/home/team'>Meet our team</DefaultLink>

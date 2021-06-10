@@ -66,9 +66,8 @@
 
     .basket__link {
         @include default-flex;
+        @include default-border;
 
-        border: 2px $c-primary solid;
-        border-radius: $br-m;
         margin: 0 $m-sm;
         padding: 10px 15px;
 

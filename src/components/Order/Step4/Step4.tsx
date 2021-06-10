@@ -1,16 +1,18 @@
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
 
-import { finish, reduceStep, selectOrderState } from '../../../store/order/orderSlice';
-import { clearBasket, selectBasketState } from '../../../store/basket/basketSlice';
+import { postOrder, reduceStep, selectOrderState } from '../../../store/order/orderSlice';
+import { selectBasketState } from '../../../store/basket/basketSlice';
 import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
 import { ActiveButton } from '../../UI/ActiveButton/ActiveButton';
 import { HeaderStep } from '../HeaderStep/HeaderStep';
 import { sumNumbers } from '../../../helpers/helpers';
+import { StatusFetch } from '../../../store/products/productsSlice';
+import { Loader } from '../../UI/Loader/Loader';
 
 import '../Step2/Step2.scss';
 import './Step4.scss';
+import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
 export const Step4: React.FC = () => {
     const dispatch = useDispatch();
@@ -27,7 +29,9 @@ export const Step4: React.FC = () => {
         country,
         email,
         phone,
-        postalCode
+        postalCode,
+        orderFetch,
+        errorMessage
     } = useSelector(selectOrderState);
 
     const { basket, cost } = useSelector(selectBasketState);
@@ -43,10 +47,18 @@ export const Step4: React.FC = () => {
     };
 
     const handleSubmit = () => {
-        dispatch(finish());
-        dispatch(clearBasket());
-        redirect();
-        toast.success('Your order has been received! 🎉');
+        const order = {
+            firstName,
+            lastName,
+            email,
+            phone,
+            cost,
+            address,
+            delivery: deliveryMethod,
+            payment: paymentMethod,
+            products: basket,
+        }
+        dispatch(postOrder(redirect, order));
     };
 
     return (
@@ -54,7 +66,7 @@ export const Step4: React.FC = () => {
             <HeaderStep>FINISH</HeaderStep>
             <div className='Summary'>
                 <div className='Summary__basket'>
-                    <h2>Products</h2>
+                    <Subtitle classNames='subtitle'>Products</Subtitle>
                     {basket.map((product) => (
                         <div key={product.id}>
                             <img src={product.pathIMG} alt='product order img' />
@@ -64,7 +76,7 @@ export const Step4: React.FC = () => {
                     ))}
                 </div>
                 <div className='Summary__user'>
-                    <h2>Address</h2>
+                    <Subtitle classNames='subtitle'>Address</Subtitle>
                     <h3>First name: {firstName}</h3>
                     <h3>Last name: {lastName}</h3>
                     <h3>Email: {email}</h3>
@@ -75,13 +87,13 @@ export const Step4: React.FC = () => {
                     <h3>Address: {address}</h3>
                 </div>
                 <div className='Summary__delivery'>
-                    <h2>Delivery</h2>
+                    <Subtitle classNames='subtitle'>Delivery</Subtitle>
                     <h3>Delivery method: {deliveryMethod}</h3>
                     <h3>Delivery cost: ${deliveryCost}</h3>
                     <h3>Payment method: {paymentMethod}</h3>
                 </div>
                 <div className='Summary__total'>
-                    <h2>Total cost</h2>
+                    <Subtitle  classNames='subtitle'>Total cost</Subtitle>
                     <h3>${sumNumbers(cost, deliveryCost as number)}</h3>
                 </div>
             </div>
@@ -95,6 +107,8 @@ export const Step4: React.FC = () => {
                     Order
                 </ActiveButton>
             </div>
+            {orderFetch === StatusFetch.LOADING && <Loader />}
+            {orderFetch === StatusFetch.FAIL && <p className='Summary__error'>{errorMessage}</p>}
         </form>
     );
 };
