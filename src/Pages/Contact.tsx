@@ -1,11 +1,11 @@
 import { Container } from '../components/UI/Container/Container';
 import { Title } from '../components/UI/Title/Title';
 import { Text } from '../components/UI/Text/Text';
+import { Subtitle } from '../components/UI/Subtitle/Subtitle';
 
 import './scss/Contact.scss';
 
 import teamGuru from '../img/teamGuru.jpg';
-import { Subtitle } from '../components/UI/Subtitle/Subtitle';
 
 export const Contact = () => (
     <Container>
@@ -24,7 +24,9 @@ export const Contact = () => (
                         </p>
                     </div>
                     <div className='contactUs__item'>
-                        <Subtitle classNames='subtitle'>Website Enquiries And General Marketing</Subtitle>
+                        <Subtitle classNames='subtitle'>
+                            Website Enquiries And General Marketing
+                        </Subtitle>
                         <p>
                             <i className='fas fa-envelope'></i> info@tackleguru.co.uk
                         </p>

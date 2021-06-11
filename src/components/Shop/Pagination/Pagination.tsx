@@ -7,13 +7,9 @@ type TPagination = {
     productsPerPage: number;
     totalProducts: number;
     paginate: (pageNumber: number) => void;
-}
+};
 
-export const Pagination: React.FC<TPagination> = ({
-    productsPerPage,
-    totalProducts,
-    paginate
-}) => {
+export const Pagination: React.FC<TPagination> = ({ productsPerPage, totalProducts, paginate }) => {
     const pageNumbers = [];
     const [decoration, setDecoration] = useState(1);
 

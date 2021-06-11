@@ -55,54 +55,42 @@ export const Sort: React.FC<TSort> = ({ products, setSortedProducts }) => {
             <h2 className='Sort__title'>SORT</h2>
             <DefaultButton
                 style={
-                    activeSort === 1
-                        ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'white' }
+                    activeSort === 1 ? { backgroundColor: '#ffa33b' } : { backgroundColor: 'white' }
                 }
                 onClick={defaultSort}>
                 Default
             </DefaultButton>
             <DefaultButton
                 style={
-                    activeSort === 6
-                        ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'white' }
+                    activeSort === 6 ? { backgroundColor: '#ffa33b' } : { backgroundColor: 'white' }
                 }
                 onClick={newsSort}>
                 News
             </DefaultButton>
             <DefaultButton
                 style={
-                    activeSort === 2
-                        ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'white' }
+                    activeSort === 2 ? { backgroundColor: '#ffa33b' } : { backgroundColor: 'white' }
                 }
                 onClick={highToLowSort}>
                 Price high to low
             </DefaultButton>
             <DefaultButton
                 style={
-                    activeSort === 3
-                        ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'white' }
+                    activeSort === 3 ? { backgroundColor: '#ffa33b' } : { backgroundColor: 'white' }
                 }
                 onClick={lowToHighort}>
                 Price low to high
             </DefaultButton>
             <DefaultButton
                 style={
-                    activeSort === 4
-                        ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'white' }
+                    activeSort === 4 ? { backgroundColor: '#ffa33b' } : { backgroundColor: 'white' }
                 }
                 onClick={aToZSort}>
                 Product Name - A to Z
             </DefaultButton>
             <DefaultButton
                 style={
-                    activeSort === 5
-                        ? { backgroundColor: '#ffa33b' }
-                        : { backgroundColor: 'white' }
+                    activeSort === 5 ? { backgroundColor: '#ffa33b' } : { backgroundColor: 'white' }
                 }
                 onClick={zToASort}>
                 Product Name - Z to A

@@ -5,8 +5,8 @@ import { useHistory } from 'react-router-dom';
 import './Modal.scss';
 
 type TModal = {
-    children: React.ReactNode
-}
+    children: React.ReactNode;
+};
 
 export const Modal: React.FC<TModal> = ({ children }) => {
     const history = useHistory();

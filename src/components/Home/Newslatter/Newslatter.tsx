@@ -52,7 +52,7 @@ export const Newslatter = () => {
             if (e.response.data.errors) {
                 setError('email', {
                     type: 'manual',
-                    message: e.response.data.errors
+                    message: e.response.data.message
                 });
             } else {
                 setError('email', {
@@ -90,9 +90,7 @@ export const Newslatter = () => {
                 <Loader />
             ) : (
                 <div className='Newslatter__results'>
-                    {!firstTime ? (
-                        correctEmail && <Success />
-                    ) : null}
+                    {!firstTime ? correctEmail && <Success /> : null}
                 </div>
             )}
         </div>

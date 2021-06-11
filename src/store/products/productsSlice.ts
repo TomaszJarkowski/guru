@@ -13,6 +13,7 @@ export type Product = {
     price: number;
     status: string;
     pathIMG: string;
+    description: string;
 };
 
 type ProductsState = {
@@ -60,7 +61,7 @@ export const fetchProducts = () => async (dispatch: Function) => {
 
     try {
         const res = await axios.get(url);
-        dispatch(setProducts(res.data));
+        dispatch(setProducts(res.data.data));
     } catch (err) {
         dispatch(setErrorFetch(err.message));
     }

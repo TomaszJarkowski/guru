@@ -9,10 +9,10 @@ import { HeaderStep } from '../HeaderStep/HeaderStep';
 import { sumNumbers } from '../../../helpers/helpers';
 import { StatusFetch } from '../../../store/products/productsSlice';
 import { Loader } from '../../UI/Loader/Loader';
+import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
 import '../Step2/Step2.scss';
 import './Step4.scss';
-import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
 export const Step4: React.FC = () => {
     const dispatch = useDispatch();
@@ -56,8 +56,8 @@ export const Step4: React.FC = () => {
             address,
             delivery: deliveryMethod,
             payment: paymentMethod,
-            products: basket,
-        }
+            products: basket
+        };
         dispatch(postOrder(redirect, order));
     };
 
@@ -93,14 +93,14 @@ export const Step4: React.FC = () => {
                     <h3>Payment method: {paymentMethod}</h3>
                 </div>
                 <div className='Summary__total'>
-                    <Subtitle  classNames='subtitle'>Total cost</Subtitle>
+                    <Subtitle classNames='subtitle'>Total cost</Subtitle>
                     <h3>${sumNumbers(cost, deliveryCost as number)}</h3>
                 </div>
             </div>
             <div className='Step__buttons'>
                 <DefaultButton onClick={back}>Back</DefaultButton>
                 <ActiveButton
-                    onClick={(e:any) => {
+                    onClick={(e: any) => {
                         e.preventDefault();
                         handleSubmit();
                     }}>

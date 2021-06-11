@@ -5,7 +5,5 @@ type TDisabledButton = {
 };
 
 export const DisabledButton: React.FC<TDisabledButton> = ({ children }) => (
-    <button className='DisabledButton'>
-        {children}
-    </button>
+    <button className='DisabledButton'>{children}</button>
 );

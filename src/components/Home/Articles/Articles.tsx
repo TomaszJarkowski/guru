@@ -17,7 +17,11 @@ import './Articles.scss';
 
 const Description = ({ description }: { description: string }) => {
     const descriptionShort = description.slice(0, 80);
-    return <Text classNames='descriptionShort' small={true}>{descriptionShort}...</Text>;
+    return (
+        <Text classNames='descriptionShort' small={true}>
+            {descriptionShort}...
+        </Text>
+    );
 };
 
 export const Articles = () => {

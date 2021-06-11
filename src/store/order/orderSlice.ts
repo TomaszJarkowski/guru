@@ -33,7 +33,7 @@ type Order = {
     delivery: string;
     payment: string;
     products: Product[];
-}
+};
 
 const initialState: OrderState = {
     step: 1,

@@ -4,7 +4,7 @@ import './PrimaryButton.scss';
 type TPrimaryButton = {
     children: React.ReactNode;
     onClick?: () => void;
-    style?: CSSProperties
+    style?: CSSProperties;
 };
 
 export const PrimaryButton: React.FC<TPrimaryButton> = ({ children, onClick, style }) => (

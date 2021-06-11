@@ -18,7 +18,7 @@ export type TProduct = {
 
 type ProductProps = {
     product: TProduct;
-}
+};
 
 export const Product: React.FC<ProductProps> = ({ product }) => {
     const history = useHistory();

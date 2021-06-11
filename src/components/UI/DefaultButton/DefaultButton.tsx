@@ -4,7 +4,7 @@ import './DefaultButton.scss';
 type TDefaultButton = {
     children: React.ReactNode;
     onClick?: () => void;
-    style?: CSSProperties
+    style?: CSSProperties;
 };
 
 export const DefaultButton: React.FC<TDefaultButton> = ({ children, onClick, style }) => (

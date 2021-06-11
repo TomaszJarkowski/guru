@@ -1,6 +1,6 @@
 import guruLogo from '../../../img/guru_logo.jpg';
 
-import './HeaderStep.scss'
+import './HeaderStep.scss';
 
 export const HeaderStep: React.FC = ({ children }) => {
     return (

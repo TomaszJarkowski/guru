@@ -20,7 +20,7 @@ export const Content: React.FC = () => {
 
     const redirect = () => {
         history.push('/order');
-    }
+    };
 
     return (
         <div className='Basket'>

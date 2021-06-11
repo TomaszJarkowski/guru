@@ -6,7 +6,7 @@
     .backgroungIMG {
         padding-top: 20px;
         padding-bottom: 20px;
-        background-image: url("../../img/backgroundFisherman.jpeg");
+        background-image: url('../../img/backgroundFisherman.jpeg');
         background-size: cover;
     }
 
@@ -26,7 +26,7 @@
         .contactUs__item {
             .subtitle {
                 margin: $m-sm 0;
-                background-color: rgb(212, 212, 212);;
+                background-color: rgb(212, 212, 212);
             }
 
             p {

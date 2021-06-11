@@ -4,7 +4,7 @@ import './Products.scss';
 
 type TProducts = {
     products: TProduct[];
-}
+};
 
 export const Products: React.FC<TProducts> = ({ products }) => {
     return (

@@ -30,10 +30,7 @@ export const Page = () => {
                 path='/order'
                 render={() => (basket.length ? <Order /> : <Redirect to='/basket' />)}
             />
-            <Route
-                path='/finish'
-                render={() => (finish ? <Finish /> : <Redirect to='/shop' />)}
-            />
+            <Route path='/finish' render={() => (finish ? <Finish /> : <Redirect to='/shop' />)} />
             <Route component={Page404} />
         </Switch>
     );

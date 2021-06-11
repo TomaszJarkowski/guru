@@ -6,7 +6,8 @@
     padding: 40px 0;
 
     &__title {
-        font-size: $fs-xl;
+        @include default-title;
+
         text-align: center;
         margin-bottom: $m-lg;
     }

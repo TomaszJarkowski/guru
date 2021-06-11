@@ -60,7 +60,7 @@ export const fetchArticles = () => async (dispatch: Function) => {
 
     try {
         const res = await axios.get(url);
-        dispatch(setArticles(res.data));
+        dispatch(setArticles(res.data.data));
     } catch (err) {
         dispatch(setErrorFetch(err.message));
     }

@@ -1,5 +1,6 @@
-import './Illustration.scss';
 import { Subtitle } from '../../UI/Subtitle/Subtitle';
+
+import './Illustration.scss';
 
 import img1 from '../../../img/calendar.png';
 import img2 from '../../../img/clock.png';
