@@ -1,13 +1,15 @@
 # Guru
-Fishing online store. Education and portfolio project. [LINK]()
+Fishing online store. Education and portfolio project: [LINK](https://guru-shop.herokuapp.com/)
 
-![screen__one]('./src/img/screen1.png')
+Here is the **BACKEND CODE**: [LINK](https://github.com/TomaszJarkowski/guru-backend)
+
+![screen__one](./src/img/screen1.png)
 
 ## General information :page_facing_up:
 
 The Guru online store is a website created for learning. The website was built using the MERN stack. Before starting the project, some requirements for creating this page were set, these requirements are at the bottom of the readme. You can add products to the basket, fill out the order form and place an order, you can also subscribe to our newsletter or read our articles. In the basket, we can remove products, increase and decrease their quantity, and also go to the next stage, which is "Order". The site is also connected to YouTube and the last 4 videos are displayed.
 
-![screen__two]('./src/img/screen2.png')
+![screen__two](./src/img/screen2.png)
 
 ## Getting Started :envelope_with_arrow:
 
