@@ -3,8 +3,8 @@
 .SingleProduct {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    color: black;
+    background-color: #fff;
+    color: #000;
 
     @media (min-width: 1000px) {
         flex-direction: row;

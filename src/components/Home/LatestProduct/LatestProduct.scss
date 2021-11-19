@@ -5,7 +5,7 @@
 
     justify-content: space-evenly;
     flex-direction: column;
-    color: black;
+    color: #000;
     padding: 20px;
 
     @media (min-width: 900px) {
@@ -35,18 +35,18 @@
 }
 
 .NewProduct {
-    color: black;
+    color: #000;
     border-radius: $br-m;
     background-color: $c-primary;
 
     &__title {
         padding: 10px;
-        color: white;
+        color: #fff;
         letter-spacing: 2px;
         font-weight: bold;
         background-color: $c-primary;
         font-size: $fs-xl;
-        text-shadow: 0 0 1px black;
+        text-shadow: 0 0 1px #000;
         border-radius: $br-m $br-m 0 0;
 
         @media (min-width: 650px) {
@@ -58,7 +58,7 @@
     &__text {
         padding: 5px 10px;
         margin-bottom: $m-sm;
-        background-color: white;
+        background-color: #fff;
         max-height: 400px;
         overflow-y: auto;
 

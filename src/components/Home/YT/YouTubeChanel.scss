@@ -5,7 +5,7 @@
 
     flex-direction: column;
     text-align: center;
-    color: black;
+    color: #000;
     padding: 30px;
     background-color: #c4302b;
 
@@ -13,7 +13,7 @@
         @include default-title;
 
         letter-spacing: 2px;
-        color: white;
+        color: #fff;
         border: 2px solid $c-primary;
         box-shadow: 0 0 20px 0 $c-primary;
     }
@@ -27,7 +27,7 @@
         margin-top: $m-md;
 
         .video__item {
-            background-color: white;
+            background-color: #fff;
             border: black 2px solid;
             display: flex;
             flex-direction: column;
@@ -47,14 +47,14 @@
                 padding: 5px 0;
                 border: 2px solid #c4302b;
                 transition: 0.2s linear all;
-                background-color: white;
+                background-color: #fff;
 
                 @media (min-width: 550px) {
                     padding: 10px 0;
                 }
 
                 a {
-                    color: black;
+                    color: #000;
                     transition: 0.2s linear all;
 
                     @media (min-width: 550px) {
@@ -72,10 +72,10 @@
                     background-color: #c4302b;
 
                     a {
-                        color: white;
+                        color: #fff;
 
                         i {
-                            color: white;
+                            color: #fff;
                         }
                     }
                 }

@@ -46,8 +46,8 @@
         display: block;
         color: $c-dark;
         background: none;
-        background-color: white;
-        border: 2px solid white;
+        background-color: #fff;
+        border: 2px solid #fff;
         border-radius: $br-l;
         width: 80px;
         padding: 6px;
@@ -57,13 +57,13 @@
         cursor: pointer;
 
         &:last-child {
-            color: white;
+            color: #fff;
             border: 2px solid $c-primary;
             background-color: $c-primary;
         }
 
         &:active {
-            box-shadow: 0 0 7px 2px white;
+            box-shadow: 0 0 7px 2px #fff;
         }
 
         &:focus {

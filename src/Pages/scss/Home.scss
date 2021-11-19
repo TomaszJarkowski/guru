@@ -1,7 +1,7 @@
 @import '../../scss/Variables.scss';
 
 .HomePage {
-    background-color: white;
+    background-color: #fff;
 
     &__about {
         @include default-flex;
