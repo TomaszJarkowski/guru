@@ -2,7 +2,7 @@
 
 .Footer {
     width: 100%;
-    background-color: black;
+    background-color: #000;
 
     &__content {
         @include default-flex;
@@ -30,7 +30,7 @@
             width: 50px;
             height: 50px;
             margin: $m-sm;
-            background-color: white;
+            background-color: #fff;
             border-radius: $br-l;
             overflow: hidden;
             transition: 0.3s linear;
@@ -44,7 +44,7 @@
             &:hover {
                 transform: scale(1.2);
                 border-radius: 50%;
-                box-shadow: 0 0 8px 2px white;
+                box-shadow: 0 0 8px 2px #fff;
             }
 
             i {
@@ -55,7 +55,7 @@
                 top: 0;
                 left: 0;
                 line-height: 50px;
-                color: black;
+                color: #000;
                 font-size: $fs-lg;
 
                 @media (min-width: 450px) {
@@ -76,7 +76,7 @@
         }
 
         .info-item {
-            border: 2px solid white;
+            border: 2px solid #fff;
             padding: 10px;
             border-radius: $br-m;
             margin: $m-sm;
@@ -137,8 +137,8 @@
     &__map {
         @include default-flex;
 
-        border: 2px solid white;
-        background-color: black;
+        border: 2px solid #fff;
+        background-color: #000;
         border-radius: $br-m;
         transition: 0.2s linear;
         font-size: $fs-md;
@@ -155,7 +155,7 @@
         }
 
         &:hover {
-            box-shadow: 0 0 8px 0 white;
+            box-shadow: 0 0 8px 0 #fff;
             transform: scale(1.1);
         }
     }

@@ -2,14 +2,14 @@
 
 .ActiveButton {
     border: 2px solid $c-light-green;
-    background-color: white;
+    background-color: #fff;
     padding: 10px;
-    color: black;
+    color: #000;
     box-shadow: 0 0 2px 0 $c-light-green;
     transition: all 0.1s linear;
 
     &:hover {
         background-color: $c-light-green;
-        color: white;
+        color: #fff;
     }
 }
