@@ -3,9 +3,10 @@ name: Deploy
 on:
   workflow_dispatch:
   pull_request:
+    types:
+      - closed
     branches:
       - master
-  types: [closed]
 
 jobs:
   build:
