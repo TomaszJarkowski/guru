@@ -27,6 +27,7 @@ export const Content: React.FC = () => {
         if (!products.length) {
             dispatch(fetchProducts());
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const index = products.findIndex((obj) => obj.id === parseInt(params.id));

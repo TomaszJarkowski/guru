@@ -33,6 +33,7 @@ export const Articles = () => {
         if (!articles.length) {
             dispatch(fetchArticles());
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleClick = () => {

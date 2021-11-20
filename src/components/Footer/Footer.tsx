@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Container } from '../UI/Container/Container';
 
 import logo from '../../img/guru_logo.jpg';

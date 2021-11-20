@@ -48,6 +48,7 @@ export const Step2: React.FC = () => {
             setDeliveryMethod(selector.deliveryMethod);
             setDeliveryCost(selector.deliveryCost);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const onSubmit = async () => {

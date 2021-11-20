@@ -39,6 +39,7 @@ export const Step3: React.FC = () => {
         if (selector.paymentMethod) {
             setPaymentMethod(selector.paymentMethod);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const onSubmit = async () => {

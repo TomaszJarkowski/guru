@@ -17,6 +17,7 @@ export const YouTubeChanel = () => {
         if (!films.length) {
             dispatch(fetchFilms());
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     if (filmsFetch === StatusFetch.FAIL) {
