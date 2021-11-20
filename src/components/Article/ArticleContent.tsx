@@ -113,7 +113,7 @@ export const ArticleContent: React.FC = () => {
                                 Maggot feeders are also perfect for fishing slow moving rivers for
                                 species such as Dace and Chub and maggot feeders in particular,
                                 although not exactly traditional, are frequently used in Scotland’s
-                                deep glacial lochs for Brown Trout and Arctic.
+                                deep glacial lochs for Brown Trout and.
                             </Text>
                         </div>
                     ) : (
