@@ -2,24 +2,26 @@ name: Deploy
 
 on:
   workflow_dispatch:
-  pull_request:
-    types:
-      - closed
+  push:
     branches:
       - master
 
 jobs:
   build:
     name: Build and deploy
-    if: github.event.pull_request.merged
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
       - uses:  phips28/gh-action-bump-version@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit-message: 'CI: bumps version to {{version}} [skip ci]'
+      - run: npm install
+      - run: npm run build
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
