@@ -16,6 +16,7 @@ jobs:
     steps:
       - uses: 'rimonhanna/gh-action-bump-version@master'
       - uses: actions/checkout@v2
+      - uses: 'rimonhanna/gh-action-bump-version@master'
       - uses: akhileshns/heroku-deploy@v3.12.12
       - uses: 'rimonhanna/gh-action-bump-version@master'
         with:
