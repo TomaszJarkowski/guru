@@ -2,9 +2,6 @@ name: Deploy
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
 
 jobs:
   build:
@@ -15,11 +12,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - uses:  phips28/gh-action-bump-version@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          commit-message: 'CI: bumps version to {{version}} [skip ci]'
       - run: npm install
       - run: npm run build
       - uses: akhileshns/heroku-deploy@v3.12.12
