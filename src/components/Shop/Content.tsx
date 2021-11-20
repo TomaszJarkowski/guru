@@ -26,6 +26,7 @@ export const Content = () => {
         if (!products.length) {
             dispatch(fetchProducts());
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {

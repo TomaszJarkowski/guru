@@ -20,6 +20,7 @@ export const ArticleContent: React.FC = () => {
         if (!articles.length) {
             dispatch(fetchArticles());
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const index = articles.findIndex((obj) => obj.id === parseInt(params.id));

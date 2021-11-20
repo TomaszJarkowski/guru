@@ -23,6 +23,7 @@ export const NewProducts: React.FC = () => {
         if (!newProducts.length) {
             dispatch(fetchNewProducts());
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const redirectToProduct = (id: number) => {

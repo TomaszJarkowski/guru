@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Container } from '../components/UI/Container/Container';
 import { Title } from '../components/UI/Title/Title';
 import { Text } from '../components/UI/Text/Text';
