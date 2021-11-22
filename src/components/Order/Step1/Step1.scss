@@ -2,7 +2,7 @@
 
 .Step {
     &__box {
-        @include default-flex;
+        @include default-flexbox;
 
         margin: $m-xs 0;
 

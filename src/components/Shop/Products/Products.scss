@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
 .Products {
-    @include default-flex;
+    @include default-flexbox;
 
     justify-content: space-around;
     flex-wrap: wrap;

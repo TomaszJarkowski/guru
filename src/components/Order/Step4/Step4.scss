@@ -27,7 +27,7 @@
 
     &__basket {
         div {
-            @include default-flex;
+            @include default-flexbox;
 
             justify-content: space-around;
             padding: 5px 0;

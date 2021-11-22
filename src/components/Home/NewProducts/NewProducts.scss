@@ -48,7 +48,7 @@
     }
 
     &__products {
-        @include default-flex;
+        @include default-flexbox;
 
         flex-wrap: wrap;
 

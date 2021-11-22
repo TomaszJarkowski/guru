@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
 .Anglers {
-    @include default-flex;
+    @include default-flexbox;
 
     flex-direction: column;
     color: #000;
@@ -29,7 +29,7 @@
     }
 
     &__items {
-        @include default-flex;
+        @include default-flexbox;
 
         text-align: center;
         flex-direction: column;
@@ -66,7 +66,7 @@
 }
 
 .OurTeam {
-    @include default-flex;
+    @include default-flexbox;
     @include default-border;
 
     flex-wrap: wrap;

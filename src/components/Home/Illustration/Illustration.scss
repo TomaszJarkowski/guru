@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
 .Illustration {
-    @include default-flex;
+    @include default-flexbox;
 
     justify-content: space-evenly;
     text-align: center;

@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
 .Newslatter {
-    @include default-flex;
+    @include default-flexbox;
 
     flex-direction: column;
     text-align: center;

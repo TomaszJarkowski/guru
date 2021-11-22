@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
 .StepsDots {
-    @include default-flex;
+    @include default-flexbox;
 
     justify-content: space-around;
     color: $c-dark;
@@ -9,7 +9,7 @@
     text-align: center;
 
     &__dot {
-        @include default-flex;
+        @include default-flexbox;
 
         padding: 10px 2px;
         width: 100%;

@@ -1,7 +1,7 @@
 @import '../../scss/Variables.scss';
 
 .Modal {
-    @include default-flex;
+    @include default-flexbox;
 
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;

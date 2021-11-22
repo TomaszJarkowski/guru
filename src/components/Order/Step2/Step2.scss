@@ -3,7 +3,7 @@
 .Step {
     .delivery__item,
     .payment__item {
-        @include default-flex;
+        @include default-flexbox;
 
         justify-content: space-evenly;
         height: 70px;

@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
 .BasketItem {
-    @include default-flex;
+    @include default-flexbox;
     @include default-border;
 
     justify-content: space-around;
