@@ -26,5 +26,4 @@ jobs:
           destination_branch: "release"
           pr_title: "Pulling ${{ github.ref }} into release"
           pr_body: "👑 *An automated PR*"
-          pr_draft: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
