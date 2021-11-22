@@ -65,7 +65,7 @@
     }
 
     .basket__link {
-        @include default-flex;
+        @include default-flexbox;
         @include default-border;
 
         margin: 0 $m-sm;

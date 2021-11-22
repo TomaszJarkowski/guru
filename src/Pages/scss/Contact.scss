@@ -87,7 +87,7 @@
     }
 
     iframe {
-        @include default-flex;
+        @include default-flexbox;
 
         text-align: center;
         width: 100%;

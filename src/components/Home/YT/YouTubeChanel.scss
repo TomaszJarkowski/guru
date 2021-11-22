@@ -1,7 +1,7 @@
 @import '../../../scss//Variables.scss';
 
 .YTChanel {
-    @include default-flex;
+    @include default-flexbox;
 
     flex-direction: column;
     text-align: center;
@@ -19,7 +19,7 @@
     }
 
     .video__items {
-        @include default-flex;
+        @include default-flexbox;
 
         justify-content: space-evenly;
         flex-wrap: wrap;

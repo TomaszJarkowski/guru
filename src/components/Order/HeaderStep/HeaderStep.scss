@@ -26,7 +26,7 @@
     }
 
     &__logo {
-        @include default-flex;
+        @include default-flexbox;
 
         background-color: #000;
         width: 100%;

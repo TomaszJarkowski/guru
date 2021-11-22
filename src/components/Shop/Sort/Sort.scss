@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
 .Sort {
-    @include default-flex;
+    @include default-flexbox;
 
     flex-wrap: wrap;
     padding: 10px 0;

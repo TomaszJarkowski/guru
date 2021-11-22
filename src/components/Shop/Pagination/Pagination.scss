@@ -1,7 +1,7 @@
 @import '../../../scss/Variables.scss';
 
 .Pagination {
-    @include default-flex;
+    @include default-flexbox;
 
     background-color: $c-secondary;
 

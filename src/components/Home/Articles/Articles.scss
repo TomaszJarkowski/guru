@@ -7,7 +7,7 @@
     padding: 10px;
 
     &__list {
-        @include default-flex;
+        @include default-flexbox;
 
         justify-content: space-evenly;
         text-align: center;
@@ -33,12 +33,12 @@
     }
 
     &__btn {
-        @include default-flex;
+        @include default-flexbox;
 
         padding-bottom: 10px;
 
         button {
-            @include default-flex;
+            @include default-flexbox;
 
             border: none;
             width: 45px;

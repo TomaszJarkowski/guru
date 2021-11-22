@@ -5,7 +5,7 @@
     background-color: #000;
 
     &__content {
-        @include default-flex;
+        @include default-flexbox;
 
         flex-direction: column;
     }
@@ -20,7 +20,7 @@
     }
 
     &__socials {
-        @include default-flex;
+        @include default-flexbox;
 
         @media (min-width: 450px) {
             margin: $m-sm;
@@ -67,7 +67,7 @@
     }
 
     &__info {
-        @include default-flex;
+        @include default-flexbox;
 
         flex-direction: column;
 
@@ -135,7 +135,7 @@
     }
 
     &__map {
-        @include default-flex;
+        @include default-flexbox;
 
         border: 2px solid #fff;
         background-color: #000;
