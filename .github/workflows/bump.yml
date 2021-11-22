@@ -20,3 +20,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit-message: 'Bumps version to {{version}}'
+      - uses: repo-sync/pull-request@v2
+        name: pull-request
+        with:
+          destination_branch: "release"
+          pr_title: "Pulling ${{ github.ref }} into release"
+          pr_body: "👑 *An automated PR*"
+          pr_draft: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
