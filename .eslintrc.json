@@ -10,6 +10,11 @@
         "jest": true,
         "node": true
     },
+    "settings": {
+        "react": {
+            "version": "detect" // Automatically detect the react version
+        }
+    },
     "plugins": ["react-hooks"],
     "rules": {
         "arrow-parens": "off",

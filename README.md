@@ -43,7 +43,6 @@ npm start
 * Typescript
 * Redux
 * SCSS 
-
 ## Additional technologies :link:
 
 * Axios
@@ -54,6 +53,9 @@ npm start
 * React-tooltip
 * React-toastify
 * React Portal
+* Docker
+* Testing-library
+* Sentry
 
 ## Customer Requirements :bulb:
 
@@ -73,6 +75,9 @@ npm start
 - [x] After correctly placing the order, you are redirected to the finish page
 - [x] If the path is incorrect, an error page should appear
 - [x] Sticky menu
+- [x] Dockerize app
+- [x] Unit tests
+- [x] Application monitoring and error tracking
 - [ ] Payment
 - [ ] Admin panel
 - [ ] PWA

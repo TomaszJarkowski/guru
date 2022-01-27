@@ -5,16 +5,11 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 import { Basket } from './Basket';
 import { Container } from '../UI/Container/Container';
+import { NAVBAR_PATHS } from './NAVBAR_PATHS';
 
 import './Nav.scss';
 
 import url from '../../img/guru_logo.jpg';
-
-const listOfLinks = [
-    { name: 'Home', path: '/', exact: true },
-    { name: 'Shop', path: '/shop' },
-    { name: 'Contact', path: '/contact' }
-];
 
 export const Nav: React.FC = () => {
     const [positionSticky, setpositionSticky] = useState(false);
@@ -27,7 +22,7 @@ export const Nav: React.FC = () => {
         [positionSticky]
     );
 
-    const menu = listOfLinks.map((item) => (
+    const menu = NAVBAR_PATHS.map((item) => (
         <li key={item.name} className='Navigation__item'>
             <NavLink
                 activeClassName='is-active'

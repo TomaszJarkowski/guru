@@ -78,7 +78,7 @@ export const Step3: React.FC = () => {
             <div className='Step__buttons'>
                 <DefaultButton onClick={back}>Back</DefaultButton>
                 <ActiveButton
-                    onClick={(e: any) => {
+                    onClick={(e: React.MouseEvent<HTMLElement>) => {
                         e.preventDefault();
                         onSubmit();
                     }}>
