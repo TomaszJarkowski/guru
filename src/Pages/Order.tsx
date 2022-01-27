@@ -1,3 +1,4 @@
+/* eslint-disable padded-blocks */
 import { useSelector } from 'react-redux';
 import { Prompt } from 'react-router-dom';
 
@@ -16,7 +17,6 @@ export const Order: React.FC = () => {
 
     const FormContent = () => {
         switch (step) {
-
             case 1:
                 return <Step1 />;
             case 2:
@@ -27,7 +27,6 @@ export const Order: React.FC = () => {
                 return <Step4 />;
             default:
                 return <Step1 />;
-
         }
     };
 

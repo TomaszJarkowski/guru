@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
+import { useState } from 'react';
 
 import { fetchArticles, selectArticlesState } from '../../store/articles/articlesSlice';
 import { StatusFetch } from '../../store/products/productsSlice';
@@ -15,6 +16,7 @@ export const ArticleContent: React.FC = () => {
     const dispatch = useDispatch();
     const { articles, articlesFetch, errorMessage } = useSelector(selectArticlesState);
     const params: { id: string } = useParams();
+    const [index, setIndex] = useState(0)
 
     useEffect(() => {
         if (!articles.length) {
@@ -23,7 +25,9 @@ export const ArticleContent: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const index = articles.findIndex((obj) => obj.id === parseInt(params.id));
+    if (articles && articles.length && !index) {
+        setIndex(articles.findIndex((obj) => obj.id === parseInt(params.id)));
+    }
 
     if (articlesFetch === StatusFetch.FAIL) {
         return <Error>{errorMessage}</Error>;
