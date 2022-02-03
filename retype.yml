@@ -1,0 +1,11 @@
+input: .
+output: .retype
+url: https://guru-shop.herokuapp.com
+branding:
+  title: Guru
+  label: Docs
+links:
+- text: Guru
+  link: https://guru-shop.herokuapp.com
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."
