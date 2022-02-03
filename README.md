@@ -37,6 +37,8 @@ To start a live server, enter in the terminal:
 npm start
 ```
 
+Start project by Docker, soon...
+
 ## Core technologies :rocket:
 
 * React.js
