@@ -1,6 +1,6 @@
 {
   "name": "guru",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "2.4.0",
@@ -67,6 +67,8 @@
     ]
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "react-docgen-typescript": "2.2.2",
+    "react-styleguidist": "11.2.0"
   }
 }
