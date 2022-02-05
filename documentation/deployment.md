@@ -1,4 +1,7 @@
-# Deployment
+---
+order: 96
+---
+# Deployment :inbox_tray:
 
 This repository includes a **Guru** project.
 
