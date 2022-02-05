@@ -37,7 +37,15 @@ To start a live server, enter in the terminal:
 npm start
 ```
 
-Start project by Docker, soon...
+Start project by **Docker**
+
+```
+docker build -t guru .
+```
+
+```
+docker run -p 8000:8080 guru
+```
 
 ## Core technologies :rocket:
 
