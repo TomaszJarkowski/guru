@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { selectChanelState, TFilm, fetchFilms } from '../../../store/chanel/chanelSlice';
-import { StatusFetch } from '../../../store/products/productsSlice';
+import { StatusFetch } from '../../../constant/StatusFetch';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';
 import { Subtitle } from '../../UI/Subtitle/Subtitle';

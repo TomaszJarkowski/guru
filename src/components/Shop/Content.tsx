@@ -6,7 +6,7 @@ import { Pagination } from './Pagination/Pagination';
 import { Sort } from './Sort/Sort';
 import { fetchProducts, selectProductsState } from '../../store/products/productsSlice';
 import { Loader } from '../UI/Loader/Loader';
-import { StatusFetch } from '../../store/products/productsSlice';
+import { StatusFetch } from '../../constant/StatusFetch';
 import { TProduct } from './Product/Product';
 import { Error } from '../UI/Error/Error';
 import { Empty } from '../UI/Empty/Empty';

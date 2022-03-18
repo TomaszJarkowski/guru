@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
-    fetchArticles,
     selectArticlesState,
     TArticle
 } from '../../../store/articles/articlesSlice';
-import { StatusFetch } from '../../../store/products/productsSlice';
+import { fetchArticles } from '../../../api/articles/index';
+import { StatusFetch } from '../../../constant/StatusFetch';
 import { DefaultLink } from '../../UI/DefaultLink/DefaultLink';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';

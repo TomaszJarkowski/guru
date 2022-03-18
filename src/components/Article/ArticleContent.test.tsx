@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { StatusFetch } from '../../store/products/productsSlice';
+import { StatusFetch } from '../../constant/StatusFetch';
 import { ArticleContent } from './ArticleContent';
 import * as reactRedux from 'react-redux';
 import * as routeData from 'react-router';

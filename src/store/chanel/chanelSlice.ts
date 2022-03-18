@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-import { StatusFetch } from '../products/productsSlice';
+import { StatusFetch } from '../../constant/StatusFetch';
 
 declare const process: {
     env: {

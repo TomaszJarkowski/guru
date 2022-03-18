@@ -1,6 +1,7 @@
 input: ./documentation
 output: .retype
 url: https://tomaszjarkowski.github.io/guru/
+favicon: ./img/logo.png
 branding:
   title: Guru
   logo: ./img/logo.png
