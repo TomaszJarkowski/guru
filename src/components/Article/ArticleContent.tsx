@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { useState } from 'react';
 
-import { fetchArticles, selectArticlesState } from '../../store/articles/articlesSlice';
-import { StatusFetch } from '../../store/products/productsSlice';
+import { selectArticlesState } from '../../store/articles/articlesSlice';
+import { fetchArticles } from '../../api/articles/index';
+import { StatusFetch } from '../../constant/StatusFetch';
 import { Loader } from '../UI/Loader/Loader';
 import { Empty } from '../UI/Empty/Empty';
 import { Error } from '../UI/Error/Error';

@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-import { Product, StatusFetch } from '../products/productsSlice';
+import { Product } from '../products/productsSlice';
+import { StatusFetch } from '../../constant/StatusFetch';
 
 type NewProductsState = {
     newProducts: Product[];

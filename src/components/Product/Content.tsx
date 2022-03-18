@@ -5,11 +5,8 @@ import { useHistory, useParams } from 'react-router';
 import { toast } from 'react-toastify';
 
 import { addProduct } from '../../store/basket/basketSlice';
-import {
-    fetchProducts,
-    selectProductsState,
-    StatusFetch
-} from '../../store/products/productsSlice';
+import { fetchProducts, selectProductsState } from '../../store/products/productsSlice';
+import { StatusFetch } from '../../constant/StatusFetch';
 import { Loader } from '../UI/Loader/Loader';
 import { Empty } from '../UI/Empty/Empty';
 import { Error } from '../UI/Error/Error';
@@ -27,7 +24,7 @@ export const Content: React.FC = () => {
         if (!products.length) {
             dispatch(fetchProducts());
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const index = products.findIndex((obj) => obj.id === parseInt(params.id));

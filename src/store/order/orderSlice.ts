@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 import { createSlice } from '@reduxjs/toolkit';
-import { StatusFetch } from '../products/productsSlice';
+import { StatusFetch } from '../../constant/StatusFetch';
 import { clearBasket, Product } from '../basket/basketSlice';
 
 type OrderState = {

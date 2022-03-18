@@ -6,7 +6,8 @@ import {
     fetchNewProducts,
     selectNewProductsState
 } from '../../../store/newProducts/newProductsSlice';
-import { Product, StatusFetch } from '../../../store/products/productsSlice';
+import { Product } from '../../../store/products/productsSlice';
+import { StatusFetch } from '../../../constant/StatusFetch';
 import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';

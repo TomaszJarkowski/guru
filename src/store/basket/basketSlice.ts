@@ -16,7 +16,7 @@ type BasketState = {
     cost: number;
 };
 
-const initialState: BasketState = {
+export const initialState: BasketState = {
     basket: [],
     number: 0,
     cost: 0

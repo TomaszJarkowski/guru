@@ -1,11 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export enum StatusFetch {
-    LOADING = 'LOADING',
-    SUCCESS = 'SUCCESS',
-    FAIL = 'FAIL'
-}
+import { StatusFetch } from '../../constant/StatusFetch';
 
 export type Product = {
     id: number;

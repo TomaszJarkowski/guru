@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
-import { StatusFetch } from '../products/productsSlice';
+import { fetchArticles } from '../../api/articles/index';
+import { StatusFetch } from '../../constant/StatusFetch';
+import { RootState } from '../store';
 
 type img = {
     src: string;
@@ -15,13 +16,13 @@ export type TArticle = {
     pathIMG: string;
 };
 
-type articlesState = {
+type ArticlesState = {
     articles: TArticle[];
     errorMessage: string;
     articlesFetch: StatusFetch;
 };
 
-const initialState: articlesState = {
+export const initialState: ArticlesState = {
     articles: [],
     articlesFetch: StatusFetch.LOADING,
     errorMessage: ''
@@ -30,38 +31,30 @@ const initialState: articlesState = {
 export const slice = createSlice({
     name: 'articles',
     initialState,
-    reducers: {
-        setLoadingFetch: (state) => {
-            state.articlesFetch = StatusFetch.LOADING;
-            state.errorMessage = '';
-        },
-        setErrorFetch: (state, action) => {
-            state.articlesFetch = StatusFetch.FAIL;
-            state.errorMessage = action.payload;
-        },
-        setArticles: (state, action) => {
-            state.articlesFetch = StatusFetch.SUCCESS;
-            state.articles = action.payload;
-            state.errorMessage = '';
-        }
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchArticles.pending, (state) => {
+                state.articlesFetch = StatusFetch.LOADING;
+                state.errorMessage = '';
+            })
+            .addCase(fetchArticles.fulfilled, (state, { payload }) => {
+                state.articlesFetch = StatusFetch.SUCCESS;
+                state.articles = payload;
+                state.errorMessage = '';
+            })
+            .addCase(fetchArticles.rejected, (state, { payload }) => {
+                if (typeof payload === 'string') {
+                    state.articlesFetch = StatusFetch.FAIL;
+                    state.errorMessage = payload;
+                } else {
+                    state.articlesFetch = StatusFetch.FAIL;
+                    state.errorMessage = 'Default Error Message';
+                }
+            });
     }
 });
 
-export const { setArticles, setLoadingFetch, setErrorFetch } = slice.actions;
-
-export const selectArticlesState = (state: any): articlesState => state.articles;
+export const selectArticlesState = (state: RootState): ArticlesState => state.articles;
 
 export default slice.reducer;
-
-export const fetchArticles = () => async (dispatch: Function) => {
-    const url = `${process.env.REACT_APP_API}/articles`;
-
-    dispatch(setLoadingFetch());
-
-    try {
-        const res = await axios.get(url);
-        dispatch(setArticles(res.data.data));
-    } catch (err) {
-        dispatch(setErrorFetch(err.message));
-    }
-};

@@ -7,7 +7,7 @@ import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
 import { ActiveButton } from '../../UI/ActiveButton/ActiveButton';
 import { HeaderStep } from '../HeaderStep/HeaderStep';
 import { sumNumbers } from '../../../helpers/helpers';
-import { StatusFetch } from '../../../store/products/productsSlice';
+import { StatusFetch } from '../../../constant/StatusFetch';
 import { Loader } from '../../UI/Loader/Loader';
 import { Subtitle } from '../../UI/Subtitle/Subtitle';
 
