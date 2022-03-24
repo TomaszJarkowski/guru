@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
+import { fetchNewProducts } from '../../api/new-products/index';
 import { Product } from '../products/productsSlice';
 import { StatusFetch } from '../../constant/StatusFetch';
+import { RootState } from '../store';
 
 type NewProductsState = {
     newProducts: Product[];
@@ -10,7 +11,7 @@ type NewProductsState = {
     newProductsFetch: StatusFetch;
 };
 
-const initialState: NewProductsState = {
+export const initialState: NewProductsState = {
     newProducts: [],
     newProductsFetch: StatusFetch.LOADING,
     errorMessage: ''
@@ -19,38 +20,30 @@ const initialState: NewProductsState = {
 export const slice = createSlice({
     name: 'newProducts',
     initialState,
-    reducers: {
-        setLoadingFetch: (state) => {
-            state.newProductsFetch = StatusFetch.LOADING;
-            state.errorMessage = '';
-        },
-        setErrorFetch: (state, action) => {
-            state.newProductsFetch = StatusFetch.FAIL;
-            state.errorMessage = action.payload;
-        },
-        setNewProducts: (state, action) => {
-            state.newProductsFetch = StatusFetch.SUCCESS;
-            state.newProducts = action.payload;
-            state.errorMessage = '';
-        }
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchNewProducts.pending, (state) => {
+                state.newProductsFetch = StatusFetch.LOADING;
+                state.errorMessage = '';
+            })
+            .addCase(fetchNewProducts.fulfilled, (state, { payload }) => {
+                state.newProductsFetch = StatusFetch.SUCCESS;
+                state.errorMessage = '';
+                state.newProducts = payload;
+            })
+            .addCase(fetchNewProducts.rejected, (state, { payload }) => {
+                if (typeof payload === 'string') {
+                    state.newProductsFetch = StatusFetch.FAIL;
+                    state.errorMessage = payload;
+                } else {
+                    state.newProductsFetch = StatusFetch.FAIL;
+                    state.errorMessage = 'Default Error Message';
+                }
+            });
     }
 });
 
-export const { setNewProducts, setLoadingFetch, setErrorFetch } = slice.actions;
-
-export const selectNewProductsState = (state: any): NewProductsState => state.newProducts;
+export const selectNewProductsState = (state: RootState): NewProductsState => state.newProducts;
 
 export default slice.reducer;
-
-export const fetchNewProducts = () => async (dispatch: Function) => {
-    const url = `${process.env.REACT_APP_API}/new-products`;
-
-    dispatch(setLoadingFetch());
-
-    try {
-        const res = await axios.get(url);
-        dispatch(setNewProducts(res.data.data));
-    } catch (err) {
-        dispatch(setErrorFetch(err.message));
-    }
-};

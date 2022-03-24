@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 
 import {
-    fetchNewProducts,
     selectNewProductsState
 } from '../../../store/newProducts/newProductsSlice';
 import { Product } from '../../../store/products/productsSlice';
@@ -12,6 +11,7 @@ import { DefaultButton } from '../../UI/DefaultButton/DefaultButton';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';
 import { Subtitle } from '../../UI/Subtitle/Subtitle';
+import { fetchNewProducts } from '../../../api/new-products';
 
 import './NewProducts.scss';
 

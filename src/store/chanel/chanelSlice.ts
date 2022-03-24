@@ -1,15 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
+import { fetchRecentMovies } from '../../api/movies/index';
 import { StatusFetch } from '../../constant/StatusFetch';
+import { RootState } from '../store';
 
-declare const process: {
-    env: {
-        REACT_APP_YT: string;
-    };
-};
-
-export type TFilm = {
+export type TMovie = {
     id: {
         videoId: number;
     };
@@ -24,12 +19,12 @@ export type TFilm = {
 };
 
 type ChanelState = {
-    films: TFilm[];
+    films: TMovie[];
     errorMessage: string;
     filmsFetch: StatusFetch;
 };
 
-const initialState: ChanelState = {
+export const initialState: ChanelState = {
     films: [],
     filmsFetch: StatusFetch.LOADING,
     errorMessage: ''
@@ -38,38 +33,30 @@ const initialState: ChanelState = {
 export const slice = createSlice({
     name: 'chanel',
     initialState,
-    reducers: {
-        setLoadingFetch: (state) => {
-            state.filmsFetch = StatusFetch.LOADING;
-            state.errorMessage = '';
-        },
-        setErrorFetch: (state, action) => {
-            state.filmsFetch = StatusFetch.FAIL;
-            state.errorMessage = action.payload;
-        },
-        setFilms: (state, action) => {
-            state.filmsFetch = StatusFetch.SUCCESS;
-            state.films = action.payload;
-            state.errorMessage = '';
-        }
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchRecentMovies.pending, (state) => {
+                state.filmsFetch = StatusFetch.LOADING;
+                state.errorMessage = '';
+            })
+            .addCase(fetchRecentMovies.fulfilled, (state, { payload }) => {
+                state.filmsFetch = StatusFetch.SUCCESS;
+                state.films = payload;
+                state.errorMessage = '';
+            })
+            .addCase(fetchRecentMovies.rejected, (state, { payload }) => {
+                if (typeof payload === 'string') {
+                    state.filmsFetch = StatusFetch.FAIL;
+                    state.errorMessage = payload;
+                } else {
+                    state.filmsFetch = StatusFetch.FAIL;
+                    state.errorMessage = 'Default Error Message';
+                }
+            });
     }
 });
 
-export const { setFilms, setLoadingFetch, setErrorFetch } = slice.actions;
-
-export const selectChanelState = (state: any): ChanelState => state.chanel;
+export const selectChanelState = (state: RootState): ChanelState => state.chanel;
 
 export default slice.reducer;
-
-export const fetchFilms = () => async (dispatch: Function) => {
-    const url = process.env.REACT_APP_YT;
-
-    dispatch(setLoadingFetch());
-
-    try {
-        const res = await axios.get(url);
-        dispatch(setFilms(res.data.items));
-    } catch (err) {
-        dispatch(setErrorFetch(err.message));
-    }
-};
