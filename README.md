@@ -1,7 +1,8 @@
 # Guru
 Fishing online store. Education and portfolio project: [LINK](https://guru-shop.herokuapp.com/)
 
-Here is the **BACKEND CODE**: [LINK](https://github.com/TomaszJarkowski/guru-backend)
+**DOCUMENTATION**: [LINK](https://tomaszjarkowski.github.io/guru/)
+**BACKEND CODE**: [LINK](https://github.com/TomaszJarkowski/guru-backend)
 
 ![screen__one](./src/img/screen1.png)
 

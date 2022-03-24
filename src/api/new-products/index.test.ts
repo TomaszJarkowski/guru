@@ -2,8 +2,8 @@
 import axios from 'axios';
 import { configureStore } from '@reduxjs/toolkit';
 
-import { fetchArticles } from './index';
-import { ARTICLES_API_URL } from '../URL/apiAddresses';
+import { fetchNewProducts } from './index';
+import { NEW_PRODUCTS_API_URL } from './../URL/apiAddresses';
 
 const mockData = {
     message: 'success',
@@ -11,23 +11,26 @@ const mockData = {
     data: [
         {
             id: 1,
-            title: 'Article1',
+            name: 'Product1',
+            price: 1.2,
             description: 'Description1',
-            imgs: [{ src: 'src1' }],
+            status: 'new',
             pathIMG: 'pathIMG1'
         },
         {
             id: 2,
-            title: 'Article2',
+            name: 'Product2',
+            price: 1.2,
             description: 'Description2',
-            imgs: [{ src: 'src2' }],
+            status: 'new',
             pathIMG: 'pathIMG2'
         },
         {
             id: 3,
-            title: 'Article3',
+            name: 'Product3',
+            price: 1.2,
             description: 'Description3',
-            imgs: [{ src: 'src3' }],
+            status: 'new',
             pathIMG: 'pathIMG3'
         }
     ]
@@ -38,14 +41,14 @@ const errorMockData = {
     statusCode: 404
 };
 
-describe('fetchArticles', () => {
+describe('fetchNewProducts', () => {
     it('resolved', async () => {
         const getSpy = jest.spyOn(axios, 'get').mockResolvedValueOnce({ data: mockData });
 
         const store = configureStore({
             reducer: function (state = '', action) {
                 switch (action.type) {
-                    case 'articles/fetch/fulfilled':
+                    case 'newProducts/fetch/fulfilled':
                         return action.payload;
                     default:
                         return state;
@@ -53,8 +56,8 @@ describe('fetchArticles', () => {
             }
         });
 
-        await store.dispatch(fetchArticles());
-        expect(getSpy).toBeCalledWith(ARTICLES_API_URL);
+        await store.dispatch(fetchNewProducts());
+        expect(getSpy).toBeCalledWith(NEW_PRODUCTS_API_URL);
         const state = await store.getState();
         expect(state).toEqual(mockData.data);
     });
@@ -65,7 +68,7 @@ describe('fetchArticles', () => {
         const store = configureStore({
             reducer: function (state = '', action) {
                 switch (action.type) {
-                    case 'articles/fetch/rejected':
+                    case 'newProducts/fetch/rejected':
                         return action.payload;
                     default:
                         return state;
@@ -73,8 +76,8 @@ describe('fetchArticles', () => {
             }
         });
 
-        await store.dispatch(fetchArticles());
-        expect(getSpy).toBeCalledWith(ARTICLES_API_URL);
+        await store.dispatch(fetchNewProducts());
+        expect(getSpy).toBeCalledWith(NEW_PRODUCTS_API_URL);
         const state = await store.getState();
         expect(state).toEqual('Oops something went wrong...');
     });

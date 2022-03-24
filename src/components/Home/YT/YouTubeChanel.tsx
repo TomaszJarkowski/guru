@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { selectChanelState, TFilm, fetchFilms } from '../../../store/chanel/chanelSlice';
+import { selectChanelState, TMovie } from '../../../store/chanel/chanelSlice';
 import { StatusFetch } from '../../../constant/StatusFetch';
 import { Loader } from '../../UI/Loader/Loader';
 import { Error } from '../../UI/Error/Error';
 import { Subtitle } from '../../UI/Subtitle/Subtitle';
+import { fetchRecentMovies } from '../../../api/movies/index';
 
 import './YouTubeChanel.scss';
 
@@ -15,7 +16,7 @@ export const YouTubeChanel = () => {
 
     useEffect(() => {
         if (!films.length) {
-            dispatch(fetchFilms());
+            dispatch(fetchRecentMovies());
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -31,7 +32,7 @@ export const YouTubeChanel = () => {
                 {filmsFetch !== StatusFetch.SUCCESS ? (
                     <Loader />
                 ) : (
-                    films.map((film: TFilm) => (
+                    films.map((film: TMovie) => (
                         <div className='video__item' key={film.id.videoId}>
                             <Subtitle classNames='video__title'>{film.snippet.title}</Subtitle>
                             <img src={film.snippet.thumbnails.high.url} alt='yt chanel img' />
