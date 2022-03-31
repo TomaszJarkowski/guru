@@ -1,8 +1,9 @@
 # Guru
 Fishing online store. Education and portfolio project: [LINK](https://guru-shop.herokuapp.com/)
 
-**DOCUMENTATION**: [LINK](https://tomaszjarkowski.github.io/guru/)
-**BACKEND CODE**: [LINK](https://github.com/TomaszJarkowski/guru-backend)
+- **DOCUMENTATION**: [LINK](https://tomaszjarkowski.github.io/guru/)
+
+- **BACKEND CODE**: [LINK](https://github.com/TomaszJarkowski/guru-backend)
 
 ![screen__one](./src/img/screen1.png)
 
@@ -48,6 +49,21 @@ docker build -t guru .
 docker run -p 8000:8080 guru
 ```
 
+### Components documentation :nail_care:
+
+```
+npm run styleguide
+```
+
+```
+open http://localhost:6060/
+```
+
+Build the client, enter in the terminal:
+
+```
+npm run styleguide:build
+```
 ## Core technologies :rocket:
 
 * React.js
