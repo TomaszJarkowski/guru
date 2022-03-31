@@ -25,4 +25,4 @@ order: 99
 - [x] Application monitoring and error tracking
 - [ ] Payment
 - [ ] Admin panel
-- [ ] PWA
+- [x] PWA
