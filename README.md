@@ -107,7 +107,7 @@ npm run styleguide:build
 - [x] Application monitoring and error tracking
 - [ ] Payment
 - [ ] Admin panel
-- [ ] PWA
+- [x] PWA
 
 ## Author :poland:
 
