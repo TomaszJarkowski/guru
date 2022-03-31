@@ -1,6 +1,9 @@
 {
   "name": "guru",
   "version": "0.1.12",
+  "engines": {
+    "node": "14.x"
+  },
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "2.4.0",
