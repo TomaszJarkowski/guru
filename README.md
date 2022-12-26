@@ -81,6 +81,7 @@ npm run styleguide:build
 * React-toastify
 * React Portal
 * Docker
+* PWA
 * Testing-library
 * Sentry
 

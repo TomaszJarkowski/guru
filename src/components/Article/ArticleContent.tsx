@@ -17,18 +17,20 @@ export const ArticleContent: React.FC = () => {
     const dispatch = useDispatch();
     const { articles, articlesFetch, errorMessage } = useSelector(selectArticlesState);
     const params: { id: string } = useParams();
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
         if (!articles.length) {
             dispatch(fetchArticles());
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    if (articles && articles.length && !index) {
-        setIndex(articles.findIndex((obj) => obj.id === parseInt(params.id)));
-    }
+    useEffect(() => {
+        if (articles && articles.length) {
+            setIndex(articles.findIndex((obj) => obj.id === Number(params.id)));
+        }
+    }, [articles, articles.length, params.id]);
 
     if (articlesFetch === StatusFetch.FAIL) {
         return <Error>{errorMessage}</Error>;

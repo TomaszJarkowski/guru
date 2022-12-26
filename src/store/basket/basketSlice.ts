@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { RootState } from '../store';
 import { differenceNumbers, sumNumbers } from '../../helpers/helpers';
 
 export type Product = {
@@ -71,6 +72,6 @@ export const slice = createSlice({
 
 export const { addProduct, removeProduct, trashProduct, clearBasket } = slice.actions;
 
-export const selectBasketState = (state: any): BasketState => state.basket;
+export const selectBasketState = (state: RootState): BasketState => state.basket;
 
 export default slice.reducer;
